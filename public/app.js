@@ -281,33 +281,114 @@ function showCalendar(data) {
   wrapper.append(eventRows(data, events), pager(totalPages, page));
 }
 
+function browseRanges(items, perPage) {
+  const pages = [];
+  const normalized = (value) => {
+    const lower = value.toLocaleLowerCase("da");
+    return lower.charAt(0).toLocaleUpperCase("da") + lower.slice(1);
+  };
+  for (let index = 0; index < items.length; index += perPage) {
+    const pageItems = items.slice(index, index + perPage);
+    pages.push({
+      first: normalized(pageItems[0].sortName || pageItems[0].name),
+      last: normalized(pageItems.at(-1).sortName || pageItems.at(-1).name),
+      fullLast: normalized(pageItems.at(-1).sortName || pageItems.at(-1).name),
+    });
+  }
+  for (let index = 0; index < pages.length - 1; index += 1) {
+    const left = pages[index].last;
+    const right = pages[index + 1].first;
+    const length = Math.max([...left].length, [...right].length);
+    for (let size = 1; size <= length; size += 1) {
+      const shortLeft = [...left].slice(0, size).join("").trim();
+      const shortRight = [...right].slice(0, size).join("").trim();
+      if (shortLeft !== shortRight) {
+        pages[index].last = shortLeft;
+        pages[index + 1].first = shortRight;
+        break;
+      }
+    }
+  }
+  return pages.map(({ first, last, fullLast }) => ({
+    first,
+    last: fullLast.startsWith(first) ? null : last,
+  }));
+}
+
 function showBrowse(data, type) {
-  const items = type === "bands" ? data.bands : data.venues;
-  const singular = type === "bands" ? "band" : "venue";
-  heading(type === "bands" ? "Bands" : "Spillesteder");
+  const config = {
+    bands: [data.bands, "band", "Bands"],
+    venues: [data.venues, "venue", "Spillesteder"],
+    users: [data.users, "user", "Brugere"],
+  };
+  const [items, singular, title] = config[type];
+  const perPage = 30;
+  const search = (params.get("search") || "").trim();
+  const totalPages = Math.ceil(items.length / perPage);
+  const page = Math.min(requestedPage, totalPages);
+  heading(title);
   const wrapper = content();
-  wrapper.append(node("p", { text: "Vælg begyndelsesbogstaver eller søg:" }));
+
+  if (totalPages > 1) {
+    wrapper.append(node("p", { text: "Vælg begyndelsesbogstaver eller søg:" }));
+    const ranges = browseRanges(items, perPage);
+    const pageBar = node("nav", { className: "browse-pages", title: `${title} efter begyndelsesbogstaver` });
+    pageBar.setAttribute("aria-label", `${title} efter begyndelsesbogstaver`);
+    ranges.forEach((range, index) => {
+      const pageNumber = index + 1;
+      const label = range.last ? `${range.first} – ${range.last}` : range.first;
+      const query = new URLSearchParams({ view: type });
+      if (pageNumber > 1) query.set("page", pageNumber);
+      const active = !search && pageNumber === page;
+      const pageLink = node("a", { className: `button${active ? " activebutton" : ""}`, text: label, href: `?${query}` });
+      if (active) pageLink.setAttribute("aria-current", "page");
+      pageBar.append(node("div", { className: "pagebutton" }, [pageLink]));
+    });
+    wrapper.append(pageBar);
+  }
 
   const form = node("form", { className: "searchform" });
+  form.method = "get";
+  const viewInput = node("input");
+  viewInput.type = "hidden";
+  viewInput.name = "view";
+  viewInput.value = type;
   const input = node("input");
   input.type = "search";
   input.name = "search";
-  input.placeholder = "Søg";
-  input.setAttribute("aria-label", "Søg");
-  form.append(input, node("button", { className: "button", text: "Søg" }));
-  wrapper.append(form);
+  input.value = search;
+  input.setAttribute("aria-label", `Søg i ${title.toLocaleLowerCase("da")}`);
+  form.append(viewInput, input, node("button", { className: "button", text: "Søg" }));
+  wrapper.append(form, node("div", { className: "clear" }));
 
-  const list = node("ol", { className: "columns" });
-  const draw = () => {
-    const query = input.value.trim().toLocaleLowerCase("da");
-    const matches = items.filter((item) => item.name.toLocaleLowerCase("da").includes(query));
-    list.replaceChildren(...matches.map((item) => node("li", {}, [entityLink(item, singular)])));
-    if (!matches.length) list.append(node("li", { className: "empty", text: "(ingen resultater)" }));
-  };
-  form.addEventListener("submit", (event) => { event.preventDefault(); draw(); });
-  input.addEventListener("input", draw);
-  draw();
-  wrapper.append(list);
+  let results;
+  if (search) {
+    const query = search.toLocaleLowerCase("da");
+    results = items
+      .filter((item) => item.name.toLocaleLowerCase("da").includes(query))
+      .sort((a, b) => {
+        const aName = a.name.toLocaleLowerCase("da");
+        const bName = b.name.toLocaleLowerCase("da");
+        return Number(bName === query) - Number(aName === query)
+          || Number(bName.startsWith(query)) - Number(aName.startsWith(query));
+      })
+      .slice(0, perPage);
+  } else {
+    results = items.slice((page - 1) * perPage, page * perPage);
+  }
+
+  if (!results.length) {
+    wrapper.append(node("p", {}, [node("em", { text: "(ingen resultater)" })]));
+    return;
+  }
+  const columns = node("div", { className: "browse-columns" });
+  for (let start = 0; start < results.length; start += perPage / 2) {
+    const list = node("ol");
+    list.start = start + 1;
+    list.append(...results.slice(start, start + perPage / 2).map((item) => node("li", {}, [entityLink(item, singular)])));
+    columns.append(node("div", { className: "browse-column" }, [list]));
+  }
+  wrapper.append(columns);
 }
 
 function infoHeading(box, title, value) {
@@ -360,14 +441,6 @@ function showDetail(data, type, itemId) {
   wrapper.append(node("div", { className: "clear" }));
 }
 
-function showUsers(data) {
-  heading("Brugere");
-  const wrapper = content();
-  const list = node("ol", { className: "columns users" });
-  list.append(...data.users.map((user) => node("li", {}, [entityLink(user, "user")])));
-  wrapper.append(list);
-}
-
 function showUser(data, userId) {
   const user = data.users.find((entry) => entry.id === userId);
   if (!user) return showNotFound();
@@ -400,14 +473,96 @@ function showAbout() {
   );
 }
 
+function rankingTable(title, headings, rows, type, suffix) {
+  const section = node("section", { className: "stat-item" }, [node("h2", { text: title })]);
+  const table = node("table", { className: "stats" });
+  table.append(node("tr", {}, headings.map((label) => node("th", { text: label }))));
+  for (const row of rows) {
+    table.append(node("tr", {}, [
+      node("td", {}, [entityLink(row.item, type)]),
+      node("td", { className: "amount", text: `${row.num} ${suffix}` }),
+    ]));
+  }
+  section.append(table);
+  return section;
+}
+
 function showStats(data) {
   heading("Statistik");
   const wrapper = content();
-  const table = node("table", { className: "stats" });
-  for (const [label, value] of [["Events", data.events.length], ["Bands", data.bands.length], ["Spillesteder", data.venues.length], ["Brugere", data.users.length]]) {
-    table.append(node("tr", {}, [node("th", { text: label }), node("td", { text: String(value) })]));
+  const eventById = new Map(data.events.map((event) => [event.id, event]));
+  const attendanceByEvent = new Map();
+  for (const entry of data.attendance) attendanceByEvent.set(entry.eventId, (attendanceByEvent.get(entry.eventId) || 0) + 1);
+
+  const rank = (items, scores, latestDates) => items
+    .filter((item) => scores.has(item.id))
+    .map((item) => ({ item, num: scores.get(item.id), latest: latestDates.get(item.id) || "" }))
+    .sort((a, b) => b.num - a.num || b.latest.localeCompare(a.latest) || b.item.id - a.item.id)
+    .slice(0, 5);
+
+  const userScores = new Map();
+  const userLatest = new Map();
+  for (const entry of data.attendance) {
+    const event = eventById.get(entry.eventId);
+    userScores.set(entry.userId, (userScores.get(entry.userId) || 0) + 1);
+    if (!userLatest.has(entry.userId) || event.date > userLatest.get(entry.userId)) userLatest.set(entry.userId, event.date);
   }
-  wrapper.append(table);
+
+  const venueScores = new Map();
+  const venueLatest = new Map();
+  for (const event of data.events) {
+    const count = attendanceByEvent.get(event.id) || 0;
+    if (!count || !event.venueId) continue;
+    venueScores.set(event.venueId, (venueScores.get(event.venueId) || 0) + count);
+    if (!venueLatest.has(event.venueId) || event.date > venueLatest.get(event.venueId)) venueLatest.set(event.venueId, event.date);
+  }
+
+  const bandScores = new Map();
+  const bandLatest = new Map();
+  for (const appearance of data.appearances) {
+    const event = eventById.get(appearance.eventId);
+    const count = attendanceByEvent.get(event.id) || 0;
+    if (!count) continue;
+    bandScores.set(appearance.bandId, (bandScores.get(appearance.bandId) || 0) + count);
+    if (!bandLatest.has(appearance.bandId) || event.date > bandLatest.get(appearance.bandId)) bandLatest.set(appearance.bandId, event.date);
+  }
+
+  const eventRanking = data.events
+    .filter((event) => attendanceByEvent.has(event.id))
+    .map((event) => ({ event, num: attendanceByEvent.get(event.id) }))
+    .sort((a, b) => b.num - a.num || b.event.date.localeCompare(a.event.date) || b.event.id - a.event.id)
+    .slice(0, 5);
+
+  const grid = node("div", { className: "stats-grid" });
+  const left = node("div", { className: "stat-column" }, [
+    rankingTable("Top 5 bands", ["Band", "Set"], rank(data.bands, bandScores, bandLatest), "band", "gange"),
+    rankingTable("Top 5 spillesteder", ["Spillested", "Besøgt"], rank(data.venues, venueScores, venueLatest), "venue", "gange"),
+    rankingTable("Top 5 brugere", ["Bruger", "Med til"], rank(data.users, userScores, userLatest), "user", "events"),
+  ]);
+
+  const largest = node("section", { className: "stat-item large" }, [node("h2", { text: "Største events" })]);
+  const counts = eventRanking.map((row) => row.num);
+  const countText = counts.length > 1 ? `${counts.slice(0, -1).join(", ")} og ${counts.at(-1)}` : String(counts[0]);
+  largest.append(node("p", { text: `Med ${countText} bruger(e).` }));
+  largest.append(compactEventRows(data, eventRanking.map((row) => row.event), null, null));
+
+  const countSection = node("section", { className: "stat-item" }, [node("h2", { text: "Antal" })]);
+  const countTable = node("table", { className: "stats" });
+  for (const [label, value] of [["Events", data.events.length], ["Bands", data.bands.length], ["Spillesteder", data.venues.length], ["Brugere", data.users.length]]) {
+    countTable.append(node("tr", {}, [node("th", { text: label }), node("td", { className: "amount", text: String(value) })]));
+  }
+  countSection.append(countTable);
+
+  const latestSection = node("section", { className: "stat-item" }, [node("h2", { text: "Senest oprettet" })]);
+  const latestTable = node("table", { className: "stats" });
+  for (const [label, items, type] of [["Band", data.bands, "band"], ["Spillested", data.venues, "venue"], ["Bruger", data.users, "user"]]) {
+    const latest = items.reduce((current, item) => item.id > current.id ? item : current);
+    latestTable.append(node("tr", {}, [node("th", { text: label }), node("td", { className: "amount" }, [entityLink(latest, type)])]));
+  }
+  latestSection.append(latestTable);
+  const right = node("div", { className: "stat-column" }, [largest, countSection, latestSection]);
+  grid.append(left, right);
+  wrapper.append(grid);
 }
 
 function showNotFound() {
@@ -422,9 +577,8 @@ fetch("data/archive.json")
   })
   .then((data) => {
     if (view === "calendar") showCalendar(data);
-    else if (view === "bands" || view === "venues") showBrowse(data, view);
+    else if (view === "bands" || view === "venues" || view === "users") showBrowse(data, view);
     else if (view === "band" || view === "venue") showDetail(data, view, id);
-    else if (view === "users") showUsers(data);
     else if (view === "user") showUser(data, id);
     else if (view === "about") showAbout();
     else if (view === "stats") showStats(data);

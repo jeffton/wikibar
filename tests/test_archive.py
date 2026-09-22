@@ -68,6 +68,17 @@ class StaticAppTests(unittest.TestCase):
         event_index = next(index for index, event in enumerate(self.archive["events"]) if event["id"] == 362)
         self.assertEqual(event_index // 12 + 1, 31)
 
+    def test_retro_browse_and_statistics_ui_is_present(self):
+        self.assertIn("function browseRanges(items, perPage)", self.source)
+        self.assertIn("const perPage = 30", self.source)
+        self.assertIn(".slice(0, perPage)", self.source)
+        self.assertIn('pageLink.setAttribute("aria-current", "page")', self.source)
+        self.assertIn('rankingTable("Top 5 bands"', self.source)
+        self.assertIn('rankingTable("Top 5 spillesteder"', self.source)
+        self.assertIn('rankingTable("Top 5 brugere"', self.source)
+        self.assertIn('text: "Største events"', self.source)
+        self.assertIn('text: "Senest oprettet"', self.source)
+
 
 class PublicArchiveTests(unittest.TestCase):
     @classmethod
@@ -89,6 +100,79 @@ class PublicArchiveTests(unittest.TestCase):
             event["date"], event["time"] or "", event["endDate"] or "", event["id"],
         ))
         self.assertEqual(events, expected)
+
+    def test_public_statistics_match_the_legacy_formulas(self):
+        event_by_id = {event["id"]: event for event in self.archive["events"]}
+        attendance = {}
+        for entry in self.archive["attendance"]:
+            attendance[entry["eventId"]] = attendance.get(entry["eventId"], 0) + 1
+
+        band_scores = {}
+        band_latest = {}
+        for appearance in self.archive["appearances"]:
+            event = event_by_id[appearance["eventId"]]
+            count = attendance.get(event["id"], 0)
+            if count:
+                band_id = appearance["bandId"]
+                band_scores[band_id] = band_scores.get(band_id, 0) + count
+                band_latest[band_id] = max(band_latest.get(band_id, ""), event["date"])
+        bands = {band["id"]: band["name"] for band in self.archive["bands"]}
+        top_bands = sorted(band_scores, key=lambda band_id: (-band_scores[band_id], -int(band_latest[band_id].replace("-", "")), -band_id))[:5]
+        self.assertEqual(
+            [(bands[band_id], band_scores[band_id]) for band_id in top_bands],
+            [("Snake and Jet's Amazing Bullit Band", 17), ("Decorate.Decorate", 17),
+             ("Beta Satan", 15), ("The City Kill", 12), ("Sha La Las", 11)],
+        )
+
+        top_events = sorted(
+            attendance,
+            key=lambda event_id: (
+                -attendance[event_id], -int(event_by_id[event_id]["date"].replace("-", "")), -event_id,
+            ),
+        )[:5]
+        self.assertEqual(
+            [(event_by_id[event_id]["name"], attendance[event_id]) for event_id in top_events],
+            [("Roskilde Festival 2007", 8), ("Nakkefestival 2007", 5),
+             ("Vesterbro Festival", 5), ("Roskilde Festival 2009", 4),
+             ("Roskilde Festival 2008", 4)],
+        )
+
+        venue_scores = {}
+        venue_latest = {}
+        for event in self.archive["events"]:
+            count = attendance.get(event["id"], 0)
+            if count and event["venueId"]:
+                venue_id = event["venueId"]
+                venue_scores[venue_id] = venue_scores.get(venue_id, 0) + count
+                venue_latest[venue_id] = max(venue_latest.get(venue_id, ""), event["date"])
+        venues = {venue["id"]: venue["name"] for venue in self.archive["venues"]}
+        top_venues = sorted(venue_scores, key=lambda venue_id: (
+            -venue_scores[venue_id], -int(venue_latest[venue_id].replace("-", "")), -venue_id,
+        ))[:5]
+        self.assertEqual(
+            [(venues[venue_id], venue_scores[venue_id]) for venue_id in top_venues],
+            [("Loppen", 33), ("Vega", 23), ("Elværket", 14), ("Stengade", 11), ("Lades Kælder", 9)],
+        )
+
+        user_scores = {}
+        for entry in self.archive["attendance"]:
+            user_scores[entry["userId"]] = user_scores.get(entry["userId"], 0) + 1
+        users = {user["id"]: user["name"] for user in self.archive["users"]}
+        self.assertEqual(
+            [(users[user_id], user_scores[user_id]) for user_id in sorted(user_scores, key=user_scores.get, reverse=True)[:5]],
+            [("Jeff", 91), ("Mo", 69), ("KO", 41), ("anne", 24), ("Anette 13.2", 4)],
+        )
+
+    def test_browse_page_ranges_match_the_legacy_boundaries(self):
+        self.assertEqual((len(self.archive["bands"]) + 29) // 30, 13)
+        self.assertEqual((len(self.archive["venues"]) + 29) // 30, 2)
+        bands = self.archive["bands"]
+        page_edges = [
+            (bands[index]["sortName"], bands[min(index + 29, len(bands) - 1)]["sortName"])
+            for index in range(0, len(bands), 30)
+        ]
+        self.assertEqual(page_edges[0], ("1234", "Bob Log III"))
+        self.assertEqual(page_edges[-1], ("Twins Twins", "Zombies, The"))
 
     def test_private_tables_and_fields_are_absent(self):
         forbidden = {

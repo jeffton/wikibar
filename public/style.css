@@ -162,7 +162,13 @@ p { margin: 0 0 .8em; }
 .info td.amount { text-align: right; }
 .info a { overflow-wrap: anywhere; }
 
-.searchform { display: inline-flex; gap: .3em; margin: .4em 0 1em; }
+.browse-pages { display: inline; }
+.pagebutton { display: inline-block; margin: 0 .25em .35em 0; }
+.searchform { display: inline-flex; gap: .3em; margin: 0 0 1em .75em; }
+.browse-columns { display: flex; gap: 3em; }
+.browse-column { flex: 1 1 0; min-width: 0; }
+.browse-column ol { margin-top: .5em; }
+.browse-column li { margin-bottom: .2em; }
 input {
   padding: 2px;
   border: 1px solid #333;
@@ -178,9 +184,18 @@ input {
 .users { margin-top: 1em; }
 .clear { clear: both; }
 
-.stats { border-collapse: collapse; }
+.stats-grid { display: flex; gap: 2em; align-items: flex-start; }
+.stat-column { flex: 1 1 0; min-width: 0; }
+.stat-item {
+  margin: 0 0 1em;
+  padding: .25em .6em .6em;
+  border: 1px dashed #777;
+  background: #222;
+}
+.stat-item .profile-calendar { margin-bottom: 0; }
+.stats { width: 100%; border-collapse: collapse; }
 .stats th, .stats td { padding: .25em .7em; border-bottom: 1px dotted #777; text-align: left; }
-.stats td { text-align: right; }
+.stats td.amount { text-align: right; }
 
 @media (max-width: 900px) {
   .menu { padding: 6.5em .6em .8em; background-size: 310px auto; }
@@ -198,5 +213,8 @@ input {
   .event .minibar { display: none; }
   .eventstatus { width: 65px; height: auto; }
   .info { float: none; max-width: none; margin: 0 0 1em; }
+  .browse-columns, .stats-grid { display: block; }
+  .browse-column ol { margin-bottom: 0; }
+  .searchform { margin-left: 0; }
   .columns { columns: 1; }
 }
