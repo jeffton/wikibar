@@ -1,0 +1,20 @@
+<?php
+
+$mysqli = new mysqli("localhost", "wikibar", "replace-me", "wikibar");
+
+// create test table
+$mysqli->query("DROP TABLE IF EXISTS test");
+$mysqli->query("CREATE TABLE test ( something int not null )");
+
+// insert value using prepared statement
+$smt = $mysqli->prepare("INSERT INTO test ( something ) VALUES (?)");
+$testvalue = 0;
+$smt->bind_param('i', $testvalue);
+$smt->execute();
+
+// print results
+$results = $mysqli->query("SELECT * FROM test");
+$row = $results->fetch_assoc();
+print_r($row);
+
+?>

@@ -1,3 +1,4 @@
+import hashlib
 import importlib.util
 import json
 import unittest
@@ -17,6 +18,31 @@ INSERT INTO `sample` (`id`, `name`, `note`) VALUES (2, 'Lin\\nje', 'x'), (3, 'It
         columns, rows = IMPORT_ARCHIVE.extract_insert(sql, "sample")
         self.assertEqual(columns, ["id", "name", "note"])
         self.assertEqual(rows, [[1, "Rock 'n' roll", None], [2, "Lin\nje", "x"], [3, "It's; okay", None]])
+
+
+class LegacySourceTests(unittest.TestCase):
+    def test_original_source_snapshots_are_present_without_private_artifacts(self):
+        legacy = ROOT / "legacy"
+        self.assertTrue((legacy / "2007-05-18/wikibar.dk/site/index.php").is_file())
+        self.assertTrue((legacy / "2007-05-18/wikibar.dk/classes/database.php").is_file())
+        self.assertTrue((legacy / "2016-12-08-partial/classes/eventapi.php").is_file())
+        self.assertTrue((legacy / "2016-12-08-partial/mobile/index.php").is_file())
+        self.assertFalse(any(legacy.rglob("*.sql")))
+        self.assertFalse((legacy / "2007-05-18/wikibar.dk/config.php").exists())
+        self.assertFalse((legacy / "2016-12-08-partial/config.php").exists())
+        self.assertFalse(any(path.name == "templates_c" for path in legacy.rglob("templates_c")))
+
+        manifest_path = legacy / "MANIFEST.sha256"
+        expected = {}
+        for line in manifest_path.read_text(encoding="utf-8").splitlines():
+            digest, path = line.split("  ", 1)
+            expected[path] = digest
+        actual = {
+            str(path.relative_to(legacy)): hashlib.sha256(path.read_bytes()).hexdigest()
+            for path in legacy.rglob("*")
+            if path.is_file() and path != manifest_path
+        }
+        self.assertEqual(actual, expected)
 
 
 class PublicArchiveTests(unittest.TestCase):

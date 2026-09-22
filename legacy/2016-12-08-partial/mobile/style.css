@@ -1,0 +1,75 @@
+body {
+  font-family: sans-serif;
+  background: black;
+  color: #ccc;
+  margin: 0;
+}
+
+.main {
+  margin: 0 1em 1em 1em;
+}
+
+.top {
+  background-color: #fc0;
+  background-image: url('logo.png');
+  background-repeat: no-repeat;
+  height: 48px;
+}
+
+.bottom {
+  background: #fc0;
+  padding: .5em 1em;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+  margin: .5em 0 .2em 0;
+}
+
+h1 {
+  border-bottom: 4px solid yellow;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+
+a {
+  color: yellow;
+  font-variant: small-caps;
+}
+
+.bottom a {
+  color: black;
+}
+
+a.button {
+  display: block;
+}
+
+.minibar {
+  float: right;
+  margin-left: .5em;
+}
+
+.event {
+  border-left: 2px solid #c80;
+  border-bottom: 1px solid #c80;
+  padding-left: .4em;
+  padding-bottom: .4em;
+  background-repeat: no-repeat;
+  background-position: 2px 50%;
+  min-height: 64px;
+  padding-left: 18px;
+}
+
+span.item {
+  white-space: nowrap;
+}

@@ -1,0 +1,490 @@
+/* overordnet */
+
+h1, h2, h3, h4 {
+  margin-bottom: .2em;
+  margin-top: .2em;
+  font-family: "trebuchet ms";
+  color: white;
+}
+
+h1 {
+  border-bottom: 4px solid #ff0;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  color: #ccc;
+}
+
+body, input, textarea, .button {
+  font-family: "trebuchet ms", sans-serif;
+}
+
+a {
+  color: lightblue;
+}
+
+a img {
+  border: none;
+  vertical-align: middle;
+}
+
+/* struktur */
+
+.content {
+  padding: 10px;
+  padding-top: 0;
+  text-align: justify;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: .8em;
+}
+
+.main {
+  width: 76%;
+  min-height: 20em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+/* menu */
+
+.menu {
+  background-color: #fc0;
+  padding: 2em;
+  text-align: right;
+  background-image: url('logo.png');
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+.menucontent {
+  padding-left: 280px;
+}
+
+.menucontent a {
+  margin-left: .8em;
+}
+
+.searchform {
+  display: inline;
+  padding-left: 1em;
+}
+
+
+/* fod */
+
+.foot {
+  clear: both;
+  background-color: #fa0;
+  color: black;
+  font-family: verdana, sans-serif;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.foot .login {
+  text-align: right;
+}
+
+.foot .login span {
+  font-size: .8em;
+  padding-right: 1em;
+  font-weight: bold;
+  color: #300;
+}
+
+.foot .links {
+  font-size: .7em;
+  text-align: center;
+}
+
+.foot .links a {
+  color: black;
+}
+
+
+/* infoboks */
+
+.info {
+  float: right;
+  margin: 10px;
+  margin-right: 0;
+  padding: 10px;
+  padding-top: 6px;
+  background-color: #333;
+  border: 1px dashed #777;
+  font-size: .9em;
+  max-width: 40%;
+  min-width: 12em;
+  overflow: hidden;
+}
+
+.info table {
+  border-collapse: collapse;
+}
+
+.info tr {
+  text-align: left;
+}
+
+.info td, .info th {
+  border-bottom: 1px dotted #999;
+}
+
+.info th {
+  padding-right: 10px;
+}
+
+.info table td.amount {
+  text-align: right;
+}
+
+/* editbar */
+
+.editbar {
+  float: right;
+  padding: 1px;
+  margin-top: 5px;
+  clear: both;
+  margin-bottom: 1em;
+}
+
+.abovetabs {
+  margin-bottom: -2em; /* til ie */
+}
+
+.minibar {
+  float: right;
+}
+
+.minibar .button {
+  display: block;
+  margin: 1px 0;
+  text-align: center;
+}
+
+
+/* link-knapper */
+
+.button {
+  font-variant: small-caps;
+  text-decoration: none;
+  border: 1px solid #b55;
+  padding: 0px 4px;
+  background: #711;
+  color: white;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background: #933;
+}
+
+.button:active {
+  background: #711;
+}
+
+span.item {
+  white-space: nowrap;
+}
+
+/* REDIGERING */
+
+input, textarea {
+  background-color: #444 !important; /* se code.jenseng.com/google */
+  color: white;
+  padding: 2px;
+  margin: 0;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+  font-size: .9em;
+}
+
+input.radio, input.checkbox {
+  border: none;
+  background-color: transparent !important;
+}
+
+input.checkbox {
+  vertical-align: middle;
+}
+
+input.amount {
+  text-align: right;
+}
+
+.toolbar {
+  margin-bottom: 2px;
+  font-size: .8em;
+  color: gray;
+}
+
+.edititem {
+  float: left;
+  padding: .5em;
+}
+
+.edititemlarge {
+  clear: left;
+  padding: .5em;
+}
+
+.edititem h2, .edititemlarge h2 {
+  padding-right: 1em;
+}
+
+.editor { }
+
+table.urlchooser {
+  border-collapse: collapse;
+}
+
+table.urlchooser td {
+  padding: 0 1px;
+}
+
+td.urlprefix {
+  text-align: right;
+}
+
+div.datedisplay {
+  font-size: .8em;
+  height: 3em;
+  width: 11em;
+  text-align: left;
+}
+
+label.eventtype {
+  float: left; 
+  text-align: center;
+  margin-right: 2em;
+  padding: 0 .1em;
+}
+
+label.eventtype, label.eventtype input {
+  cursor: pointer;
+}
+
+
+/* hjælp */
+
+.notice {
+  background-repeat: no-repeat;
+  background-position: 5px 50%;
+  padding-left: 35px;
+  margin: .4em 0;
+  min-height: 24px;
+}
+
+.notice div {
+  padding-left: .4em;
+  font-weight: bold;
+}
+
+.infotext {
+  background-image: url('info.png');
+}
+
+.infotext div {
+  border-left: 2px solid #669;
+  color: #ccf;
+}
+
+.errortext {
+  background-image: url('error.png');
+}
+
+.errortext div {
+  border-left: 2px solid #966;
+  color: #fcc;
+}
+
+
+.helplink {
+  padding-left: .5em;
+}
+
+#helpbox {
+  position: absolute;
+  width: 36%;
+  left: 32%;
+  min-height: 10%;
+  max-height: 50%;
+  overflow: auto;
+  top: 30%;
+  border: 1px solid #369;
+  padding: .8em;
+  background-color: #036;
+  z-index: 1;
+}
+
+#helpdisplay {
+  text-align: justify;
+  font-size: .8em;
+}
+
+/* tabs */
+
+.tabs {
+  padding: 0;
+  margin: 0;
+  padding-top: .5em;
+  width: 100%;
+  border-bottom: 4px solid yellow;
+  list-style-type: none;
+  padding-bottom: 1px;
+}
+
+.tabs li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  margin-left: .3em;
+  position: relative;
+  top: 1px;
+  white-space: nowrap;
+}
+
+.tabs li.inactive {
+  border: 1px solid orange;
+  background-color: #420;
+  border-bottom: 0;
+}
+
+.tabs li.active {
+  border: 3px solid yellow;
+  border-bottom: 4px solid black;
+}
+
+.tabs li {
+  font-size: 1.6em;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.tabs li a {
+  text-decoration: none;
+  font-variant: small-caps;
+  color: white;
+  padding: 0 .4em;
+}
+
+.tabs li.inactive a {
+  color: #ccc;
+}
+
+.tabs li.inactive a:hover {
+  color: white;
+}
+
+.tabpane {
+  border: 1px solid orange;
+  border-top: none;
+  padding: 10px;
+}
+
+/* KALENDER */
+
+.calendar {
+  text-align: left;
+}
+
+.calendar h2 {
+  margin-top: .6em;
+}
+
+.calendar h3 {
+  margin: 0;
+}
+
+.calendar .countdown {
+  font-size: .8em;
+  color: #ccc;
+}
+
+.event {
+  padding-left: 75px;
+  margin-top: .6em;
+  margin-bottom: 1em;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+.eventcontent {
+  min-height: 69px;
+  border-left: 2px solid #c80;
+  background-image: url('eventcorner.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.eventdetails {
+  padding-left: .5em;
+}
+
+.event .bands {
+  font-size: 1.05em;
+}
+
+.eventnotes {
+  color: #aaa;
+  padding-left: .5em;
+  padding-right: .5em;
+  margin-top: .5em;
+  border-top: 1px solid #c80;
+  font-size: .95em;
+  float:left;
+}
+
+.event .links {
+  font-size: .9em;
+}
+
+
+.event .guests {
+  font-size: .8em;
+}
+
+.calendarsmall {
+  margin-top: .6em;
+  margin-right: 10px;
+  float: left;
+  width: auto;
+}
+
+.calendar .at {
+  color: #999;
+  font-size: .8em;
+  padding-right: .5em;
+}
+
+
+/* hacks */
+
+.tabpane {
+  height: 1%; /*  for at give den hasLayout i IE; ellers flimrer kanten
+                  http://positioniseverything.net/explorer/peekaboo.html */
+}
+
+.hidden { /* display:hidden breaks IE enter-submit*/
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background:black !important;
+  color:black !important;
+}

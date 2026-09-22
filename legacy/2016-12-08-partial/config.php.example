@@ -1,0 +1,35 @@
+<?php
+
+$smartylib   = '/path/to/wikibar/_smarty/libs/';
+$smartylocal = '/path/to/wikibar/smarty/';
+
+$dbhost = 'localhost';
+$dbuser = 'wikibar';
+$dbpass = 'replace-me';
+$dbbase = 'wikibar';
+
+$folder = '/';
+
+$timezone = 'Europe/Copenhagen';
+
+$sessionpath = '/path/to/wikibar/sessions';
+
+define('ADS_ENABLED', false);
+
+//////////////////////////////////////////////////////////////////////
+
+function unsetConfigVars() {
+  global $dbhost, $dbuser, $dbpass, $dbbase;
+  unset($dbhost); unset($dbuser); unset($dbpass); unset($dbbase);
+
+  global $smartylib, $smartylocal;
+  unset($smartylib); unset($smartylocal);
+
+  global $timezone;
+  unset($timezone);
+
+  global $sessionpath;
+  unset($sessionpath);
+}
+
+?>

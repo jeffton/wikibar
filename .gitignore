@@ -6,3 +6,12 @@ __pycache__/
 *.sql
 *.zip
 archive/
+legacy/2007-05-18/wikibar.dk/config.php
+legacy/2016-12-08-partial/config.php
+legacy/**/*.sql
+legacy/**/smarty/templates_c/
+legacy/**/.DS_Store
+legacy/**/*.pnproj
+legacy/**/*.pnps
+legacy/**/*.ppg
+legacy/**/*.tws

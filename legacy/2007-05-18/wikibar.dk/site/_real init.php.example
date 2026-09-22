@@ -1,0 +1,33 @@
+<?php
+
+
+define('SMARTY_DIR', '/path/to/wikibar/_smarty/libs/');
+require_once(SMARTY_DIR . 'Smarty.class.php');
+$smarty = new Smarty();
+
+$smarty->template_dir = '/path/to/wikibar/wikibar.dk/smarty/templates';
+$smarty->compile_dir =  '/path/to/wikibar/wikibar.dk/smarty/templates_c';
+$smarty->config_dir =   '/path/to/wikibar/wikibar.dk/smarty/config';
+$smarty->cache_dir =    '/path/to/wikibar/wikibar.dk/smarty/cache';
+define('PLUGINS_DIR',   '/path/to/wikibar/wikibar.dk/smarty/plugins');
+$smarty->plugins_dir[] = PLUGINS_DIR;
+
+
+require_once "../../_utf8/utf8.php";
+require_once "../../_utf8/ucfirst.php";
+require_once "../../_utf8/strcasecmp.php";
+
+require_once "../classes/database.php";
+require_once "../classes/formatting.php";
+require_once "../classes/urls.php";
+require_once "../classes/datetools.php";
+
+
+$database = new database("localhost", "wikibar", "replace-me", "wikibar");
+$formatting = new Formatting();
+$datetools = new Datetools();
+
+define('HOST', 'http://localhost/');
+
+
+?>
