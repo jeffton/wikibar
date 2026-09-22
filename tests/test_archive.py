@@ -11,11 +11,12 @@ SPEC.loader.exec_module(IMPORT_ARCHIVE)
 
 
 class SqlParserTests(unittest.TestCase):
-    def test_parses_mysql_values(self):
-        sql = "INSERT INTO `sample` (`id`, `name`, `note`) VALUES (1, 'Rock ''n'' roll', NULL), (2, 'Lin\\nje', 'x');"
+    def test_parses_mysql_values_across_multiple_inserts(self):
+        sql = """INSERT INTO `sample` (`id`, `name`, `note`) VALUES (1, 'Rock ''n'' roll', NULL);
+INSERT INTO `sample` (`id`, `name`, `note`) VALUES (2, 'Lin\\nje', 'x'), (3, 'It\\'s; okay', NULL);"""
         columns, rows = IMPORT_ARCHIVE.extract_insert(sql, "sample")
         self.assertEqual(columns, ["id", "name", "note"])
-        self.assertEqual(rows, [[1, "Rock 'n' roll", None], [2, "Lin\nje", "x"]])
+        self.assertEqual(rows, [[1, "Rock 'n' roll", None], [2, "Lin\nje", "x"], [3, "It's; okay", None]])
 
 
 class PublicArchiveTests(unittest.TestCase):
@@ -25,12 +26,17 @@ class PublicArchiveTests(unittest.TestCase):
         cls.archive = json.loads(cls.archive_text)
 
     def test_expected_snapshot_counts(self):
-        self.assertEqual(len(self.archive["events"]), 79)
-        self.assertEqual(len(self.archive["bands"]), 112)
-        self.assertEqual(len(self.archive["venues"]), 19)
+        self.assertEqual(len(self.archive["events"]), 363)
+        self.assertEqual(len(self.archive["bands"]), 388)
+        self.assertEqual(len(self.archive["venues"]), 50)
+        self.assertEqual(len(self.archive["users"]), 21)
+        self.assertEqual(len(self.archive["appearances"]), 562)
 
     def test_private_tables_and_fields_are_absent(self):
-        forbidden = {"user", "users", "guest", "guests", "password", "passwordsalt", "mail", "history"}
+        forbidden = {
+            "password", "passwordsalt", "token", "tokenvalid", "mail", "mailconfirmed",
+            "mailtoken", "guest", "guests", "history", "attendance",
+        }
 
         def visit(value):
             if isinstance(value, dict):
@@ -43,11 +49,18 @@ class PublicArchiveTests(unittest.TestCase):
 
         visit(self.archive)
 
-    def test_private_home_venues_are_absent(self):
-        venue_names = {venue["name"] for venue in self.archive["venues"]}
-        self.assertNotIn("KO & MO's lejlighed", venue_names)
-        self.assertNotIn("Anna's lejlighed", venue_names)
-        self.assertTrue(all(event["venueId"] not in {13, 15} for event in self.archive["events"]))
+    def test_user_profiles_have_only_public_fields(self):
+        allowed = {"id", "name", "text", "website", "myspace", "facebook"}
+        self.assertTrue(all(set(user) == allowed for user in self.archive["users"]))
+
+    def test_home_events_are_present_without_addresses(self):
+        homes = {venue["id"]: venue for venue in self.archive["venues"] if venue["privateHome"]}
+        self.assertEqual(set(homes), {13, 15})
+        for home in homes.values():
+            self.assertIsNone(home["street"])
+            self.assertIsNone(home["postalCode"])
+            self.assertIsNone(home["city"])
+        self.assertEqual(sum(event["venueId"] in homes for event in self.archive["events"]), 3)
 
     def test_no_legacy_hashes_or_database_credentials(self):
         self.assertNotIn("passwordsalt", self.archive_text.lower())

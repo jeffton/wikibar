@@ -75,6 +75,7 @@ p { margin: 0 0 .8em; }
 }
 .button:hover, .button:focus { background: #933; }
 .button:active { background: #711; }
+.activebutton { border-color: #ff0; background: #933; }
 
 .notice {
   min-height: 24px;
@@ -89,9 +90,8 @@ p { margin: 0 0 .8em; }
 .errortext { background-image: url("layout/error.png"); }
 .errortext div { border-left: 2px solid #966; color: #fcc; }
 
-.archive-note { font-size: .85em; }
-
 .calendar { text-align: left; }
+.pager { clear: both; margin: .8em 0; text-align: center; }
 .calendar h2 { margin-top: .6em; }
 .calendar h3 { margin: 0; }
 
@@ -155,6 +155,8 @@ input {
 .columns { columns: 2; column-gap: 3em; }
 .columns li { break-inside: avoid; margin-bottom: .2em; }
 .empty { font-style: italic; }
+.social-text { font-size: .75em; }
+.users { margin-top: 1em; }
 .clear { clear: both; }
 
 .stats { border-collapse: collapse; }

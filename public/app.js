@@ -4,6 +4,8 @@ const main = document.querySelector("#main");
 const params = new URLSearchParams(location.search);
 const view = params.get("view") || "calendar";
 const id = Number(params.get("id"));
+const requestedPage = Math.max(1, Number.parseInt(params.get("page") || "1", 10) || 1);
+const EVENTS_PER_PAGE = 12;
 
 const labels = {
   concert: "koncert",
@@ -13,7 +15,7 @@ const labels = {
   festival: "festival",
 };
 
-const selectedNav = view === "venue" ? "venues" : view === "band" ? "bands" : view;
+const selectedNav = view === "venue" ? "venues" : view === "band" ? "bands" : view === "user" ? "users" : view;
 for (const link of document.querySelectorAll("[data-nav]")) {
   const nav = link.dataset.nav;
   const image = link.querySelector("img");
@@ -63,6 +65,11 @@ function entityLink(item, type) {
     link.rel = "noreferrer";
     wrapper.append(" ", link);
   }
+  if (item.facebook) {
+    const facebook = externalLink("Facebook", item.facebook);
+    facebook.className = "social-text";
+    wrapper.append(" ", facebook);
+  }
   return wrapper;
 }
 
@@ -75,10 +82,6 @@ function content() {
   const wrapper = node("div", { className: "content" });
   main.append(wrapper);
   return wrapper;
-}
-
-function notice(text) {
-  return node("div", { className: "notice infotext archive-note" }, [node("div", { text })]);
 }
 
 function archiveDate(value) {
@@ -162,14 +165,16 @@ function eventRows(data, events) {
     if (meta.childNodes.length) details.append(meta);
     eventContent.append(details);
 
-    if (event.text || event.website || event.myspace) {
+    if (event.text || event.website || event.myspace || event.facebook) {
       const notes = node("div", { className: "eventnotes" });
       if (event.text) notes.append(node("span", { className: "content-copy", text: event.text }));
-      if (event.website || event.myspace) {
+      const eventLinks = [event.website, event.myspace, event.facebook].filter(Boolean);
+      if (eventLinks.length) {
         const links = node("div", { className: "eventlinks" });
-        if (event.website) links.append(externalLink(event.website.replace(/^https?:\/\//, ""), event.website));
-        if (event.website && event.myspace) links.append(" • ");
-        if (event.myspace) links.append(externalLink(event.myspace.replace(/^https?:\/\//, ""), event.myspace));
+        eventLinks.forEach((url, index) => {
+          if (index) links.append(" • ");
+          links.append(externalLink(url.replace(/^https?:\/\//, ""), url));
+        });
         notes.append(links);
       }
       eventContent.append(notes);
@@ -182,12 +187,39 @@ function eventRows(data, events) {
   return calendar;
 }
 
-function showCalendar(data, events = data.events, title = "Kalender") {
-  heading(title);
+function pager(totalPages, currentPage) {
+  const bar = node("nav", { className: "editbar pager" });
+  bar.setAttribute("aria-label", "Kalendersider");
+  const first = Math.max(1, currentPage - 2);
+  const last = Math.min(totalPages, currentPage + 2);
+  const addPage = (page, label = `Side ${page}`) => {
+    const query = new URLSearchParams(location.search);
+    query.set("page", page);
+    const link = node("a", { className: `button${page === currentPage ? " activebutton" : ""}`, text: label, href: `?${query}` });
+    if (page === currentPage) link.setAttribute("aria-current", "page");
+    bar.append(link);
+  };
+  if (first > 1) addPage(1);
+  if (first > 2) bar.append(" … ");
+  for (let page = first; page <= last; page += 1) {
+    if (bar.childNodes.length) bar.append(" ");
+    addPage(page);
+  }
+  if (last < totalPages - 1) bar.append(" … ");
+  if (last < totalPages) {
+    bar.append(" ");
+    addPage(totalPages);
+  }
+  return bar;
+}
+
+function showCalendar(data) {
+  const totalPages = Math.ceil(data.events.length / EVENTS_PER_PAGE);
+  const page = Math.min(requestedPage, totalPages);
+  const events = data.events.slice((page - 1) * EVENTS_PER_PAGE, page * EVENTS_PER_PAGE);
+  heading(`Kalender${page > 1 ? ` (side ${page})` : ""}`);
   const wrapper = content();
-  wrapper.append(notice("Koncertkalenderen står på det sidste dataøjebliksbillede fra 28. august 2007."));
-  if (events.length) wrapper.append(eventRows(data, events));
-  else wrapper.append(node("em", { text: "Kalenderen er tom" }));
+  wrapper.append(eventRows(data, events), pager(totalPages, page));
 }
 
 function showBrowse(data, type) {
@@ -235,7 +267,7 @@ function showDetail(data, type, itemId) {
 
   if (type === "venue") {
     const address = [item.street, [item.postalCode, item.city].filter(Boolean).join(" "), item.country].filter(Boolean).join("\n");
-    infoHeading(box, "Adresse", address);
+    infoHeading(box, item.privateHome ? "Type" : "Adresse", item.privateHome ? "Privat hjem" : address);
     infoHeading(box, "Musikken starter", item.musicStarts);
     const prices = [
       ["Typisk entré", item.typicalEntry], ["Fadøl", item.draught], ["Flaskeøl", item.bottle],
@@ -252,6 +284,7 @@ function showDetail(data, type, itemId) {
   }
   if (item.website) infoHeading(box, "Website", externalLink(item.website.replace(/^https?:\/\//, ""), item.website));
   if (item.myspace) infoHeading(box, "MySpace", externalLink(item.myspace.replace(/^https?:\/\//, ""), item.myspace));
+  if (item.facebook) infoHeading(box, "Facebook", externalLink(item.facebook.replace(/^https?:\/\//, ""), item.facebook));
   if (box.children.length) wrapper.append(box);
   if (item.text) wrapper.append(node("p", { className: "content-copy", text: item.text }));
 
@@ -264,11 +297,27 @@ function showDetail(data, type, itemId) {
   wrapper.append(node("div", { className: "clear" }));
 }
 
-function showUsers() {
+function showUsers(data) {
   heading("Brugere");
   const wrapper = content();
-  wrapper.append(notice("Brugerkonti og login er ikke genåbnet."));
-  wrapper.append(node("p", { text: "Den oprindelige brugerdatabase, adgangskoder, profiler og deltagerlister er udeladt. Koncertkalenderen er bevaret som et skrivebeskyttet arkiv." }));
+  const list = node("ol", { className: "columns users" });
+  list.append(...data.users.map((user) => node("li", {}, [entityLink(user, "user")])));
+  wrapper.append(list);
+}
+
+function showUser(data, userId) {
+  const user = data.users.find((entry) => entry.id === userId);
+  if (!user) return showNotFound();
+  heading(`${user.name} (bruger)`);
+  const wrapper = content();
+  const box = node("aside", { className: "info" });
+  if (user.website) infoHeading(box, "Website", externalLink(user.website.replace(/^https?:\/\//, ""), user.website));
+  if (user.myspace) infoHeading(box, "MySpace", externalLink(user.myspace.replace(/^https?:\/\//, ""), user.myspace));
+  if (user.facebook) infoHeading(box, "Facebook", externalLink(user.facebook.replace(/^https?:\/\//, ""), user.facebook));
+  if (box.children.length) wrapper.append(box);
+  if (user.text) wrapper.append(node("p", { className: "content-copy", text: user.text }));
+  else wrapper.append(node("em", { text: "Denne bruger skrev ikke en profiltekst." }));
+  wrapper.append(node("div", { className: "clear" }));
 }
 
 function showAbout() {
@@ -276,17 +325,16 @@ function showAbout() {
   const wrapper = content();
   wrapper.append(
     node("p", { text: "Wikibar var en fælles koncertkalender, hvor brugerne kunne oprette og redigere events, bands og spillesteder – og fortælle, hvilke koncerter de tog til." }),
-    node("p", { text: "Denne udgave genskaber designet og det offentlige kalenderindhold fra det sidste bevarede databaseudtræk den 28. august 2007. Den kører som statiske filer uden PHP, MySQL, login eller skriveadgang." }),
-    node("p", { text: "Konti, adgangskoder, mails, deltagerlister, ændringshistorik og private hjemmeevents er ikke medtaget." }),
+    node("p", { text: "Denne udgave genskaber designet og indholdet fra den komplette bevarede databasekopi fra 8. december 2016. Den kører som statiske filer uden PHP, MySQL, login eller skriveadgang." }),
+    node("p", { text: "Alle events, bands, spillesteder og offentlige profiloplysninger er med. Adgangskoder, mails, tokens, deltagerlister, ændringshistorik og adresser på private hjem er udeladt." }),
   );
 }
 
 function showStats(data) {
   heading("Statistik");
   const wrapper = content();
-  wrapper.append(notice("Tal fra det rensede arkivøjebliksbillede."));
   const table = node("table", { className: "stats" });
-  for (const [label, value] of [["Events", data.events.length], ["Bands", data.bands.length], ["Spillesteder", data.venues.length]]) {
+  for (const [label, value] of [["Events", data.events.length], ["Bands", data.bands.length], ["Spillesteder", data.venues.length], ["Brugere", data.users.length]]) {
     table.append(node("tr", {}, [node("th", { text: label }), node("td", { text: String(value) })]));
   }
   wrapper.append(table);
@@ -306,7 +354,8 @@ fetch("data/archive.json")
     if (view === "calendar") showCalendar(data);
     else if (view === "bands" || view === "venues") showBrowse(data, view);
     else if (view === "band" || view === "venue") showDetail(data, view, id);
-    else if (view === "users") showUsers();
+    else if (view === "users") showUsers(data);
+    else if (view === "user") showUser(data, id);
     else if (view === "about") showAbout();
     else if (view === "stats") showStats(data);
     else showNotFound();

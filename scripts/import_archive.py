@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create the public, privacy-scrubbed Wikibar archive from the 2007 SQL dump."""
+"""Create the public, privacy-scrubbed Wikibar archive from a MySQL dump."""
 
 from __future__ import annotations
 
@@ -8,35 +8,49 @@ import json
 import re
 from pathlib import Path
 
-PUBLIC_TABLES = {"appearance", "band_version", "current", "event", "venue_version"}
-PRIVATE_VENUE_IDS = {13, 15}  # Private apartments in the original data.
+PRIVATE_HOME_IDS = {13, 15}
+CURRENT_TYPES = {"band", "event", "venue"}
+
+
+def extract_inserts(sql: str, table: str) -> tuple[list[str], list[list[object]]]:
+    """Extract and combine every INSERT statement for a table."""
+    marker = f"INSERT INTO `{table}`"
+    position = 0
+    columns: list[str] = []
+    rows: list[list[object]] = []
+
+    while (start := sql.find(marker, position)) >= 0:
+        columns_start = sql.index("(", start)
+        columns_end = sql.index(") VALUES", columns_start)
+        statement_columns = re.findall(r"`([^`]+)`", sql[columns_start:columns_end])
+        if columns and statement_columns != columns:
+            raise ValueError(f"Columns changed between INSERT statements for {table}")
+        columns = statement_columns
+        values_start = columns_end + len(") VALUES")
+        values_end = values_start
+        quoted = False
+        while values_end < len(sql):
+            char = sql[values_end]
+            if char == "\\" and quoted and values_end + 1 < len(sql):
+                values_end += 2
+                continue
+            if char == "'":
+                if quoted and values_end + 1 < len(sql) and sql[values_end + 1] == "'":
+                    values_end += 2
+                    continue
+                quoted = not quoted
+            elif char == ";" and not quoted:
+                break
+            values_end += 1
+        rows.extend(parse_tuples(sql[values_start:values_end]))
+        position = values_end + 1
+
+    return columns, rows
 
 
 def extract_insert(sql: str, table: str) -> tuple[list[str], list[list[object]]]:
-    marker = f"INSERT INTO `{table}`"
-    start = sql.find(marker)
-    if start < 0:
-        return [], []
-
-    columns_start = sql.index("(", start)
-    columns_end = sql.index(") VALUES", columns_start)
-    columns = re.findall(r"`([^`]+)`", sql[columns_start:columns_end])
-    values_start = columns_end + len(") VALUES")
-
-    values_end = values_start
-    quoted = False
-    while values_end < len(sql):
-        char = sql[values_end]
-        if char == "'":
-            if quoted and values_end + 1 < len(sql) and sql[values_end + 1] == "'":
-                values_end += 2
-                continue
-            quoted = not quoted
-        elif char == ";" and not quoted:
-            break
-        values_end += 1
-
-    return columns, parse_tuples(sql[values_start:values_end])
+    """Compatibility wrapper used by the parser test and older callers."""
+    return extract_inserts(sql, table)
 
 
 def parse_tuples(source: str) -> list[list[object]]:
@@ -97,7 +111,7 @@ def parse_tuples(source: str) -> list[list[object]]:
 
 
 def records(sql: str, table: str) -> list[dict[str, object]]:
-    columns, rows = extract_insert(sql, table)
+    columns, rows = extract_inserts(sql, table)
     return [dict(zip(columns, row, strict=True)) for row in rows]
 
 
@@ -110,11 +124,20 @@ def clean_url(value: object) -> str | None:
     return f"https://{url}"
 
 
+def social_url(value: object, service: str) -> str | None:
+    if not value:
+        return None
+    raw = str(value).strip()
+    if raw.startswith(("http://", "https://")):
+        return raw
+    return f"https://{service}.com/{raw}"
+
+
 def build_archive(sql: str) -> dict[str, object]:
     current = {
         (row["type"], row["id"]): row["version"]
         for row in records(sql, "current")
-        if row["type"] in {"band", "venue"}
+        if row["type"] in CURRENT_TYPES
     }
 
     bands = []
@@ -125,53 +148,71 @@ def build_archive(sql: str) -> dict[str, object]:
             "id": row["id"], "name": row["name"], "sortName": row["name_sort"],
             "country": row["country"], "text": row["text"],
             "website": clean_url(row["url_website"]),
-            "myspace": clean_url(f"myspace.com/{row['url_myspace']}") if row["url_myspace"] else None,
+            "myspace": social_url(row["url_myspace"], "myspace"),
+            "facebook": social_url(row["url_facebook"], "facebook"),
         })
 
     venues = []
     for row in records(sql, "venue_version"):
-        if row["id"] in PRIVATE_VENUE_IDS or current.get(("venue", row["id"])) != row["version"]:
+        if current.get(("venue", row["id"])) != row["version"]:
             continue
+        private_home = row["id"] in PRIVATE_HOME_IDS
         venues.append({
             "id": row["id"], "name": row["name"], "sortName": row["name_sort"],
-            "street": row["address_street"], "postalCode": row["address_postalcode"],
-            "city": row["address_city"], "country": row["address_country"],
+            "privateHome": private_home,
+            "street": None if private_home else row["address_street"],
+            "postalCode": None if private_home else row["address_postalcode"],
+            "city": None if private_home else row["address_city"],
+            "country": None if private_home else row["address_country"],
             "typicalEntry": row["price_entry"], "bottle": row["price_bottle"],
             "draught": row["price_draught"], "shot": row["price_shot"],
             "drink": row["price_drink"], "wardrobe": row["wardrobe"],
             "wardrobePrice": row["wardrobe_price"], "musicStarts": row["music_starts_at"],
             "website": clean_url(row["url_website"]),
-            "myspace": clean_url(f"myspace.com/{row['url_myspace']}") if row["url_myspace"] else None,
+            "myspace": social_url(row["url_myspace"], "myspace"),
+            "facebook": social_url(row["url_facebook"], "facebook"),
             "text": row["text"],
         })
 
     events = []
-    allowed_event_ids: set[int] = set()
-    for row in records(sql, "event"):
-        if row["venueID"] in PRIVATE_VENUE_IDS:
+    event_versions: dict[int, int] = {}
+    for row in records(sql, "event_version"):
+        if current.get(("event", row["id"])) != row["version"]:
             continue
-        allowed_event_ids.add(int(row["id"]))
+        event_id = int(row["id"])
+        event_versions[event_id] = int(row["version"])
         events.append({
             "id": row["id"], "type": row["eventtype"], "name": row["name"],
             "venueId": row["venueID"], "date": row["date"], "time": row["time"],
             "endDate": row["enddate"], "price": row["price"], "text": row["text"],
             "website": clean_url(row["url_website"]),
-            "myspace": clean_url(f"myspace.com/{row['url_myspace']}") if row["url_myspace"] else None,
+            "myspace": social_url(row["url_myspace"], "myspace"),
+            "facebook": social_url(row["url_facebook"], "facebook"),
             "status": row["status"],
         })
 
     appearances = [
         {"eventId": row["eventID"], "bandId": row["bandID"], "sequence": row["sequence"]}
-        for row in records(sql, "appearance") if row["eventID"] in allowed_event_ids
+        for row in records(sql, "appearance_version")
+        if event_versions.get(int(row["eventID"])) == row["version"]
     ]
+
+    users = [{
+        "id": row["id"], "name": row["name"], "text": row["text"],
+        "website": clean_url(row["url_website"]),
+        "myspace": social_url(row["url_myspace"], "myspace"),
+        "facebook": social_url(row["url_facebook"], "facebook"),
+    } for row in records(sql, "user")]
 
     return {
         "meta": {
-            "snapshot": "2007-08-28",
-            "privacy": "Accounts, credentials, attendance, edit history and private-home events are excluded.",
+            "snapshot": "2016-12-08",
+            "dataThrough": max(str(event["date"]) for event in events),
+            "privacy": "Passwords, salts, tokens, email addresses, attendance and edit history are excluded. Private-home addresses are excluded.",
         },
         "bands": sorted(bands, key=lambda row: str(row["sortName"]).casefold()),
         "venues": sorted(venues, key=lambda row: str(row["sortName"]).casefold()),
+        "users": sorted(users, key=lambda row: str(row["name"]).casefold()),
         "events": sorted(events, key=lambda row: (str(row["date"]), int(row["id"]))),
         "appearances": appearances,
     }
@@ -179,7 +220,7 @@ def build_archive(sql: str) -> dict[str, object]:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("source", type=Path, help="Path to the private 2007 MySQL dump")
+    parser.add_argument("source", type=Path, help="Path to the private MySQL dump")
     parser.add_argument("output", type=Path, nargs="?", default=Path("public/data/archive.json"))
     args = parser.parse_args()
 
@@ -187,8 +228,8 @@ def main() -> None:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(archive, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
-        f"Wrote {len(archive['events'])} events, {len(archive['bands'])} bands and "
-        f"{len(archive['venues'])} venues to {args.output}"
+        f"Wrote {len(archive['events'])} events, {len(archive['bands'])} bands, "
+        f"{len(archive['venues'])} venues and {len(archive['users'])} users to {args.output}"
     )
 
 

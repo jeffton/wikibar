@@ -1,19 +1,19 @@
 # Wikibar
 
-En sikker, skrivebeskyttet genoplivning af koncertkalenderen **wikibar.dk** fra 2007.
+En sikker, skrivebeskyttet genoplivning af koncertkalenderen **wikibar.dk**.
 
-Siden bevarer det oprindelige sorte/gule design, bitmapmenuen og det sidste bevarede offentlige kalenderindhold. Den består kun af statiske HTML-, CSS-, JavaScript- og JSON-filer. Der er ingen PHP, database, login eller skriveadgang.
+Siden bevarer det oprindelige sorte/gule design, bitmapmenuen og det komplette bevarede kalenderindhold. Den består kun af statiske HTML-, CSS-, JavaScript- og JSON-filer. Der er ingen PHP, database, login eller skriveadgang.
 
 ## Data og privatliv
 
-Dataene stammer fra databaseøjebliksbilledet 28. august 2007. Importen medtager kun:
+Dataene stammer fra den komplette databasekopi fra 8. december 2016 og indeholder events til og med 30. juni 2012. Importen medtager:
 
-- events
-- bands
-- offentlige spillesteder
+- alle 363 events, inklusive hjemmeevents
+- bands og spillesteder
+- offentlige brugerprofiler
 - relationen mellem events og bands
 
-Brugerkonti, password-hashes, salts, mails, profiler, deltagerlister, ændringshistorik, databasecredentials og events i private hjem er udeladt. Det oprindelige SQL-dump ligger ikke i repositoryet.
+Adgangskoder, salts, tokens, mails, deltagerlister, ændringshistorik og adresser på private hjem er udeladt. Det oprindelige SQL-dump ligger ikke i repositoryet.
 
 `scripts/import_archive.py` kan genskabe `public/data/archive.json` fra det private dump:
 
