@@ -54,6 +54,12 @@ class PublicArchiveTests(unittest.TestCase):
         self.assertNotIn("mysql1035", self.archive_text.lower())
         self.assertNotRegex(self.archive_text, r"[a-f0-9]{96,}")
 
+    def test_original_event_artwork_is_present(self):
+        layout = ROOT / "public/layout"
+        for event_type in ("concert", "festival", "party", "release", "releaseparty"):
+            self.assertTrue((layout / f"event-{event_type}.png").is_file())
+        self.assertTrue((layout / "eventcorner.png").is_file())
+
 
 if __name__ == "__main__":
     unittest.main()

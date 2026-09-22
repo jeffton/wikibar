@@ -22,7 +22,8 @@ h1, h2, h3, h4 {
 h1 { border-bottom: 4px solid #ff0; }
 h2 { font-size: 1.2em; }
 a { color: lightblue; }
-a img { border: 0; }
+a img { border: 0; vertical-align: middle; }
+.item { white-space: nowrap; }
 p { margin: 0 0 .8em; }
 
 .menu {
@@ -90,23 +91,39 @@ p { margin: 0 0 .8em; }
 
 .archive-note { font-size: .85em; }
 
-.calendar {
-  width: 100%;
-  margin-top: .5em;
-  border-collapse: collapse;
-  text-align: left;
+.calendar { text-align: left; }
+.calendar h2 { margin-top: .6em; }
+.calendar h3 { margin: 0; }
+
+.event {
+  min-height: 69px;
+  margin: .6em 0 1em;
+  padding-left: 75px;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
 }
-.calendar .top td { border-bottom: 1px dotted orange; }
-.calendar .date { padding: .2em; color: #fff; font-size: 1.05em; font-weight: bold; }
-.calendar .edit { padding-left: 1em; text-align: right; }
-.calendar .bottom { font-size: .95em; }
-.calendar .bottom td { padding: .3em .7em 1.5em; vertical-align: top; }
-.calendar .event-main { width: 37%; }
-.calendar .venue { width: 28%; }
-.calendar .at { padding-right: .5em; color: #999; font-size: .8em; }
-.calendar .price { text-align: right; white-space: nowrap; }
-.event-status { color: #f88; font-weight: bold; }
-.event-type { color: #999; font-size: .8em; }
+.eventcontent {
+  min-height: 69px;
+  overflow: hidden;
+  border-left: 2px solid #c80;
+  background: url("layout/eventcorner.png") bottom right no-repeat;
+}
+.eventdetails { padding-left: .5em; }
+.eventbands { font-size: 1.05em; }
+.eventnotes {
+  float: left;
+  margin-top: .5em;
+  padding: .15em .5em;
+  border-top: 1px solid #c80;
+  color: #aaa;
+  font-size: .95em;
+}
+.eventlinks { padding-top: .15em; font-size: .9em; }
+.eventmeta { margin-top: .1em; }
+.at { padding-right: .5em; color: #999; font-size: .8em; }
+.minibar { float: right; margin-left: .5em; }
+.minibar .button { display: block; margin-bottom: 1px; text-align: center; }
+.eventstatus { float: right; margin: 0 8px; }
 
 .info {
   float: right;
@@ -156,9 +173,9 @@ input {
   .menucontent { font-size: 0; }
   .menucontent a { margin-right: 3px; }
   .menucontent img { width: auto; height: 38px; }
-  .calendar .edit { display: none; }
-  .calendar .bottom td { display: block; width: auto; padding: .25em .5em; }
-  .calendar .bottom td:last-child { padding-bottom: 1.4em; text-align: left; }
+  .event { padding-left: 58px; background-size: auto 60px; }
+  .event .minibar { display: none; }
+  .eventstatus { width: 65px; height: auto; }
   .info { float: none; max-width: none; margin: 0 0 1em; }
   .columns { columns: 1; }
 }

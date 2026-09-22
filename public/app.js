@@ -45,6 +45,27 @@ function route(label, targetView, targetId) {
   return node("a", { text: label, href: `?${query}` });
 }
 
+function entityLink(item, type) {
+  const wrapper = node("span", { className: "item" }, [route(item.name, type, item.id)]);
+  for (const [url, image, label, width, height] of [
+    [item.website, "linkicon-website.png", "Website", 18, 18],
+    [item.myspace, "linkicon-myspace.png", "MySpace", 17, 19],
+  ]) {
+    if (!url) continue;
+    const icon = node("img");
+    icon.src = `layout/${image}`;
+    icon.alt = label;
+    icon.title = label;
+    icon.width = width;
+    icon.height = height;
+    const link = node("a", { href: url }, [icon]);
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    wrapper.append(" ", link);
+  }
+  return wrapper;
+}
+
 function heading(title) {
   document.title = `${title} på wikibar.dk`;
   main.replaceChildren(node("h1", { text: title }));
@@ -81,44 +102,84 @@ function eventRows(data, events) {
   }
   for (const list of appearances.values()) list.sort((a, b) => a.sequence - b.sequence);
 
-  const table = node("table", { className: "calendar" });
+  const calendar = node("div", { className: "calendar" });
+  let previousDate = null;
   for (const event of events) {
-    const date = event.endDate
-      ? `${archiveDate(event.date)} – ${archiveDate(event.endDate)}`
-      : archiveDate(event.date);
-    const dateLabel = event.time ? `${date}, ${event.time.slice(0, 5)}` : date;
-    const edit = node("td", { className: "edit" }, [
-      node("a", { className: "button", text: "Jeg er på!", href: "?view=users" }),
-      document.createTextNode(" "),
+    if (event.date !== previousDate || event.endDate) {
+      const dateHeading = node("h2", { text: archiveDate(event.date) });
+      if (event.endDate) {
+        dateHeading.append(" ", node("span", { className: "item" }, [
+          node("small", { text: `til ${archiveDate(event.endDate)}` }),
+        ]));
+      }
+      calendar.append(dateHeading);
+    }
+    previousDate = event.date;
+
+    const card = node("article", { className: "event" });
+    card.style.backgroundImage = `url("layout/event-${event.type}.png")`;
+    card.setAttribute("aria-label", labels[event.type] || event.type);
+
+    const eventContent = node("div", { className: "eventcontent" });
+    eventContent.append(node("div", { className: "minibar" }, [
       node("a", { className: "button", text: "Redigér event", href: "?view=about" }),
-    ]);
-    table.append(node("tr", { className: "top" }, [
-      node("td", { className: "date", text: dateLabel }), edit,
+      node("a", { className: "button", text: "Jeg er på!", href: "?view=users" }),
     ]));
-    table.lastChild.firstChild.colSpan = 3;
 
-    const eventMain = node("td", { className: "event-main" });
-    if (event.name) eventMain.append(node("strong", { text: event.name }), node("br"));
+    if (event.status) {
+      const statusImage = node("img", { className: "eventstatus" });
+      statusImage.src = `layout/eventstatus_${event.status}.png`;
+      statusImage.alt = event.status === "soldout" ? "UDSOLGT" : "AFLYST";
+      statusImage.width = 86;
+      statusImage.height = 40;
+      eventContent.append(statusImage);
+    }
+
+    const details = node("div", { className: "eventdetails" });
+    if (event.name) details.append(node("h3", { text: event.name }));
+
     const eventBands = (appearances.get(event.id) || []).map((item) => bands.get(item.bandId)).filter(Boolean);
-    eventBands.forEach((band, index) => {
-      eventMain.append(route(band.name, "band", band.id));
-      if (index < eventBands.length - 1) eventMain.append(node("br"));
-    });
-    if (!eventBands.length && event.name) eventMain.append(node("span", { className: "event-type", text: labels[event.type] || event.type }));
-    if (event.status) eventMain.append(node("br"), node("span", {
-      className: "event-status", text: event.status === "soldout" ? "UDSOLGT" : "AFLYST",
-    }));
-    if (event.text) eventMain.title = event.text;
+    if (eventBands.length) {
+      const bandLine = node("div", { className: "eventbands" });
+      eventBands.forEach((band, index) => {
+        bandLine.append(entityLink(band, "band"));
+        if (index < eventBands.length - 1) bandLine.append(" • ");
+      });
+      details.append(bandLine);
+    }
 
-    const venueCell = node("td", { className: "venue" });
+    const meta = node("div", { className: "eventmeta" });
+    if (event.time) meta.append(event.time.slice(0, 5));
     const venue = venues.get(event.venueId);
-    if (venue) venueCell.append(node("span", { className: "at", text: "@" }), route(venue.name, "venue", venue.id));
+    if (venue) {
+      if (meta.childNodes.length) meta.append(" ");
+      meta.append(node("span", { className: "at", text: "@" }), entityLink(venue, "venue"));
+    }
+    if (event.price !== null) {
+      if (meta.childNodes.length) meta.append(" – ");
+      meta.append(`${event.price} kr.`);
+    }
+    if (meta.childNodes.length) details.append(meta);
+    eventContent.append(details);
 
-    const kind = node("td", { className: "event-type", text: labels[event.type] || event.type });
-    const price = node("td", { className: "price", text: event.price === null ? "" : `${event.price} kr.` });
-    table.append(node("tr", { className: "bottom" }, [eventMain, venueCell, kind, price]));
+    if (event.text || event.website || event.myspace) {
+      const notes = node("div", { className: "eventnotes" });
+      if (event.text) notes.append(node("span", { className: "content-copy", text: event.text }));
+      if (event.website || event.myspace) {
+        const links = node("div", { className: "eventlinks" });
+        if (event.website) links.append(externalLink(event.website.replace(/^https?:\/\//, ""), event.website));
+        if (event.website && event.myspace) links.append(" • ");
+        if (event.myspace) links.append(externalLink(event.myspace.replace(/^https?:\/\//, ""), event.myspace));
+        notes.append(links);
+      }
+      eventContent.append(notes);
+    }
+
+    eventContent.append(node("div", { className: "clear" }));
+    card.append(eventContent);
+    calendar.append(card);
   }
-  return table;
+  return calendar;
 }
 
 function showCalendar(data, events = data.events, title = "Kalender") {
@@ -149,7 +210,7 @@ function showBrowse(data, type) {
   const draw = () => {
     const query = input.value.trim().toLocaleLowerCase("da");
     const matches = items.filter((item) => item.name.toLocaleLowerCase("da").includes(query));
-    list.replaceChildren(...matches.map((item) => node("li", {}, [route(item.name, singular, item.id)])));
+    list.replaceChildren(...matches.map((item) => node("li", {}, [entityLink(item, singular)])));
     if (!matches.length) list.append(node("li", { className: "empty", text: "(ingen resultater)" }));
   };
   form.addEventListener("submit", (event) => { event.preventDefault(); draw(); });
