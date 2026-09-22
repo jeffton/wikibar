@@ -45,6 +45,24 @@ class LegacySourceTests(unittest.TestCase):
         self.assertEqual(actual, expected)
 
 
+class StaticAppTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.source = (ROOT / "public/app.js").read_text(encoding="utf-8")
+        cls.archive = json.loads((ROOT / "public/data/archive.json").read_text(encoding="utf-8"))
+
+    def test_profile_list_is_compact_and_links_to_calendar_event(self):
+        self.assertEqual(self.source.count("events.slice(-6).reverse()"), 2)
+        self.assertIn('href: `?view=calendar&page=${page}#event-${event.id}`', self.source)
+        self.assertIn('card.id = `event-${event.id}`', self.source)
+        self.assertIn('location.hash === `#event-${event.id}`', self.source)
+        self.assertIn('scrollIntoView({ block: "center" })', self.source)
+
+    def test_known_profile_event_resolves_to_its_calendar_page(self):
+        event_index = next(index for index, event in enumerate(self.archive["events"]) if event["id"] == 362)
+        self.assertEqual(event_index // 12 + 1, 31)
+
+
 class PublicArchiveTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -58,6 +76,13 @@ class PublicArchiveTests(unittest.TestCase):
         self.assertEqual(len(self.archive["users"]), 21)
         self.assertEqual(len(self.archive["appearances"]), 562)
         self.assertEqual(len(self.archive["attendance"]), 245)
+
+    def test_events_use_the_original_calendar_order(self):
+        events = self.archive["events"]
+        expected = sorted(events, key=lambda event: (
+            event["date"], event["time"] or "", event["endDate"] or "", event["id"],
+        ))
+        self.assertEqual(events, expected)
 
     def test_private_tables_and_fields_are_absent(self):
         forbidden = {
@@ -103,6 +128,7 @@ class PublicArchiveTests(unittest.TestCase):
         layout = ROOT / "public/layout"
         for event_type in ("concert", "festival", "party", "release", "releaseparty"):
             self.assertTrue((layout / f"event-{event_type}.png").is_file())
+            self.assertTrue((layout / f"eventsmall-{event_type}.png").is_file())
         self.assertTrue((layout / "eventcorner.png").is_file())
 
 

@@ -218,7 +218,9 @@ def build_archive(sql: str) -> dict[str, object]:
         "bands": sorted(bands, key=lambda row: str(row["sortName"]).casefold()),
         "venues": sorted(venues, key=lambda row: str(row["sortName"]).casefold()),
         "users": sorted(users, key=lambda row: str(row["name"]).casefold()),
-        "events": sorted(events, key=lambda row: (str(row["date"]), int(row["id"]))),
+        "events": sorted(events, key=lambda row: (
+            str(row["date"]), str(row["time"] or ""), str(row["endDate"] or ""), int(row["id"]),
+        )),
         "appearances": appearances,
         "attendance": attendance,
     }

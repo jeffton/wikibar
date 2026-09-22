@@ -125,7 +125,9 @@ function eventRows(data, events) {
     }
     previousDate = event.date;
 
-    const card = node("article", { className: "event" });
+    const highlighted = location.hash === `#event-${event.id}`;
+    const card = node("article", { className: `event${highlighted ? " eventhighlight" : ""}` });
+    card.id = `event-${event.id}`;
     card.style.backgroundImage = `url("layout/event-${event.type}.png")`;
     card.setAttribute("aria-label", labels[event.type] || event.type);
 
@@ -200,6 +202,45 @@ function eventRows(data, events) {
     card.append(eventContent);
     calendar.append(card);
   }
+  return calendar;
+}
+
+function compactEventRows(data, events, profileType, profileId) {
+  const bands = new Map(data.bands.map((band) => [band.id, band]));
+  const venues = new Map(data.venues.map((venue) => [venue.id, venue]));
+  const appearances = new Map();
+  for (const appearance of data.appearances) {
+    if (!appearances.has(appearance.eventId)) appearances.set(appearance.eventId, []);
+    appearances.get(appearance.eventId).push(appearance);
+  }
+  for (const list of appearances.values()) list.sort((a, b) => a.sequence - b.sequence);
+
+  const calendar = node("div", { className: "profile-calendar" });
+  events.forEach((event, index) => {
+    const row = node("article", { className: `smallevent${index === events.length - 1 ? " lastsmallevent" : ""}` });
+    row.style.backgroundImage = `url("layout/eventsmall-${event.type}.png")`;
+    const eventIndex = data.events.findIndex((entry) => entry.id === event.id);
+    const page = Math.floor(eventIndex / EVENTS_PER_PAGE) + 1;
+    row.append(node("div", { className: "minibar" }, [
+      node("a", { className: "button", text: "Vis", href: `?view=calendar&page=${page}#event-${event.id}` }),
+    ]));
+    row.append(node("h3", { text: archiveDate(event.date) }));
+    if (event.name) row.append(node("h4", { text: event.name }));
+
+    const eventBands = (appearances.get(event.id) || [])
+      .map((appearance) => bands.get(appearance.bandId))
+      .filter((band) => band && !(profileType === "band" && band.id === profileId));
+    if (eventBands.length) {
+      const names = eventBands.map((band) => `${band.name}${band.country ? ` (${band.country})` : ""}`).join(" • ");
+      const bandLine = node("div");
+      if (profileType === "band") bandLine.append(node("strong", { text: "+" }), " ");
+      bandLine.append(names);
+      row.append(bandLine);
+    }
+    const venue = venues.get(event.venueId);
+    if (venue && profileType !== "venue") row.append(node("div", {}, [node("span", { className: "at", text: "@" }), venue.name]));
+    calendar.append(row);
+  });
   return calendar;
 }
 
@@ -310,7 +351,7 @@ function showDetail(data, type, itemId) {
   const events = data.events.filter((event) => type === "band" ? matchingEventIds.has(event.id) : event.venueId === item.id);
   if (events.length) {
     wrapper.append(node("h2", { className: "clear", text: "Tidligere events" }));
-    wrapper.append(eventRows(data, events.slice(-6).reverse()));
+    wrapper.append(compactEventRows(data, events.slice(-6).reverse(), type, item.id));
   } else {
     wrapper.append(node("em", { text: "Kalenderen er tom" }));
   }
@@ -342,7 +383,7 @@ function showUser(data, userId) {
   const events = data.events.filter((event) => eventIds.has(event.id));
   if (events.length) {
     wrapper.append(node("h2", { className: "clear", text: "Tidligere events" }));
-    wrapper.append(eventRows(data, events.slice(-6).reverse()));
+    wrapper.append(compactEventRows(data, events.slice(-6).reverse(), "user", user.id));
   }
   wrapper.append(node("div", { className: "clear" }));
 }
@@ -387,6 +428,7 @@ fetch("data/archive.json")
     else if (view === "stats") showStats(data);
     else showNotFound();
     main.focus({ preventScroll: true });
+    if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView({ block: "center" });
   })
   .catch((error) => {
     heading("Fejl");
