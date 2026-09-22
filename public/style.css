@@ -112,7 +112,7 @@ p { margin: 0 0 .8em; }
 .eventdetails { padding-left: .5em; }
 .eventbands { font-size: 1.05em; }
 .eventnotes {
-  float: left;
+  width: 100%;
   margin-top: .5em;
   padding: .15em .5em;
   border-top: 1px solid #c80;
