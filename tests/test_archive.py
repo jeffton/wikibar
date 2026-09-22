@@ -58,6 +58,12 @@ class StaticAppTests(unittest.TestCase):
         self.assertIn('location.hash === `#event-${event.id}`', self.source)
         self.assertIn('scrollIntoView({ block: "center" })', self.source)
 
+    def test_facebook_links_use_the_original_accessible_icon(self):
+        self.assertEqual(self.source.count('"linkicon-facebook.png", "Facebook", 18, 18'), 2)
+        self.assertIn("icon.alt = label", self.source)
+        self.assertIn("icon.width = width", self.source)
+        self.assertIn("icon.height = height", self.source)
+
     def test_known_profile_event_resolves_to_its_calendar_page(self):
         event_index = next(index for index, event in enumerate(self.archive["events"]) if event["id"] == 362)
         self.assertEqual(event_index // 12 + 1, 31)
@@ -130,6 +136,12 @@ class PublicArchiveTests(unittest.TestCase):
             self.assertTrue((layout / f"event-{event_type}.png").is_file())
             self.assertTrue((layout / f"eventsmall-{event_type}.png").is_file())
         self.assertTrue((layout / "eventcorner.png").is_file())
+        facebook_icon = layout / "linkicon-facebook.png"
+        self.assertTrue(facebook_icon.is_file())
+        self.assertEqual(
+            hashlib.sha256(facebook_icon.read_bytes()).hexdigest(),
+            "18956b7dcedd7732226d8e4a09e94635d01bfa94e2b09b213afd0f2dcd868a12",
+        )
 
 
 if __name__ == "__main__":

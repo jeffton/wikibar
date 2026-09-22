@@ -175,7 +175,6 @@ input {
 .columns { columns: 2; column-gap: 3em; }
 .columns li { break-inside: avoid; margin-bottom: .2em; }
 .empty { font-style: italic; }
-.social-text { font-size: .75em; }
 .users { margin-top: 1em; }
 .clear { clear: both; }
 

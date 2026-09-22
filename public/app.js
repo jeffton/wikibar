@@ -47,28 +47,27 @@ function route(label, targetView, targetId) {
   return node("a", { text: label, href: `?${query}` });
 }
 
+function iconLink(url, image, label, width, height) {
+  const icon = node("img");
+  icon.src = `layout/${image}`;
+  icon.alt = label;
+  icon.title = label;
+  icon.width = width;
+  icon.height = height;
+  const link = node("a", { href: url }, [icon]);
+  link.target = "_blank";
+  link.rel = "noreferrer";
+  return link;
+}
+
 function entityLink(item, type) {
   const wrapper = node("span", { className: "item" }, [route(item.name, type, item.id)]);
   for (const [url, image, label, width, height] of [
     [item.website, "linkicon-website.png", "Website", 18, 18],
     [item.myspace, "linkicon-myspace.png", "MySpace", 17, 19],
+    [item.facebook, "linkicon-facebook.png", "Facebook", 18, 18],
   ]) {
-    if (!url) continue;
-    const icon = node("img");
-    icon.src = `layout/${image}`;
-    icon.alt = label;
-    icon.title = label;
-    icon.width = width;
-    icon.height = height;
-    const link = node("a", { href: url }, [icon]);
-    link.target = "_blank";
-    link.rel = "noreferrer";
-    wrapper.append(" ", link);
-  }
-  if (item.facebook) {
-    const facebook = externalLink("Facebook", item.facebook);
-    facebook.className = "social-text";
-    wrapper.append(" ", facebook);
+    if (url) wrapper.append(" ", iconLink(url, image, label, width, height));
   }
   return wrapper;
 }
@@ -186,13 +185,16 @@ function eventRows(data, events) {
     if (event.text || event.website || event.myspace || event.facebook) {
       const notes = node("div", { className: "eventnotes" });
       if (event.text) notes.append(node("span", { className: "content-copy", text: event.text }));
-      const eventLinks = [event.website, event.myspace, event.facebook].filter(Boolean);
-      if (eventLinks.length) {
+      const eventLinks = [
+        [event.website, "linkicon-website.png", "Website", 18, 18],
+        [event.myspace, "linkicon-myspace.png", "MySpace", 17, 19],
+        [event.facebook, "linkicon-facebook.png", "Facebook", 18, 18],
+      ];
+      if (eventLinks.some(([url]) => url)) {
         const links = node("div", { className: "eventlinks" });
-        eventLinks.forEach((url, index) => {
-          if (index) links.append(" • ");
-          links.append(externalLink(url.replace(/^https?:\/\//, ""), url));
-        });
+        for (const [url, image, label, width, height] of eventLinks) {
+          if (url) links.append(iconLink(url, image, label, width, height), " ");
+        }
         notes.append(links);
       }
       eventContent.append(notes);
