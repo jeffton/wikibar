@@ -433,8 +433,10 @@ function showDetail(data, type, itemId) {
     : null;
   const events = data.events.filter((event) => type === "band" ? matchingEventIds.has(event.id) : event.venueId === item.id);
   if (events.length) {
-    wrapper.append(node("h2", { className: "clear", text: "Tidligere events" }));
-    wrapper.append(compactEventRows(data, events.slice(-6).reverse(), type, item.id));
+    wrapper.append(node("section", { className: "profile-events clear" }, [
+      node("h2", { text: "Tidligere events" }),
+      compactEventRows(data, events.slice(-6).reverse(), type, item.id),
+    ]));
   } else {
     wrapper.append(node("em", { text: "Kalenderen er tom" }));
   }
@@ -457,8 +459,10 @@ function showUser(data, userId) {
   const eventIds = new Set(data.attendance.filter((entry) => entry.userId === user.id).map((entry) => entry.eventId));
   const events = data.events.filter((event) => eventIds.has(event.id));
   if (events.length) {
-    wrapper.append(node("h2", { className: "clear", text: "Tidligere events" }));
-    wrapper.append(compactEventRows(data, events.slice(-6).reverse(), "user", user.id));
+    wrapper.append(node("section", { className: "profile-events clear" }, [
+      node("h2", { text: "Tidligere events" }),
+      compactEventRows(data, events.slice(-6).reverse(), "user", user.id),
+    ]));
   }
   wrapper.append(node("div", { className: "clear" }));
 }

@@ -127,11 +127,16 @@ p { margin: 0 0 .8em; }
 .minibar .button { display: block; margin-bottom: 1px; text-align: center; }
 .eventstatus { float: right; margin: 0 8px; }
 
+.profile-events {
+  float: left;
+  width: 48%;
+}
 .profile-calendar {
   max-width: 42em;
   margin: .4em 0 1em;
   text-align: left;
 }
+.profile-events .profile-calendar { max-width: none; }
 .smallevent {
   min-height: 4.2em;
   padding: .3em .4em .45em 1.3em;
@@ -214,6 +219,7 @@ input {
   .eventstatus { width: 65px; height: auto; }
   .info { float: none; max-width: none; margin: 0 0 1em; }
   .browse-columns, .stats-grid { display: block; }
+  .profile-events { float: none; width: 100%; }
   .browse-column ol { margin-bottom: 0; }
   .searchform { margin-left: 0; }
   .columns { columns: 1; }
