@@ -41,6 +41,7 @@ python3 -m http.server --directory public 8080
 
 ```sh
 python3 -m unittest discover -s tests
+node --test tests/test_app.js
 node --check public/app.js
 ```
 

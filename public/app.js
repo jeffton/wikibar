@@ -309,6 +309,8 @@ function browseRanges(items, perPage) {
       }
     }
   }
+  pages[0].first = [...pages[0].first][0];
+  pages.at(-1).last = [...pages.at(-1).last][0];
   return pages.map(({ first, last, fullLast }) => ({
     first,
     last: fullLast.startsWith(first) ? null : last,

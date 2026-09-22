@@ -70,6 +70,8 @@ class StaticAppTests(unittest.TestCase):
 
     def test_retro_browse_and_statistics_ui_is_present(self):
         self.assertIn("function browseRanges(items, perPage)", self.source)
+        self.assertIn("pages[0].first = [...pages[0].first][0]", self.source)
+        self.assertIn("pages.at(-1).last = [...pages.at(-1).last][0]", self.source)
         self.assertIn("const perPage = 30", self.source)
         self.assertIn(".slice(0, perPage)", self.source)
         self.assertIn('pageLink.setAttribute("aria-current", "page")', self.source)
