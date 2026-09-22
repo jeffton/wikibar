@@ -309,10 +309,8 @@ function showDetail(data, type, itemId) {
     : null;
   const events = data.events.filter((event) => type === "band" ? matchingEventIds.has(event.id) : event.venueId === item.id);
   if (events.length) {
-    const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
-    const page = Math.min(requestedPage, totalPages);
-    wrapper.append(eventRows(data, events.slice((page - 1) * EVENTS_PER_PAGE, page * EVENTS_PER_PAGE)));
-    if (totalPages > 1) wrapper.append(pager(totalPages, page));
+    wrapper.append(node("h2", { className: "clear", text: "Tidligere events" }));
+    wrapper.append(eventRows(data, events.slice(-6).reverse()));
   } else {
     wrapper.append(node("em", { text: "Kalenderen er tom" }));
   }
@@ -343,11 +341,8 @@ function showUser(data, userId) {
   const eventIds = new Set(data.attendance.filter((entry) => entry.userId === user.id).map((entry) => entry.eventId));
   const events = data.events.filter((event) => eventIds.has(event.id));
   if (events.length) {
-    wrapper.append(node("h2", { className: "clear", text: "Events" }));
-    const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
-    const page = Math.min(requestedPage, totalPages);
-    wrapper.append(eventRows(data, events.slice((page - 1) * EVENTS_PER_PAGE, page * EVENTS_PER_PAGE)));
-    if (totalPages > 1) wrapper.append(pager(totalPages, page));
+    wrapper.append(node("h2", { className: "clear", text: "Tidligere events" }));
+    wrapper.append(eventRows(data, events.slice(-6).reverse()));
   }
   wrapper.append(node("div", { className: "clear" }));
 }
