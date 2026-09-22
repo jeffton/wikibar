@@ -98,6 +98,12 @@ function externalLink(label, url) {
 function eventRows(data, events) {
   const bands = new Map(data.bands.map((band) => [band.id, band]));
   const venues = new Map(data.venues.map((venue) => [venue.id, venue]));
+  const users = new Map(data.users.map((user) => [user.id, user]));
+  const attendance = new Map();
+  for (const entry of data.attendance) {
+    if (!attendance.has(entry.eventId)) attendance.set(entry.eventId, []);
+    attendance.get(entry.eventId).push(entry.userId);
+  }
   const appearances = new Map();
   for (const appearance of data.appearances) {
     if (!appearances.has(appearance.eventId)) appearances.set(appearance.eventId, []);
@@ -163,6 +169,16 @@ function eventRows(data, events) {
       meta.append(`${event.price} kr.`);
     }
     if (meta.childNodes.length) details.append(meta);
+
+    const eventUsers = (attendance.get(event.id) || []).map((userId) => users.get(userId)).filter(Boolean);
+    if (eventUsers.length) {
+      const guestList = node("div", { className: "eventguests" });
+      eventUsers.forEach((user, index) => {
+        guestList.append(entityLink(user, "user"));
+        guestList.append(index < eventUsers.length - 1 ? " • " : " var på");
+      });
+      details.append(guestList);
+    }
     eventContent.append(details);
 
     if (event.text || event.website || event.myspace || event.facebook) {
@@ -292,8 +308,14 @@ function showDetail(data, type, itemId) {
     ? new Set(data.appearances.filter((entry) => entry.bandId === item.id).map((entry) => entry.eventId))
     : null;
   const events = data.events.filter((event) => type === "band" ? matchingEventIds.has(event.id) : event.venueId === item.id);
-  if (events.length) wrapper.append(eventRows(data, events));
-  else wrapper.append(node("em", { text: "Kalenderen er tom" }));
+  if (events.length) {
+    const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
+    const page = Math.min(requestedPage, totalPages);
+    wrapper.append(eventRows(data, events.slice((page - 1) * EVENTS_PER_PAGE, page * EVENTS_PER_PAGE)));
+    if (totalPages > 1) wrapper.append(pager(totalPages, page));
+  } else {
+    wrapper.append(node("em", { text: "Kalenderen er tom" }));
+  }
   wrapper.append(node("div", { className: "clear" }));
 }
 
@@ -317,6 +339,16 @@ function showUser(data, userId) {
   if (box.children.length) wrapper.append(box);
   if (user.text) wrapper.append(node("p", { className: "content-copy", text: user.text }));
   else wrapper.append(node("em", { text: "Denne bruger skrev ikke en profiltekst." }));
+
+  const eventIds = new Set(data.attendance.filter((entry) => entry.userId === user.id).map((entry) => entry.eventId));
+  const events = data.events.filter((event) => eventIds.has(event.id));
+  if (events.length) {
+    wrapper.append(node("h2", { className: "clear", text: "Events" }));
+    const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
+    const page = Math.min(requestedPage, totalPages);
+    wrapper.append(eventRows(data, events.slice((page - 1) * EVENTS_PER_PAGE, page * EVENTS_PER_PAGE)));
+    if (totalPages > 1) wrapper.append(pager(totalPages, page));
+  }
   wrapper.append(node("div", { className: "clear" }));
 }
 
@@ -326,7 +358,7 @@ function showAbout() {
   wrapper.append(
     node("p", { text: "Wikibar var en fælles koncertkalender, hvor brugerne kunne oprette og redigere events, bands og spillesteder – og fortælle, hvilke koncerter de tog til." }),
     node("p", { text: "Denne udgave genskaber designet og indholdet fra den komplette bevarede databasekopi fra 8. december 2016. Den kører som statiske filer uden PHP, MySQL, login eller skriveadgang." }),
-    node("p", { text: "Alle events, bands, spillesteder og offentlige profiloplysninger er med. Adgangskoder, mails, tokens, deltagerlister, ændringshistorik og adresser på private hjem er udeladt." }),
+    node("p", { text: "Alle events, bands, spillesteder, offentlige profiloplysninger og de oprindelige deltagerlister er med. Adgangskoder, mails, tokens, ændringshistorik og adresser på private hjem er udeladt." }),
   );
 }
 

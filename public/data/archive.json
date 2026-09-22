@@ -2,7 +2,7 @@
   "meta": {
     "snapshot": "2016-12-08",
     "dataThrough": "2012-06-30",
-    "privacy": "Passwords, salts, tokens, email addresses, attendance and edit history are excluded. Private-home addresses are excluded."
+    "privacy": "Passwords, salts, tokens, email addresses, edit history and private-home addresses are excluded."
   },
   "bands": [
     {
@@ -13415,6 +13415,988 @@
       "eventId": 218,
       "bandId": 263,
       "sequence": 0
+    }
+  ],
+  "attendance": [
+    {
+      "eventId": 1,
+      "userId": 2
+    },
+    {
+      "eventId": 1,
+      "userId": 3
+    },
+    {
+      "eventId": 3,
+      "userId": 1
+    },
+    {
+      "eventId": 3,
+      "userId": 2
+    },
+    {
+      "eventId": 5,
+      "userId": 2
+    },
+    {
+      "eventId": 6,
+      "userId": 1
+    },
+    {
+      "eventId": 6,
+      "userId": 2
+    },
+    {
+      "eventId": 6,
+      "userId": 3
+    },
+    {
+      "eventId": 6,
+      "userId": 9
+    },
+    {
+      "eventId": 6,
+      "userId": 10
+    },
+    {
+      "eventId": 8,
+      "userId": 1
+    },
+    {
+      "eventId": 8,
+      "userId": 2
+    },
+    {
+      "eventId": 8,
+      "userId": 3
+    },
+    {
+      "eventId": 8,
+      "userId": 5
+    },
+    {
+      "eventId": 8,
+      "userId": 7
+    },
+    {
+      "eventId": 8,
+      "userId": 9
+    },
+    {
+      "eventId": 8,
+      "userId": 10
+    },
+    {
+      "eventId": 8,
+      "userId": 11
+    },
+    {
+      "eventId": 9,
+      "userId": 1
+    },
+    {
+      "eventId": 9,
+      "userId": 2
+    },
+    {
+      "eventId": 9,
+      "userId": 3
+    },
+    {
+      "eventId": 9,
+      "userId": 10
+    },
+    {
+      "eventId": 9,
+      "userId": 11
+    },
+    {
+      "eventId": 10,
+      "userId": 2
+    },
+    {
+      "eventId": 11,
+      "userId": 1
+    },
+    {
+      "eventId": 11,
+      "userId": 2
+    },
+    {
+      "eventId": 12,
+      "userId": 1
+    },
+    {
+      "eventId": 12,
+      "userId": 2
+    },
+    {
+      "eventId": 12,
+      "userId": 3
+    },
+    {
+      "eventId": 13,
+      "userId": 1
+    },
+    {
+      "eventId": 13,
+      "userId": 2
+    },
+    {
+      "eventId": 13,
+      "userId": 3
+    },
+    {
+      "eventId": 13,
+      "userId": 10
+    },
+    {
+      "eventId": 15,
+      "userId": 2
+    },
+    {
+      "eventId": 15,
+      "userId": 5
+    },
+    {
+      "eventId": 15,
+      "userId": 7
+    },
+    {
+      "eventId": 16,
+      "userId": 3
+    },
+    {
+      "eventId": 16,
+      "userId": 7
+    },
+    {
+      "eventId": 18,
+      "userId": 1
+    },
+    {
+      "eventId": 18,
+      "userId": 2
+    },
+    {
+      "eventId": 18,
+      "userId": 3
+    },
+    {
+      "eventId": 20,
+      "userId": 1
+    },
+    {
+      "eventId": 20,
+      "userId": 2
+    },
+    {
+      "eventId": 20,
+      "userId": 3
+    },
+    {
+      "eventId": 21,
+      "userId": 3
+    },
+    {
+      "eventId": 21,
+      "userId": 9
+    },
+    {
+      "eventId": 22,
+      "userId": 2
+    },
+    {
+      "eventId": 22,
+      "userId": 3
+    },
+    {
+      "eventId": 23,
+      "userId": 1
+    },
+    {
+      "eventId": 23,
+      "userId": 2
+    },
+    {
+      "eventId": 23,
+      "userId": 3
+    },
+    {
+      "eventId": 25,
+      "userId": 1
+    },
+    {
+      "eventId": 25,
+      "userId": 10
+    },
+    {
+      "eventId": 26,
+      "userId": 1
+    },
+    {
+      "eventId": 26,
+      "userId": 2
+    },
+    {
+      "eventId": 26,
+      "userId": 3
+    },
+    {
+      "eventId": 26,
+      "userId": 11
+    },
+    {
+      "eventId": 29,
+      "userId": 7
+    },
+    {
+      "eventId": 37,
+      "userId": 3
+    },
+    {
+      "eventId": 37,
+      "userId": 13
+    },
+    {
+      "eventId": 38,
+      "userId": 1
+    },
+    {
+      "eventId": 38,
+      "userId": 10
+    },
+    {
+      "eventId": 41,
+      "userId": 4
+    },
+    {
+      "eventId": 46,
+      "userId": 1
+    },
+    {
+      "eventId": 46,
+      "userId": 2
+    },
+    {
+      "eventId": 52,
+      "userId": 2
+    },
+    {
+      "eventId": 53,
+      "userId": 2
+    },
+    {
+      "eventId": 57,
+      "userId": 1
+    },
+    {
+      "eventId": 57,
+      "userId": 2
+    },
+    {
+      "eventId": 57,
+      "userId": 3
+    },
+    {
+      "eventId": 57,
+      "userId": 10
+    },
+    {
+      "eventId": 58,
+      "userId": 1
+    },
+    {
+      "eventId": 58,
+      "userId": 2
+    },
+    {
+      "eventId": 59,
+      "userId": 1
+    },
+    {
+      "eventId": 59,
+      "userId": 2
+    },
+    {
+      "eventId": 62,
+      "userId": 2
+    },
+    {
+      "eventId": 62,
+      "userId": 3
+    },
+    {
+      "eventId": 64,
+      "userId": 3
+    },
+    {
+      "eventId": 65,
+      "userId": 1
+    },
+    {
+      "eventId": 70,
+      "userId": 2
+    },
+    {
+      "eventId": 79,
+      "userId": 1
+    },
+    {
+      "eventId": 80,
+      "userId": 1
+    },
+    {
+      "eventId": 80,
+      "userId": 2
+    },
+    {
+      "eventId": 82,
+      "userId": 1
+    },
+    {
+      "eventId": 82,
+      "userId": 2
+    },
+    {
+      "eventId": 86,
+      "userId": 3
+    },
+    {
+      "eventId": 89,
+      "userId": 1
+    },
+    {
+      "eventId": 89,
+      "userId": 2
+    },
+    {
+      "eventId": 92,
+      "userId": 1
+    },
+    {
+      "eventId": 95,
+      "userId": 1
+    },
+    {
+      "eventId": 95,
+      "userId": 2
+    },
+    {
+      "eventId": 97,
+      "userId": 1
+    },
+    {
+      "eventId": 97,
+      "userId": 2
+    },
+    {
+      "eventId": 98,
+      "userId": 1
+    },
+    {
+      "eventId": 100,
+      "userId": 3
+    },
+    {
+      "eventId": 102,
+      "userId": 1
+    },
+    {
+      "eventId": 102,
+      "userId": 2
+    },
+    {
+      "eventId": 105,
+      "userId": 10
+    },
+    {
+      "eventId": 106,
+      "userId": 2
+    },
+    {
+      "eventId": 107,
+      "userId": 1
+    },
+    {
+      "eventId": 107,
+      "userId": 3
+    },
+    {
+      "eventId": 107,
+      "userId": 10
+    },
+    {
+      "eventId": 109,
+      "userId": 1
+    },
+    {
+      "eventId": 109,
+      "userId": 2
+    },
+    {
+      "eventId": 110,
+      "userId": 10
+    },
+    {
+      "eventId": 117,
+      "userId": 1
+    },
+    {
+      "eventId": 118,
+      "userId": 1
+    },
+    {
+      "eventId": 118,
+      "userId": 2
+    },
+    {
+      "eventId": 118,
+      "userId": 10
+    },
+    {
+      "eventId": 119,
+      "userId": 1
+    },
+    {
+      "eventId": 125,
+      "userId": 1
+    },
+    {
+      "eventId": 125,
+      "userId": 2
+    },
+    {
+      "eventId": 125,
+      "userId": 10
+    },
+    {
+      "eventId": 142,
+      "userId": 1
+    },
+    {
+      "eventId": 142,
+      "userId": 10
+    },
+    {
+      "eventId": 143,
+      "userId": 1
+    },
+    {
+      "eventId": 144,
+      "userId": 1
+    },
+    {
+      "eventId": 145,
+      "userId": 2
+    },
+    {
+      "eventId": 146,
+      "userId": 3
+    },
+    {
+      "eventId": 147,
+      "userId": 1
+    },
+    {
+      "eventId": 147,
+      "userId": 2
+    },
+    {
+      "eventId": 147,
+      "userId": 3
+    },
+    {
+      "eventId": 151,
+      "userId": 1
+    },
+    {
+      "eventId": 151,
+      "userId": 2
+    },
+    {
+      "eventId": 151,
+      "userId": 3
+    },
+    {
+      "eventId": 154,
+      "userId": 1
+    },
+    {
+      "eventId": 154,
+      "userId": 10
+    },
+    {
+      "eventId": 160,
+      "userId": 10
+    },
+    {
+      "eventId": 162,
+      "userId": 1
+    },
+    {
+      "eventId": 164,
+      "userId": 10
+    },
+    {
+      "eventId": 164,
+      "userId": 18
+    },
+    {
+      "eventId": 165,
+      "userId": 1
+    },
+    {
+      "eventId": 165,
+      "userId": 3
+    },
+    {
+      "eventId": 165,
+      "userId": 10
+    },
+    {
+      "eventId": 166,
+      "userId": 1
+    },
+    {
+      "eventId": 166,
+      "userId": 2
+    },
+    {
+      "eventId": 166,
+      "userId": 8
+    },
+    {
+      "eventId": 167,
+      "userId": 1
+    },
+    {
+      "eventId": 167,
+      "userId": 2
+    },
+    {
+      "eventId": 167,
+      "userId": 10
+    },
+    {
+      "eventId": 172,
+      "userId": 1
+    },
+    {
+      "eventId": 172,
+      "userId": 10
+    },
+    {
+      "eventId": 172,
+      "userId": 17
+    },
+    {
+      "eventId": 173,
+      "userId": 1
+    },
+    {
+      "eventId": 173,
+      "userId": 2
+    },
+    {
+      "eventId": 173,
+      "userId": 10
+    },
+    {
+      "eventId": 191,
+      "userId": 2
+    },
+    {
+      "eventId": 192,
+      "userId": 1
+    },
+    {
+      "eventId": 192,
+      "userId": 3
+    },
+    {
+      "eventId": 198,
+      "userId": 2
+    },
+    {
+      "eventId": 201,
+      "userId": 1
+    },
+    {
+      "eventId": 201,
+      "userId": 2
+    },
+    {
+      "eventId": 201,
+      "userId": 10
+    },
+    {
+      "eventId": 202,
+      "userId": 1
+    },
+    {
+      "eventId": 202,
+      "userId": 8
+    },
+    {
+      "eventId": 202,
+      "userId": 10
+    },
+    {
+      "eventId": 205,
+      "userId": 1
+    },
+    {
+      "eventId": 205,
+      "userId": 3
+    },
+    {
+      "eventId": 205,
+      "userId": 10
+    },
+    {
+      "eventId": 206,
+      "userId": 1
+    },
+    {
+      "eventId": 206,
+      "userId": 2
+    },
+    {
+      "eventId": 209,
+      "userId": 2
+    },
+    {
+      "eventId": 210,
+      "userId": 3
+    },
+    {
+      "eventId": 212,
+      "userId": 3
+    },
+    {
+      "eventId": 213,
+      "userId": 3
+    },
+    {
+      "eventId": 214,
+      "userId": 3
+    },
+    {
+      "eventId": 215,
+      "userId": 3
+    },
+    {
+      "eventId": 217,
+      "userId": 1
+    },
+    {
+      "eventId": 217,
+      "userId": 3
+    },
+    {
+      "eventId": 220,
+      "userId": 1
+    },
+    {
+      "eventId": 220,
+      "userId": 2
+    },
+    {
+      "eventId": 220,
+      "userId": 3
+    },
+    {
+      "eventId": 220,
+      "userId": 10
+    },
+    {
+      "eventId": 237,
+      "userId": 1
+    },
+    {
+      "eventId": 237,
+      "userId": 2
+    },
+    {
+      "eventId": 239,
+      "userId": 1
+    },
+    {
+      "eventId": 240,
+      "userId": 1
+    },
+    {
+      "eventId": 241,
+      "userId": 1
+    },
+    {
+      "eventId": 242,
+      "userId": 1
+    },
+    {
+      "eventId": 242,
+      "userId": 3
+    },
+    {
+      "eventId": 246,
+      "userId": 1
+    },
+    {
+      "eventId": 246,
+      "userId": 2
+    },
+    {
+      "eventId": 246,
+      "userId": 3
+    },
+    {
+      "eventId": 248,
+      "userId": 3
+    },
+    {
+      "eventId": 249,
+      "userId": 3
+    },
+    {
+      "eventId": 251,
+      "userId": 3
+    },
+    {
+      "eventId": 252,
+      "userId": 1
+    },
+    {
+      "eventId": 252,
+      "userId": 2
+    },
+    {
+      "eventId": 258,
+      "userId": 1
+    },
+    {
+      "eventId": 268,
+      "userId": 1
+    },
+    {
+      "eventId": 271,
+      "userId": 1
+    },
+    {
+      "eventId": 275,
+      "userId": 2
+    },
+    {
+      "eventId": 281,
+      "userId": 2
+    },
+    {
+      "eventId": 282,
+      "userId": 1
+    },
+    {
+      "eventId": 284,
+      "userId": 2
+    },
+    {
+      "eventId": 285,
+      "userId": 2
+    },
+    {
+      "eventId": 287,
+      "userId": 2
+    },
+    {
+      "eventId": 288,
+      "userId": 2
+    },
+    {
+      "eventId": 289,
+      "userId": 1
+    },
+    {
+      "eventId": 289,
+      "userId": 2
+    },
+    {
+      "eventId": 289,
+      "userId": 3
+    },
+    {
+      "eventId": 290,
+      "userId": 1
+    },
+    {
+      "eventId": 290,
+      "userId": 2
+    },
+    {
+      "eventId": 290,
+      "userId": 3
+    },
+    {
+      "eventId": 291,
+      "userId": 1
+    },
+    {
+      "eventId": 294,
+      "userId": 1
+    },
+    {
+      "eventId": 294,
+      "userId": 2
+    },
+    {
+      "eventId": 294,
+      "userId": 3
+    },
+    {
+      "eventId": 296,
+      "userId": 2
+    },
+    {
+      "eventId": 302,
+      "userId": 1
+    },
+    {
+      "eventId": 302,
+      "userId": 2
+    },
+    {
+      "eventId": 303,
+      "userId": 1
+    },
+    {
+      "eventId": 303,
+      "userId": 2
+    },
+    {
+      "eventId": 306,
+      "userId": 2
+    },
+    {
+      "eventId": 307,
+      "userId": 1
+    },
+    {
+      "eventId": 310,
+      "userId": 2
+    },
+    {
+      "eventId": 312,
+      "userId": 1
+    },
+    {
+      "eventId": 314,
+      "userId": 1
+    },
+    {
+      "eventId": 314,
+      "userId": 2
+    },
+    {
+      "eventId": 315,
+      "userId": 1
+    },
+    {
+      "eventId": 319,
+      "userId": 1
+    },
+    {
+      "eventId": 319,
+      "userId": 2
+    },
+    {
+      "eventId": 321,
+      "userId": 2
+    },
+    {
+      "eventId": 326,
+      "userId": 1
+    },
+    {
+      "eventId": 326,
+      "userId": 2
+    },
+    {
+      "eventId": 329,
+      "userId": 1
+    },
+    {
+      "eventId": 329,
+      "userId": 2
+    },
+    {
+      "eventId": 332,
+      "userId": 1
+    },
+    {
+      "eventId": 332,
+      "userId": 2
+    },
+    {
+      "eventId": 336,
+      "userId": 1
+    },
+    {
+      "eventId": 338,
+      "userId": 1
+    },
+    {
+      "eventId": 339,
+      "userId": 19
+    },
+    {
+      "eventId": 340,
+      "userId": 1
+    },
+    {
+      "eventId": 346,
+      "userId": 1
+    },
+    {
+      "eventId": 350,
+      "userId": 1
+    },
+    {
+      "eventId": 352,
+      "userId": 1
+    },
+    {
+      "eventId": 355,
+      "userId": 1
+    },
+    {
+      "eventId": 356,
+      "userId": 1
+    },
+    {
+      "eventId": 357,
+      "userId": 1
+    },
+    {
+      "eventId": 358,
+      "userId": 1
+    },
+    {
+      "eventId": 359,
+      "userId": 1
+    },
+    {
+      "eventId": 360,
+      "userId": 21
+    },
+    {
+      "eventId": 361,
+      "userId": 1
+    },
+    {
+      "eventId": 362,
+      "userId": 1
+    },
+    {
+      "eventId": 363,
+      "userId": 1
     }
   ]
 }

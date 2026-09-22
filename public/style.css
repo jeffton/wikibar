@@ -120,6 +120,7 @@ p { margin: 0 0 .8em; }
 }
 .eventlinks { padding-top: .15em; font-size: .9em; }
 .eventmeta { margin-top: .1em; }
+.eventguests { margin-top: .25em; color: #aaa; font-size: .85em; }
 .at { padding-right: .5em; color: #999; font-size: .8em; }
 .minibar { float: right; margin-left: .5em; }
 .minibar .button { display: block; margin-bottom: 1px; text-align: center; }

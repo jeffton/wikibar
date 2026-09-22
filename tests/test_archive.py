@@ -31,11 +31,12 @@ class PublicArchiveTests(unittest.TestCase):
         self.assertEqual(len(self.archive["venues"]), 50)
         self.assertEqual(len(self.archive["users"]), 21)
         self.assertEqual(len(self.archive["appearances"]), 562)
+        self.assertEqual(len(self.archive["attendance"]), 245)
 
     def test_private_tables_and_fields_are_absent(self):
         forbidden = {
             "password", "passwordsalt", "token", "tokenvalid", "mail", "mailconfirmed",
-            "mailtoken", "guest", "guests", "history", "attendance",
+            "mailtoken", "guest", "guests", "history",
         }
 
         def visit(value):
@@ -49,9 +50,14 @@ class PublicArchiveTests(unittest.TestCase):
 
         visit(self.archive)
 
-    def test_user_profiles_have_only_public_fields(self):
+    def test_user_profiles_and_attendance_have_only_public_fields(self):
         allowed = {"id", "name", "text", "website", "myspace", "facebook"}
         self.assertTrue(all(set(user) == allowed for user in self.archive["users"]))
+        self.assertTrue(all(set(entry) == {"eventId", "userId"} for entry in self.archive["attendance"]))
+        event_ids = {event["id"] for event in self.archive["events"]}
+        user_ids = {user["id"] for user in self.archive["users"]}
+        self.assertTrue(all(entry["eventId"] in event_ids for entry in self.archive["attendance"]))
+        self.assertTrue(all(entry["userId"] in user_ids for entry in self.archive["attendance"]))
 
     def test_home_events_are_present_without_addresses(self):
         homes = {venue["id"]: venue for venue in self.archive["venues"] if venue["privateHome"]}

@@ -203,18 +203,24 @@ def build_archive(sql: str) -> dict[str, object]:
         "myspace": social_url(row["url_myspace"], "myspace"),
         "facebook": social_url(row["url_facebook"], "facebook"),
     } for row in records(sql, "user")]
+    attendance = [
+        {"eventId": row["eventID"], "userId": row["userID"]}
+        for row in records(sql, "guest")
+        if int(row["eventID"]) in event_versions
+    ]
 
     return {
         "meta": {
             "snapshot": "2016-12-08",
             "dataThrough": max(str(event["date"]) for event in events),
-            "privacy": "Passwords, salts, tokens, email addresses, attendance and edit history are excluded. Private-home addresses are excluded.",
+            "privacy": "Passwords, salts, tokens, email addresses, edit history and private-home addresses are excluded.",
         },
         "bands": sorted(bands, key=lambda row: str(row["sortName"]).casefold()),
         "venues": sorted(venues, key=lambda row: str(row["sortName"]).casefold()),
         "users": sorted(users, key=lambda row: str(row["name"]).casefold()),
         "events": sorted(events, key=lambda row: (str(row["date"]), int(row["id"]))),
         "appearances": appearances,
+        "attendance": attendance,
     }
 
 
