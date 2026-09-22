@@ -1,0 +1,164 @@
+/* Wikibar's 2007 visual design, adapted only where modern screens require it. */
+:root { color-scheme: dark; }
+
+* { box-sizing: border-box; }
+
+html, body { min-height: 100%; }
+
+body {
+  margin: 0;
+  background: #000;
+  color: #ccc;
+}
+
+body, input, .button { font-family: "Trebuchet MS", sans-serif; }
+
+h1, h2, h3, h4 {
+  margin: .2em 0;
+  font-family: "Trebuchet MS", sans-serif;
+  color: #fff;
+}
+
+h1 { border-bottom: 4px solid #ff0; }
+h2 { font-size: 1.2em; }
+a { color: lightblue; }
+a img { border: 0; }
+p { margin: 0 0 .8em; }
+
+.menu {
+  min-height: 151px;
+  padding: 2em 2em 1em;
+  text-align: right;
+  background: #fc0 url("layout/logo.png") top left no-repeat;
+  color: #300;
+}
+
+.menucontent { padding-left: 280px; white-space: nowrap; }
+.menucontent a { display: inline-block; margin-left: .8em; }
+.menucontent img { display: block; }
+.login { margin-top: .65em; }
+.login span { padding-right: .45em; font-size: .8em; font-weight: bold; }
+
+.main {
+  width: 76%;
+  min-height: 24em;
+  margin: 1em auto;
+}
+.main:focus { outline: none; }
+
+.content { padding: 0 10px 10px; text-align: justify; }
+.content-copy { white-space: pre-line; }
+.loading { padding: 2em; text-align: center; }
+
+.foot {
+  clear: both;
+  padding: .65em 12%;
+  background: #fa0;
+  color: #000;
+  font-family: Verdana, sans-serif;
+}
+.foot .links { text-align: center; font-size: .7em; }
+.foot a { color: #000; }
+
+.button {
+  display: inline-block;
+  margin: 0;
+  padding: 0 4px;
+  border: 1px solid #b55;
+  background: #711;
+  color: #fff;
+  font-variant: small-caps;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.button:hover, .button:focus { background: #933; }
+.button:active { background: #711; }
+
+.notice {
+  min-height: 24px;
+  margin: .4em 0 .8em;
+  padding-left: 35px;
+  background-position: 5px 50%;
+  background-repeat: no-repeat;
+}
+.notice div { padding: .25em .4em; font-weight: bold; }
+.infotext { background-image: url("layout/info.png"); }
+.infotext div { border-left: 2px solid #669; color: #ccf; }
+.errortext { background-image: url("layout/error.png"); }
+.errortext div { border-left: 2px solid #966; color: #fcc; }
+
+.archive-note { font-size: .85em; }
+
+.calendar {
+  width: 100%;
+  margin-top: .5em;
+  border-collapse: collapse;
+  text-align: left;
+}
+.calendar .top td { border-bottom: 1px dotted orange; }
+.calendar .date { padding: .2em; color: #fff; font-size: 1.05em; font-weight: bold; }
+.calendar .edit { padding-left: 1em; text-align: right; }
+.calendar .bottom { font-size: .95em; }
+.calendar .bottom td { padding: .3em .7em 1.5em; vertical-align: top; }
+.calendar .event-main { width: 37%; }
+.calendar .venue { width: 28%; }
+.calendar .at { padding-right: .5em; color: #999; font-size: .8em; }
+.calendar .price { text-align: right; white-space: nowrap; }
+.event-status { color: #f88; font-weight: bold; }
+.event-type { color: #999; font-size: .8em; }
+
+.info {
+  float: right;
+  min-width: 12em;
+  max-width: 40%;
+  margin: 10px 0 10px 10px;
+  padding: 6px 10px 10px;
+  overflow: hidden;
+  border: 1px dashed #777;
+  background: #333;
+  font-size: .9em;
+}
+.info table { border-collapse: collapse; }
+.info th, .info td { border-bottom: 1px dotted #999; text-align: left; }
+.info th { padding-right: 10px; }
+.info td.amount { text-align: right; }
+.info a { overflow-wrap: anywhere; }
+
+.searchform { display: inline-flex; gap: .3em; margin: .4em 0 1em; }
+input {
+  padding: 2px;
+  border: 1px solid #333;
+  border-right-color: #aaa;
+  border-bottom-color: #aaa;
+  background: #444;
+  color: #fff;
+  font-size: .9em;
+}
+.columns { columns: 2; column-gap: 3em; }
+.columns li { break-inside: avoid; margin-bottom: .2em; }
+.empty { font-style: italic; }
+.clear { clear: both; }
+
+.stats { border-collapse: collapse; }
+.stats th, .stats td { padding: .25em .7em; border-bottom: 1px dotted #777; text-align: left; }
+.stats td { text-align: right; }
+
+@media (max-width: 900px) {
+  .menu { padding: 6.5em .6em .8em; background-size: 310px auto; }
+  .menucontent { padding-left: 0; overflow-x: auto; text-align: left; }
+  .menucontent a { margin: 0 .45em 0 0; }
+  .main { width: 94%; }
+  .login { text-align: left; }
+}
+
+@media (max-width: 620px) {
+  .menucontent { font-size: 0; }
+  .menucontent a { margin-right: 3px; }
+  .menucontent img { width: auto; height: 38px; }
+  .calendar .edit { display: none; }
+  .calendar .bottom td { display: block; width: auto; padding: .25em .5em; }
+  .calendar .bottom td:last-child { padding-bottom: 1.4em; text-align: left; }
+  .info { float: none; max-width: none; margin: 0 0 1em; }
+  .columns { columns: 1; }
+}

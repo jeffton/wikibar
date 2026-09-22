@@ -1,0 +1,3183 @@
+{
+  "meta": {
+    "snapshot": "2007-08-28",
+    "privacy": "Accounts, credentials, attendance, edit history and private-home events are excluded."
+  },
+  "bands": [
+    {
+      "id": 3,
+      "name": "18th Dye",
+      "sortName": "18th Dye",
+      "country": "DK/D",
+      "text": "Dansk/tysk støjrock. Gendannet band fra 90'erne.",
+      "website": "https://18thdye.org",
+      "myspace": "https://myspace.com/18thdye"
+    },
+    {
+      "id": 40,
+      "name": "Air",
+      "sortName": "Air",
+      "country": "F",
+      "text": null,
+      "website": "https://intairnet.org",
+      "myspace": "https://myspace.com/intairnet"
+    },
+    {
+      "id": 102,
+      "name": "Animal Collective",
+      "sortName": "Animal Collective",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 49,
+      "name": "Animosity",
+      "sortName": "Animosity",
+      "country": null,
+      "text": null,
+      "website": "https://www.animositysf.com",
+      "myspace": "https://myspace.com/animosity"
+    },
+    {
+      "id": 95,
+      "name": "The Ark",
+      "sortName": "Ark, The",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 7,
+      "name": "As In Rebekkamaria",
+      "sortName": "As In Rebekkamaria",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": "https://myspace.com/asinrebekkamaria"
+    },
+    {
+      "id": 96,
+      "name": "Au Revoir Simone",
+      "sortName": "Au Revoir Simone",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 2,
+      "name": "Baby Woodrose",
+      "sortName": "Baby Woodrose",
+      "country": null,
+      "text": null,
+      "website": "https://babywoodrose.com",
+      "myspace": "https://myspace.com/babywoodrose"
+    },
+    {
+      "id": 98,
+      "name": "Beirut",
+      "sortName": "Beirut",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 21,
+      "name": "Beta Satan",
+      "sortName": "Beta Satan",
+      "country": null,
+      "text": null,
+      "website": "https://betasatan.dk",
+      "myspace": "https://myspace.com/betasatan"
+    },
+    {
+      "id": 19,
+      "name": "Black Rebel Motorcycle Club",
+      "sortName": "Black Rebel Motorcycle Club",
+      "country": null,
+      "text": null,
+      "website": "https://blackrebelmotorcycleclub.com",
+      "myspace": "https://myspace.com/blackrebelmotorcycleclub"
+    },
+    {
+      "id": 35,
+      "name": "The Bloodhound Gang",
+      "sortName": "Bloodhound Gang, The",
+      "country": null,
+      "text": null,
+      "website": "https://bloodhoundgang.com",
+      "myspace": null
+    },
+    {
+      "id": 73,
+      "name": "Blue Foundation",
+      "sortName": "Blue Foundation",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 16,
+      "name": "The Blue Van",
+      "sortName": "Blue Van, The",
+      "country": null,
+      "text": null,
+      "website": "https://thebluevan.com",
+      "myspace": "https://myspace.com/thebluevan"
+    },
+    {
+      "id": 69,
+      "name": "The Breakers",
+      "sortName": "Breakers, The",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 105,
+      "name": "Chaoswave",
+      "sortName": "Chaoswave",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 76,
+      "name": "Choir of Young Believers",
+      "sortName": "Choir of Young Believers",
+      "country": "D/DK",
+      "text": null,
+      "website": null,
+      "myspace": "https://myspace.com/choirofyoungbelievers"
+    },
+    {
+      "id": 66,
+      "name": "CocoRosie",
+      "sortName": "CocoRosie",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 101,
+      "name": "Cold War Kids",
+      "sortName": "Cold War Kids",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 26,
+      "name": "Converge",
+      "sortName": "Converge",
+      "country": null,
+      "text": null,
+      "website": "https://convergecult.com",
+      "myspace": "https://myspace.com/converge"
+    },
+    {
+      "id": 106,
+      "name": "Corpus Mortale",
+      "sortName": "Corpus Mortale",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 77,
+      "name": "Cosey Mo",
+      "sortName": "Cosey Mo",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 8,
+      "name": "Death to Frank Ziyanak",
+      "sortName": "Death to Frank Ziyanak",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": "https://myspace.com/deathtofrankziyanak"
+    },
+    {
+      "id": 1,
+      "name": "Decorate.Decorate",
+      "sortName": "Decorate.Decorate",
+      "country": null,
+      "text": null,
+      "website": "https://decoratedecorate.com",
+      "myspace": "https://myspace.com/decoratedecorate"
+    },
+    {
+      "id": 82,
+      "name": "Den Fri",
+      "sortName": "Den Fri",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 37,
+      "name": "Dinosaur Machine",
+      "sortName": "Dinosaur Machine",
+      "country": null,
+      "text": null,
+      "website": "https://www.dinosaurmachine.com",
+      "myspace": "https://myspace.com/dinosaurmachine"
+    },
+    {
+      "id": 29,
+      "name": "Dizzy Jam",
+      "sortName": "Dizzy Jam",
+      "country": null,
+      "text": null,
+      "website": "https://dizzyjam.dk",
+      "myspace": null
+    },
+    {
+      "id": 57,
+      "name": "Dollface",
+      "sortName": "Dollface",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 36,
+      "name": "Dúné",
+      "sortName": "Dúné",
+      "country": null,
+      "text": null,
+      "website": "https://dunesite.com",
+      "myspace": "https://myspace.com/dunesite"
+    },
+    {
+      "id": 97,
+      "name": "Efterklang",
+      "sortName": "Efterklang",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 109,
+      "name": "The Elephants",
+      "sortName": "Elephants, The",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 9,
+      "name": "Entakt",
+      "sortName": "Entakt",
+      "country": null,
+      "text": null,
+      "website": "https://entakt.dk",
+      "myspace": "https://myspace.com/entakt"
+    },
+    {
+      "id": 27,
+      "name": "Entombed",
+      "sortName": "Entombed",
+      "country": null,
+      "text": null,
+      "website": "https://entombed.org",
+      "myspace": "https://myspace.com/serpentsaints"
+    },
+    {
+      "id": 47,
+      "name": "epo-555",
+      "sortName": "epo-555",
+      "country": null,
+      "text": null,
+      "website": "https://epo-555.dk",
+      "myspace": "https://myspace.com/epo555"
+    },
+    {
+      "id": 80,
+      "name": "Ester Louder",
+      "sortName": "Ester Louder",
+      "country": "DK",
+      "text": null,
+      "website": null,
+      "myspace": "https://myspace.com/esterlouder"
+    },
+    {
+      "id": 75,
+      "name": "Evil Death Machine",
+      "sortName": "Evil Death Machine",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": "https://myspace.com/evildeathmachine"
+    },
+    {
+      "id": 68,
+      "name": "Factory 45",
+      "sortName": "Factory 45",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": "https://myspace.com/factory45"
+    },
+    {
+      "id": 88,
+      "name": "The Fashion",
+      "sortName": "Fashion, The",
+      "country": null,
+      "text": null,
+      "website": "https://thefashion.dk",
+      "myspace": null
+    },
+    {
+      "id": 55,
+      "name": "Fifty Foot Spiders",
+      "sortName": "Fifty Foot Spiders",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": "https://myspace.com/fiftyfootspiders"
+    },
+    {
+      "id": 17,
+      "name": "The Floor is Made of Lava",
+      "sortName": "Floor is Made of Lava, The",
+      "country": null,
+      "text": null,
+      "website": "https://thelava.dk",
+      "myspace": "https://myspace.com/thelava"
+    },
+    {
+      "id": 107,
+      "name": "Gallhammer",
+      "sortName": "Gallhammer",
+      "country": "JAP",
+      "text": null,
+      "website": "https://galhammer.com",
+      "myspace": "https://myspace.com/ghammercrust"
+    },
+    {
+      "id": 52,
+      "name": "Ghost and Tape",
+      "sortName": "Ghost and Tape",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": "https://myspace.com/ghostandtape"
+    },
+    {
+      "id": 20,
+      "name": "The Go! Team",
+      "sortName": "Go! Team, The",
+      "country": "UK",
+      "text": null,
+      "website": "https://www.thegoteam.co.uk",
+      "myspace": "https://myspace.com/thegoteam"
+    },
+    {
+      "id": 61,
+      "name": "Gogol Bordello",
+      "sortName": "Gogol Bordello",
+      "country": null,
+      "text": "Gogol Bordello is a Gypsy punk band from the Lower East Side of New York City that formed in 1999. They are renowned for their frenetic, theatrical stage shows. Much of their sound is inspired by Gypsy music, as most of their members are immigrants from Eastern Europe. The band incorporates minor-key accordion and fiddle (and on some of their albums, saxophone) mixed with cabaret, punk, and dub.\r\n\r\nThey were described by Phill Jupitus on Jools Holland Live as \"a bit like The Clash having a fight with The Pogues in Eastern Europe",
+      "website": "https://gogolbordello.com",
+      "myspace": null
+    },
+    {
+      "id": 10,
+      "name": "Green Concorde",
+      "sortName": "Green Concorde",
+      "country": null,
+      "text": null,
+      "website": "https://greenconcorde.com",
+      "myspace": "https://myspace.com/greenconcorde"
+    },
+    {
+      "id": 87,
+      "name": "Heimat Connective",
+      "sortName": "Heimat Connective",
+      "country": "DK",
+      "text": null,
+      "website": null,
+      "myspace": "https://myspace.com/connective"
+    },
+    {
+      "id": 33,
+      "name": "Highway Child",
+      "sortName": "Highway Child",
+      "country": null,
+      "text": null,
+      "website": "https://www.highwaychild.dk",
+      "myspace": "https://myspace.com/highwaychilddk"
+    },
+    {
+      "id": 24,
+      "name": "I Am Bones",
+      "sortName": "I Am Bones",
+      "country": null,
+      "text": null,
+      "website": "https://iambones.dk",
+      "myspace": "https://myspace.com/iambonesband"
+    },
+    {
+      "id": 11,
+      "name": "I Got You on Tape",
+      "sortName": "I Got You on Tape",
+      "country": null,
+      "text": null,
+      "website": "https://igotyouontape.com",
+      "myspace": "https://myspace.com/igotyouontape"
+    },
+    {
+      "id": 42,
+      "name": "ISIS",
+      "sortName": "ISIS",
+      "country": "US",
+      "text": null,
+      "website": "https://isistheband.com",
+      "myspace": "https://myspace.com/sgnl05"
+    },
+    {
+      "id": 23,
+      "name": "Joyce Hotel",
+      "sortName": "Joyce Hotel",
+      "country": null,
+      "text": null,
+      "website": "https://joycehotel.com",
+      "myspace": "https://myspace.com/joycehotel"
+    },
+    {
+      "id": 6,
+      "name": "A Kid Hereafter",
+      "sortName": "Kid Hereafter, A",
+      "country": null,
+      "text": null,
+      "website": "https://akidhereafter.com",
+      "myspace": "https://myspace.com/akidhereafter"
+    },
+    {
+      "id": 34,
+      "name": "Kira Skov og Marie Fisker",
+      "sortName": "Kira Skov og Marie Fisker",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 72,
+      "name": "Knoxville",
+      "sortName": "Knoxville",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 79,
+      "name": "Lamburg Tony",
+      "sortName": "Lamburg Tony",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 41,
+      "name": "Lampshade",
+      "sortName": "Lampshade",
+      "country": null,
+      "text": null,
+      "website": "https://www.lampshade.dk/",
+      "myspace": "https://myspace.com/lmpshd"
+    },
+    {
+      "id": 86,
+      "name": "Lasse & Lasse",
+      "sortName": "Lasse & Lasse",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 5,
+      "name": "The Late Parade",
+      "sortName": "Late Parade, The",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": "https://myspace.com/thelateparade"
+    },
+    {
+      "id": 4,
+      "name": "Lis er Stille",
+      "sortName": "Lis er Stille",
+      "country": null,
+      "text": null,
+      "website": "https://liserstille.dk",
+      "myspace": null
+    },
+    {
+      "id": 56,
+      "name": "Logh",
+      "sortName": "Logh",
+      "country": null,
+      "text": null,
+      "website": "https://logh.se",
+      "myspace": null
+    },
+    {
+      "id": 43,
+      "name": "The Mary Onettes",
+      "sortName": "Mary Onettes, The",
+      "country": null,
+      "text": null,
+      "website": "https://www.themaryonettes.net",
+      "myspace": "https://myspace.com/themaryonettes"
+    },
+    {
+      "id": 91,
+      "name": "Marybell Katastrophy",
+      "sortName": "Marybell Katastrophy",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 92,
+      "name": "Mayhem",
+      "sortName": "Mayhem",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 46,
+      "name": "Mob",
+      "sortName": "Mob",
+      "country": null,
+      "text": null,
+      "website": "https://mobsite.dk",
+      "myspace": "https://myspace.com/mobnoise"
+    },
+    {
+      "id": 83,
+      "name": "Moko",
+      "sortName": "Moko",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 111,
+      "name": "Murder",
+      "sortName": "Murder",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 30,
+      "name": "Muse Jam",
+      "sortName": "Muse Jam",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 99,
+      "name": "Múm",
+      "sortName": "Múm",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 53,
+      "name": "Nancy and the Kapow! Circus Quintet",
+      "sortName": "Nancy and the Kapow! Circus Quintet",
+      "country": null,
+      "text": null,
+      "website": "https://kapowcircus.com",
+      "myspace": "https://myspace.com/kapowcircus"
+    },
+    {
+      "id": 100,
+      "name": "The National",
+      "sortName": "National, The",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 104,
+      "name": "Niels på Dåse",
+      "sortName": "Niels på Dåse",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 22,
+      "name": "Oh No Ono",
+      "sortName": "Oh No Ono",
+      "country": null,
+      "text": null,
+      "website": "https://www.ohnoono.com",
+      "myspace": "https://myspace.com/ohnoono"
+    },
+    {
+      "id": 84,
+      "name": "Old Man",
+      "sortName": "Old Man",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 74,
+      "name": "Paradise Lost",
+      "sortName": "Paradise Lost",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 32,
+      "name": "Paradise Lost Jam",
+      "sortName": "Paradise Lost Jam",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 110,
+      "name": "Patchanka!",
+      "sortName": "Patchanka!",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 38,
+      "name": "Phantom Pillow",
+      "sortName": "Phantom Pillow",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 64,
+      "name": "Phoenix City",
+      "sortName": "Phoenix City",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 59,
+      "name": "Phonovectra",
+      "sortName": "Phonovectra",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 51,
+      "name": "Port Largo",
+      "sortName": "Port Largo",
+      "country": null,
+      "text": null,
+      "website": "https://portlargo.dk",
+      "myspace": "https://myspace.com/portlargo"
+    },
+    {
+      "id": 81,
+      "name": "Pretty Pretty Maids",
+      "sortName": "Pretty Pretty Maids",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 62,
+      "name": "Prins Nitram",
+      "sortName": "Prins Nitram",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 25,
+      "name": "The Psyke Project",
+      "sortName": "Psyke Project, The",
+      "country": null,
+      "text": null,
+      "website": "https://www.thepsykeproject.dk",
+      "myspace": "https://myspace.com/thepsykeproject"
+    },
+    {
+      "id": 94,
+      "name": "The Raveonettes",
+      "sortName": "Raveonettes, The",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 31,
+      "name": "Red Hot Chili Peppers Jam",
+      "sortName": "Red Hot Chili Peppers Jam",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 67,
+      "name": "Red Warszawa",
+      "sortName": "Red Warszawa",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 65,
+      "name": "Rhonda Harris",
+      "sortName": "Rhonda Harris",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 48,
+      "name": "Rise 'n' Fall",
+      "sortName": "Rise 'n' Fall",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 60,
+      "name": "Scandal Beauty",
+      "sortName": "Scandal Beauty",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 12,
+      "name": "Sha La Las",
+      "sortName": "Sha La Las",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": "https://myspace.com/shalalas"
+    },
+    {
+      "id": 90,
+      "name": "Shout Wellington Airforce",
+      "sortName": "Shout Wellington Airforce",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": "https://myspace.com/shoutwellingtonairforce"
+    },
+    {
+      "id": 45,
+      "name": "Skambankt",
+      "sortName": "Skambankt",
+      "country": "N",
+      "text": null,
+      "website": "https://www.skambankt.com",
+      "myspace": "https://myspace.com/skambankt"
+    },
+    {
+      "id": 108,
+      "name": "Skitliv",
+      "sortName": "Skitliv",
+      "country": "N",
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 13,
+      "name": "Snake and Jet's Amazing Bullit Band",
+      "sortName": "Snake and Jet's Amazing Bullit Band",
+      "country": null,
+      "text": null,
+      "website": "https://snakeandjet.dk",
+      "myspace": "https://myspace.com/snakeandjet"
+    },
+    {
+      "id": 39,
+      "name": "Song to the Siren",
+      "sortName": "Song to the Siren",
+      "country": null,
+      "text": null,
+      "website": "https://songtothesiren.com",
+      "myspace": "https://myspace.com/karmacraft"
+    },
+    {
+      "id": 54,
+      "name": "Sort Stue",
+      "sortName": "Sort Stue",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 44,
+      "name": "Speaker Bite Me",
+      "sortName": "Speaker Bite Me",
+      "country": null,
+      "text": null,
+      "website": "https://speakerbiteme.com",
+      "myspace": "https://myspace.com/speakerbiteme"
+    },
+    {
+      "id": 14,
+      "name": "Sterling",
+      "sortName": "Sterling",
+      "country": null,
+      "text": null,
+      "website": "https://sterlingnet.dk",
+      "myspace": "https://myspace.com/sterlingdk"
+    },
+    {
+      "id": 63,
+      "name": "Stærkodder",
+      "sortName": "Stærkodder",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 58,
+      "name": "Supershine",
+      "sortName": "Supershine",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 89,
+      "name": "Taxi Taxi!",
+      "sortName": "Taxi Taxi!",
+      "country": "S",
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 15,
+      "name": "Teppop",
+      "sortName": "Teppop",
+      "country": null,
+      "text": null,
+      "website": "https://www.fys.ku.dk/~bredahl/teppop/",
+      "myspace": null
+    },
+    {
+      "id": 85,
+      "name": "Thulebasen",
+      "sortName": "Thulebasen",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 103,
+      "name": "Transmission Low",
+      "sortName": "Transmission Low",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 112,
+      "name": "Twins Twins",
+      "sortName": "Twins Twins",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 70,
+      "name": "Under Byen",
+      "sortName": "Under Byen",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 50,
+      "name": "Utah",
+      "sortName": "Utah",
+      "country": null,
+      "text": null,
+      "website": "https://utah.dk",
+      "myspace": "https://myspace.com/utahdk"
+    },
+    {
+      "id": 93,
+      "name": "Vandöd",
+      "sortName": "Vandöd",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 18,
+      "name": "Velour",
+      "sortName": "Velour",
+      "country": null,
+      "text": null,
+      "website": "https://velournet.dk",
+      "myspace": "https://myspace.com/velourboys"
+    },
+    {
+      "id": 78,
+      "name": "The Village Idiot",
+      "sortName": "Village Idiot, The",
+      "country": null,
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 71,
+      "name": "Vive la Fête",
+      "sortName": "Vive la Fête",
+      "country": "B",
+      "text": null,
+      "website": null,
+      "myspace": null
+    },
+    {
+      "id": 28,
+      "name": "Zenith",
+      "sortName": "Zenith",
+      "country": null,
+      "text": null,
+      "website": "https://zenithmetal.dk",
+      "myspace": "https://myspace.com/zenithmetal"
+    }
+  ],
+  "venues": [
+    {
+      "id": 4,
+      "name": "Apparatet",
+      "sortName": "Apparatet",
+      "street": null,
+      "postalCode": null,
+      "city": null,
+      "country": null,
+      "typicalEntry": 0,
+      "bottle": null,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": 0,
+      "wardrobePrice": null,
+      "musicStarts": "21 sharp",
+      "website": null,
+      "myspace": "https://myspace.com/apparatet",
+      "text": "Hyggeligt spillested på Nørrebro. Altid gratis entré, og musikken starter allerede kl 21."
+    },
+    {
+      "id": 21,
+      "name": "Café Retro",
+      "sortName": "Café Retro",
+      "street": "Knabrostræde 26",
+      "postalCode": "1210",
+      "city": "København K",
+      "country": null,
+      "typicalEntry": null,
+      "bottle": 24,
+      "draught": 38,
+      "shot": null,
+      "drink": null,
+      "wardrobe": null,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": "https://cafe-retro.dk",
+      "myspace": null,
+      "text": null
+    },
+    {
+      "id": 5,
+      "name": "Den Grå Hal",
+      "sortName": "Den Grå Hal",
+      "street": null,
+      "postalCode": null,
+      "city": null,
+      "country": null,
+      "typicalEntry": null,
+      "bottle": null,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": null,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": "https://graahal.dk",
+      "myspace": null,
+      "text": null
+    },
+    {
+      "id": 1,
+      "name": "Dunkel Bar",
+      "sortName": "Dunkel Bar",
+      "street": "Vester Voldgade 10",
+      "postalCode": null,
+      "city": null,
+      "country": null,
+      "typicalEntry": null,
+      "bottle": null,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": null,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": null,
+      "myspace": "https://myspace.com/dunkelbar",
+      "text": null
+    },
+    {
+      "id": 14,
+      "name": "Elværket",
+      "sortName": "Elværket",
+      "street": "Rosenkildestien",
+      "postalCode": null,
+      "city": "Helsingør",
+      "country": null,
+      "typicalEntry": 30,
+      "bottle": 15,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": 0,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": "https://muhus.nu",
+      "myspace": "https://myspace.com/elvaerket",
+      "text": "Happy hour fra 22-23"
+    },
+    {
+      "id": 11,
+      "name": "Forbrændingen",
+      "sortName": "Forbrændingen",
+      "street": "Vognporten 11",
+      "postalCode": "2620",
+      "city": "Albertslund",
+      "country": null,
+      "typicalEntry": null,
+      "bottle": null,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": null,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": "https://www.fbf.dk",
+      "myspace": null,
+      "text": null
+    },
+    {
+      "id": 20,
+      "name": "Fælledparken",
+      "sortName": "Fælledparken",
+      "street": null,
+      "postalCode": null,
+      "city": null,
+      "country": null,
+      "typicalEntry": null,
+      "bottle": null,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": null,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": null,
+      "myspace": null,
+      "text": null
+    },
+    {
+      "id": 19,
+      "name": "Global",
+      "sortName": "Global",
+      "street": "Nørre Allé 7",
+      "postalCode": "2200",
+      "city": "København N",
+      "country": null,
+      "typicalEntry": null,
+      "bottle": null,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": null,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": null,
+      "myspace": null,
+      "text": null
+    },
+    {
+      "id": 18,
+      "name": "Kaleidoskop K1",
+      "sortName": "Kaleidoskop K1",
+      "street": "Nørrebrogade 37",
+      "postalCode": "2200",
+      "city": "København N",
+      "country": null,
+      "typicalEntry": null,
+      "bottle": null,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": null,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": "https://kaleidoskop.dk",
+      "myspace": null,
+      "text": null
+    },
+    {
+      "id": 9,
+      "name": "Lades Kælder",
+      "sortName": "Lades Kælder",
+      "street": "Kattesundet 6",
+      "postalCode": "1458",
+      "city": "Kbh K.",
+      "country": null,
+      "typicalEntry": null,
+      "bottle": null,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": null,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": "https://lades.dk",
+      "myspace": null,
+      "text": null
+    },
+    {
+      "id": 2,
+      "name": "Loppen",
+      "sortName": "Loppen",
+      "street": null,
+      "postalCode": null,
+      "city": null,
+      "country": null,
+      "typicalEntry": 50,
+      "bottle": 25,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": 1,
+      "wardrobePrice": 15,
+      "musicStarts": "22-22:30",
+      "website": "https://loppen.dk",
+      "myspace": "https://myspace.com/loppenvenue",
+      "text": null
+    },
+    {
+      "id": 12,
+      "name": "Pumpehuset",
+      "sortName": "Pumpehuset",
+      "street": "Studiestræde 52",
+      "postalCode": "1554",
+      "city": "København V",
+      "country": null,
+      "typicalEntry": null,
+      "bottle": null,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": null,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": "https://www.pumpehuset.dk",
+      "myspace": null,
+      "text": null
+    },
+    {
+      "id": 8,
+      "name": "The Rock",
+      "sortName": "Rock, The",
+      "street": "Skindergade 45 -47",
+      "postalCode": "1159",
+      "city": "København K",
+      "country": null,
+      "typicalEntry": null,
+      "bottle": null,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": 1,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": "https://the-rock.dk",
+      "myspace": null,
+      "text": null
+    },
+    {
+      "id": 16,
+      "name": "RUC",
+      "sortName": "RUC",
+      "street": null,
+      "postalCode": null,
+      "city": "Trekroner",
+      "country": null,
+      "typicalEntry": 0,
+      "bottle": 8,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": 0,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": null,
+      "myspace": null,
+      "text": null
+    },
+    {
+      "id": 3,
+      "name": "Rust",
+      "sortName": "Rust",
+      "street": "Guldbergsgade 8",
+      "postalCode": "2200",
+      "city": "København N",
+      "country": null,
+      "typicalEntry": 60,
+      "bottle": null,
+      "draught": 45,
+      "shot": null,
+      "drink": null,
+      "wardrobe": 1,
+      "wardrobePrice": 10,
+      "musicStarts": null,
+      "website": "https://rust.dk",
+      "myspace": "https://myspace.com/clubrust",
+      "text": "Rust holder lukket pga. ombygning efter brand."
+    },
+    {
+      "id": 7,
+      "name": "Stengade 30",
+      "sortName": "Stengade 30",
+      "street": null,
+      "postalCode": null,
+      "city": null,
+      "country": null,
+      "typicalEntry": null,
+      "bottle": null,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": null,
+      "wardrobePrice": null,
+      "musicStarts": "22-23",
+      "website": "https://stengade30.dk",
+      "myspace": "https://myspace.com/stengade30",
+      "text": null
+    },
+    {
+      "id": 17,
+      "name": "Studenterhuset",
+      "sortName": "Studenterhuset",
+      "street": "(Lige ved Rundetårn)",
+      "postalCode": null,
+      "city": "København K",
+      "country": null,
+      "typicalEntry": null,
+      "bottle": null,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": null,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": "https://studenterhuset.com",
+      "myspace": null,
+      "text": null
+    },
+    {
+      "id": 6,
+      "name": "Vega",
+      "sortName": "Vega",
+      "street": "Enghavevej 40",
+      "postalCode": "2500",
+      "city": "Valby",
+      "country": null,
+      "typicalEntry": 120,
+      "bottle": 30,
+      "draught": 39,
+      "shot": null,
+      "drink": null,
+      "wardrobe": 1,
+      "wardrobePrice": 15,
+      "musicStarts": "ca. 21",
+      "website": "https://vega.dk",
+      "myspace": null,
+      "text": null
+    },
+    {
+      "id": 10,
+      "name": "Viften",
+      "sortName": "Viften",
+      "street": "Rødovre Parkvej 130",
+      "postalCode": "2610",
+      "city": "Rødovre",
+      "country": null,
+      "typicalEntry": null,
+      "bottle": null,
+      "draught": null,
+      "shot": null,
+      "drink": null,
+      "wardrobe": null,
+      "wardrobePrice": null,
+      "musicStarts": null,
+      "website": "https://www.viften.dk",
+      "myspace": null,
+      "text": null
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "type": "releaseparty",
+      "name": null,
+      "venueId": 1,
+      "date": "2007-05-19",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "Ingen koncert, men gratis øl og DJ",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 2,
+      "type": "concert",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-05-19",
+      "time": null,
+      "endDate": null,
+      "price": 120,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 14,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-05-19",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": 150,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 11,
+      "type": "release",
+      "name": "Normandie",
+      "venueId": null,
+      "date": "2007-05-21",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 17,
+      "type": "concert",
+      "name": null,
+      "venueId": 7,
+      "date": "2007-05-24",
+      "time": null,
+      "endDate": null,
+      "price": 130,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 15,
+      "type": "concert",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-05-25",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": 80,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 24,
+      "type": "releaseparty",
+      "name": "Soundvenue Releasefest",
+      "venueId": 6,
+      "date": "2007-05-25",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": 0,
+      "text": "Vega Natklub.\r\nFri entré kl. 22-01, og drikkevarer til alle kl. 22-23",
+      "website": "https://www.soundvenue.com/news.asp?id=5849",
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 21,
+      "type": "concert",
+      "name": null,
+      "venueId": 10,
+      "date": "2007-05-26",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": 30,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 25,
+      "type": "concert",
+      "name": null,
+      "venueId": 14,
+      "date": "2007-05-26",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": 30,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 22,
+      "type": "concert",
+      "name": null,
+      "venueId": 12,
+      "date": "2007-05-29",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": 260,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 27,
+      "type": "releaseparty",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-05-30",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": 50,
+      "text": "Releaseparty for EP'en \"A Machine Like Me\"\r\nVideo og gratis drikkevarer kl 21, koncert 22.",
+      "website": "https://www.songtothesiren.com/myspace/300507loppen.jpg",
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 32,
+      "type": "festival",
+      "name": "Distortion Festival",
+      "venueId": null,
+      "date": "2007-05-30",
+      "time": null,
+      "endDate": "2007-06-03",
+      "price": null,
+      "text": "",
+      "website": "https://cphdistortion.dk",
+      "myspace": "https://myspace.com/cphdistortion",
+      "status": null
+    },
+    {
+      "id": 3,
+      "type": "concert",
+      "name": null,
+      "venueId": 3,
+      "date": "2007-05-31",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": 80,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 4,
+      "type": "concert",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-05-31",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": 90,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 18,
+      "type": "festival",
+      "name": "Jamfestival",
+      "venueId": 8,
+      "date": "2007-06-01",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": 125,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 30,
+      "type": "concert",
+      "name": null,
+      "venueId": 7,
+      "date": "2007-06-01",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": 110,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 5,
+      "type": "concert",
+      "name": "AFLYST",
+      "venueId": 4,
+      "date": "2007-06-07",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": 0,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 13,
+      "type": "concert",
+      "name": null,
+      "venueId": 7,
+      "date": "2007-06-08",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 31,
+      "type": "concert",
+      "name": null,
+      "venueId": 7,
+      "date": "2007-06-13",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": 90,
+      "text": "+ support",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 33,
+      "type": "concert",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-06-14",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": 70,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 6,
+      "type": "festival",
+      "name": "Vesterbro Festival",
+      "venueId": null,
+      "date": "2007-06-15",
+      "time": "16:45:00",
+      "endDate": "2007-06-16",
+      "price": 80,
+      "text": "",
+      "website": "https://vesterbrofestival.dk",
+      "myspace": "https://myspace.com/vesterbrofestival",
+      "status": null
+    },
+    {
+      "id": 19,
+      "type": "concert",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-06-15",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": null,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 35,
+      "type": "concert",
+      "name": null,
+      "venueId": 8,
+      "date": "2007-06-15",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 36,
+      "type": "concert",
+      "name": "Spektakel 14",
+      "venueId": 2,
+      "date": "2007-06-17",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": 50,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 16,
+      "type": "concert",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-06-18",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": 120,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 39,
+      "type": "concert",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-06-20",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": 60,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 7,
+      "type": "concert",
+      "name": "AFLYST",
+      "venueId": 3,
+      "date": "2007-06-23",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": null,
+      "text": "Aflyst på grund af brand på Rust.",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 40,
+      "type": "concert",
+      "name": null,
+      "venueId": 9,
+      "date": "2007-06-23",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 29,
+      "type": "concert",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-06-26",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": 120,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 37,
+      "type": "party",
+      "name": "NATBAS-afslutningsfest på RUC",
+      "venueId": 16,
+      "date": "2007-06-28",
+      "time": "19:00:00",
+      "endDate": null,
+      "price": 0,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 8,
+      "type": "festival",
+      "name": "Roskilde Festival 2007",
+      "venueId": null,
+      "date": "2007-07-01",
+      "time": null,
+      "endDate": "2007-07-08",
+      "price": null,
+      "text": "Udsolgt!",
+      "website": "https://roskilde-festival.dk",
+      "myspace": "https://myspace.com/roskildefestival",
+      "status": null
+    },
+    {
+      "id": 20,
+      "type": "festival",
+      "name": "Copenhagen Jazz Festival",
+      "venueId": null,
+      "date": "2007-07-06",
+      "time": null,
+      "endDate": "2007-07-15",
+      "price": null,
+      "text": null,
+      "website": "https://www.jazzfestival.dk",
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 42,
+      "type": "concert",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-07-13",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": 100,
+      "text": "En del af Copenhagen Jazz Festival",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 43,
+      "type": "concert",
+      "name": null,
+      "venueId": 12,
+      "date": "2007-07-14",
+      "time": null,
+      "endDate": null,
+      "price": 110,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 9,
+      "type": "festival",
+      "name": "Nakkefestival 2007",
+      "venueId": null,
+      "date": "2007-07-18",
+      "time": null,
+      "endDate": "2007-07-21",
+      "price": 250,
+      "text": "Billetter er til salg på billetnet - der bliver sikkert udsolgt, og de er 100 kr. dyrere i indgangen...",
+      "website": "https://nakkefestival.dk",
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 10,
+      "type": "concert",
+      "name": null,
+      "venueId": 5,
+      "date": "2007-07-24",
+      "time": null,
+      "endDate": null,
+      "price": 230,
+      "text": null,
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 58,
+      "type": "release",
+      "name": "Guitar Hero: Rocks the 80s",
+      "venueId": null,
+      "date": "2007-07-27",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "Så er det tid til 80'er plasticguitar!",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 45,
+      "type": "concert",
+      "name": null,
+      "venueId": 8,
+      "date": "2007-08-03",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 56,
+      "type": "concert",
+      "name": null,
+      "venueId": 14,
+      "date": "2007-08-03",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": 30,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 38,
+      "type": "festival",
+      "name": "Helsingør Festival",
+      "venueId": 14,
+      "date": "2007-08-09",
+      "time": null,
+      "endDate": "2007-08-11",
+      "price": null,
+      "text": "",
+      "website": "https://helsingorfestival.dk/2007",
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 52,
+      "type": "concert",
+      "name": null,
+      "venueId": 8,
+      "date": "2007-08-09",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 44,
+      "type": "concert",
+      "name": null,
+      "venueId": 12,
+      "date": "2007-08-11",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": 230,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 48,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-08-16",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": 175,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 63,
+      "type": "concert",
+      "name": null,
+      "venueId": 8,
+      "date": "2007-08-21",
+      "time": "20:00:00",
+      "endDate": null,
+      "price": 125,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 61,
+      "type": "concert",
+      "name": null,
+      "venueId": 9,
+      "date": "2007-08-24",
+      "time": null,
+      "endDate": null,
+      "price": 50,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 54,
+      "type": "festival",
+      "name": "Blomst Festival",
+      "venueId": 18,
+      "date": "2007-08-25",
+      "time": "18:00:00",
+      "endDate": null,
+      "price": 80,
+      "text": "",
+      "website": "https://blomstblomst.dk/03",
+      "myspace": "https://myspace.com/blomstblomst",
+      "status": null
+    },
+    {
+      "id": 78,
+      "type": "festival",
+      "name": "Fair Fælled Festival",
+      "venueId": 20,
+      "date": "2007-08-25",
+      "time": null,
+      "endDate": "2007-08-26",
+      "price": null,
+      "text": "+ flere bands",
+      "website": "https://ms.dk/fair",
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 79,
+      "type": "concert",
+      "name": null,
+      "venueId": 21,
+      "date": "2007-08-30",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 66,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-09-05",
+      "time": null,
+      "endDate": null,
+      "price": 145,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 75,
+      "type": "concert",
+      "name": "12 timer non-stop",
+      "venueId": 8,
+      "date": "2007-09-08",
+      "time": "16:00:00",
+      "endDate": null,
+      "price": 60,
+      "text": "16-21: Rock/Pop\r\n22-04: Metal",
+      "website": "https://rock.xstream.dk/site/calendar_element.php?id=652",
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 12,
+      "type": "release",
+      "name": "Proof of Youth",
+      "venueId": null,
+      "date": "2007-09-10",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 53,
+      "type": "concert",
+      "name": null,
+      "venueId": 17,
+      "date": "2007-09-14",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 55,
+      "type": "releaseparty",
+      "name": "Choir vs. Evil",
+      "venueId": 19,
+      "date": "2007-09-22",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "Release party for the split 7\" ep called \"Choir vs. Evil\". Choir Of Young Believers makes a cover of an Evil Death Machine song and vice verca.",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 64,
+      "type": "festival",
+      "name": "12 timers jamfestival",
+      "venueId": 8,
+      "date": "2007-09-22",
+      "time": "16:00:00",
+      "endDate": null,
+      "price": 135,
+      "text": "",
+      "website": "https://rock.xstream.dk/site/calendar_element.php?id=653",
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 76,
+      "type": "concert",
+      "name": null,
+      "venueId": 14,
+      "date": "2007-09-26",
+      "time": null,
+      "endDate": null,
+      "price": 20,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 47,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-09-27",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": 160,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 46,
+      "type": "concert",
+      "name": "Indie Night Summer Special",
+      "venueId": 7,
+      "date": "2007-09-28",
+      "time": null,
+      "endDate": null,
+      "price": 50,
+      "text": "DJ Morten Møller & Line Sandsted + Dj Lorenzo Woodrose (Baby woodrose,The Setting son) + Dj Charlie Lømmel (Moi Caprice)\r\nGratis før 23",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 81,
+      "type": "concert",
+      "name": "Breakfastclub",
+      "venueId": 6,
+      "date": "2007-09-28",
+      "time": null,
+      "endDate": null,
+      "price": 50,
+      "text": "+ DJs: Ung Flugt",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 49,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-09-29",
+      "time": "21:00:00",
+      "endDate": null,
+      "price": 100,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 51,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-10-01",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": 180,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 80,
+      "type": "release",
+      "name": null,
+      "venueId": null,
+      "date": "2007-10-01",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "The Late Parade udgiver deres debut-EP.\r\nReception i 12 Tonar.",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 77,
+      "type": "concert",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-10-02",
+      "time": null,
+      "endDate": null,
+      "price": 80,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 59,
+      "type": "concert",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-10-13",
+      "time": null,
+      "endDate": null,
+      "price": 120,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 73,
+      "type": "concert",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-10-17",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 67,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-10-25",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 34,
+      "type": "concert",
+      "name": null,
+      "venueId": 3,
+      "date": "2007-10-26",
+      "time": "22:00:00",
+      "endDate": null,
+      "price": 90,
+      "text": "Formodentlig aflyst på grund ombygning efter brand på Rust",
+      "website": null,
+      "myspace": null,
+      "status": "cancelled"
+    },
+    {
+      "id": 62,
+      "type": "concert",
+      "name": null,
+      "venueId": 12,
+      "date": "2007-10-27",
+      "time": null,
+      "endDate": null,
+      "price": 90,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 72,
+      "type": "concert",
+      "name": null,
+      "venueId": 5,
+      "date": "2007-10-31",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 60,
+      "type": "concert",
+      "name": null,
+      "venueId": 2,
+      "date": "2007-11-01",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 74,
+      "type": "concert",
+      "name": null,
+      "venueId": 4,
+      "date": "2007-11-01",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 65,
+      "type": "release",
+      "name": "Lust, Lust, Lust",
+      "venueId": null,
+      "date": "2007-11-05",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 28,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-11-12",
+      "time": null,
+      "endDate": null,
+      "price": 300,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": "soldout"
+    },
+    {
+      "id": 68,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-11-15",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 50,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-11-17",
+      "time": "20:00:00",
+      "endDate": null,
+      "price": 180,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 69,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-11-18",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 70,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-11-26",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 41,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-11-29",
+      "time": null,
+      "endDate": null,
+      "price": 230,
+      "text": "Forsalget starter mandag 25. juni kl. 10:00",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 71,
+      "type": "concert",
+      "name": null,
+      "venueId": 6,
+      "date": "2007-12-03",
+      "time": null,
+      "endDate": null,
+      "price": null,
+      "text": "",
+      "website": null,
+      "myspace": null,
+      "status": null
+    },
+    {
+      "id": 57,
+      "type": "festival",
+      "name": "Roskilde Festival 2008",
+      "venueId": null,
+      "date": "2008-06-29",
+      "time": null,
+      "endDate": "2008-07-06",
+      "price": null,
+      "text": "Billetsalg fra 1. december 2007",
+      "website": "https://roskilde-festival.dk",
+      "myspace": "https://myspace.com/roskildefestival",
+      "status": null
+    }
+  ],
+  "appearances": [
+    {
+      "eventId": 1,
+      "bandId": 1,
+      "sequence": 0
+    },
+    {
+      "eventId": 2,
+      "bandId": 2,
+      "sequence": 0
+    },
+    {
+      "eventId": 3,
+      "bandId": 1,
+      "sequence": 1
+    },
+    {
+      "eventId": 3,
+      "bandId": 3,
+      "sequence": 0
+    },
+    {
+      "eventId": 3,
+      "bandId": 23,
+      "sequence": 2
+    },
+    {
+      "eventId": 4,
+      "bandId": 4,
+      "sequence": 0
+    },
+    {
+      "eventId": 4,
+      "bandId": 5,
+      "sequence": 1
+    },
+    {
+      "eventId": 5,
+      "bandId": 5,
+      "sequence": 0
+    },
+    {
+      "eventId": 6,
+      "bandId": 1,
+      "sequence": 3
+    },
+    {
+      "eventId": 6,
+      "bandId": 6,
+      "sequence": 0
+    },
+    {
+      "eventId": 6,
+      "bandId": 7,
+      "sequence": 1
+    },
+    {
+      "eventId": 6,
+      "bandId": 8,
+      "sequence": 2
+    },
+    {
+      "eventId": 6,
+      "bandId": 9,
+      "sequence": 4
+    },
+    {
+      "eventId": 6,
+      "bandId": 10,
+      "sequence": 5
+    },
+    {
+      "eventId": 6,
+      "bandId": 11,
+      "sequence": 6
+    },
+    {
+      "eventId": 6,
+      "bandId": 12,
+      "sequence": 7
+    },
+    {
+      "eventId": 6,
+      "bandId": 13,
+      "sequence": 8
+    },
+    {
+      "eventId": 6,
+      "bandId": 14,
+      "sequence": 9
+    },
+    {
+      "eventId": 6,
+      "bandId": 15,
+      "sequence": 10
+    },
+    {
+      "eventId": 6,
+      "bandId": 16,
+      "sequence": 11
+    },
+    {
+      "eventId": 6,
+      "bandId": 17,
+      "sequence": 12
+    },
+    {
+      "eventId": 6,
+      "bandId": 18,
+      "sequence": 13
+    },
+    {
+      "eventId": 7,
+      "bandId": 18,
+      "sequence": 0
+    },
+    {
+      "eventId": 7,
+      "bandId": 52,
+      "sequence": 1
+    },
+    {
+      "eventId": 10,
+      "bandId": 19,
+      "sequence": 0
+    },
+    {
+      "eventId": 11,
+      "bandId": 1,
+      "sequence": 0
+    },
+    {
+      "eventId": 12,
+      "bandId": 20,
+      "sequence": 0
+    },
+    {
+      "eventId": 13,
+      "bandId": 1,
+      "sequence": 0
+    },
+    {
+      "eventId": 13,
+      "bandId": 21,
+      "sequence": 1
+    },
+    {
+      "eventId": 14,
+      "bandId": 22,
+      "sequence": 0
+    },
+    {
+      "eventId": 15,
+      "bandId": 24,
+      "sequence": 0
+    },
+    {
+      "eventId": 15,
+      "bandId": 25,
+      "sequence": 1
+    },
+    {
+      "eventId": 16,
+      "bandId": 26,
+      "sequence": 0
+    },
+    {
+      "eventId": 16,
+      "bandId": 48,
+      "sequence": 1
+    },
+    {
+      "eventId": 16,
+      "bandId": 49,
+      "sequence": 2
+    },
+    {
+      "eventId": 17,
+      "bandId": 27,
+      "sequence": 0
+    },
+    {
+      "eventId": 17,
+      "bandId": 28,
+      "sequence": 1
+    },
+    {
+      "eventId": 18,
+      "bandId": 29,
+      "sequence": 0
+    },
+    {
+      "eventId": 18,
+      "bandId": 30,
+      "sequence": 1
+    },
+    {
+      "eventId": 18,
+      "bandId": 31,
+      "sequence": 2
+    },
+    {
+      "eventId": 18,
+      "bandId": 32,
+      "sequence": 3
+    },
+    {
+      "eventId": 19,
+      "bandId": 33,
+      "sequence": 0
+    },
+    {
+      "eventId": 21,
+      "bandId": 34,
+      "sequence": 0
+    },
+    {
+      "eventId": 22,
+      "bandId": 35,
+      "sequence": 0
+    },
+    {
+      "eventId": 24,
+      "bandId": 36,
+      "sequence": 0
+    },
+    {
+      "eventId": 25,
+      "bandId": 37,
+      "sequence": 0
+    },
+    {
+      "eventId": 25,
+      "bandId": 38,
+      "sequence": 1
+    },
+    {
+      "eventId": 27,
+      "bandId": 39,
+      "sequence": 0
+    },
+    {
+      "eventId": 28,
+      "bandId": 40,
+      "sequence": 0
+    },
+    {
+      "eventId": 28,
+      "bandId": 96,
+      "sequence": 1
+    },
+    {
+      "eventId": 29,
+      "bandId": 42,
+      "sequence": 0
+    },
+    {
+      "eventId": 29,
+      "bandId": 56,
+      "sequence": 1
+    },
+    {
+      "eventId": 30,
+      "bandId": 43,
+      "sequence": 0
+    },
+    {
+      "eventId": 30,
+      "bandId": 44,
+      "sequence": 1
+    },
+    {
+      "eventId": 31,
+      "bandId": 45,
+      "sequence": 0
+    },
+    {
+      "eventId": 33,
+      "bandId": 50,
+      "sequence": 0
+    },
+    {
+      "eventId": 33,
+      "bandId": 51,
+      "sequence": 1
+    },
+    {
+      "eventId": 34,
+      "bandId": 6,
+      "sequence": 0
+    },
+    {
+      "eventId": 35,
+      "bandId": 53,
+      "sequence": 0
+    },
+    {
+      "eventId": 35,
+      "bandId": 57,
+      "sequence": 1
+    },
+    {
+      "eventId": 35,
+      "bandId": 58,
+      "sequence": 2
+    },
+    {
+      "eventId": 36,
+      "bandId": 53,
+      "sequence": 2
+    },
+    {
+      "eventId": 36,
+      "bandId": 54,
+      "sequence": 0
+    },
+    {
+      "eventId": 36,
+      "bandId": 55,
+      "sequence": 1
+    },
+    {
+      "eventId": 39,
+      "bandId": 10,
+      "sequence": 0
+    },
+    {
+      "eventId": 39,
+      "bandId": 59,
+      "sequence": 1
+    },
+    {
+      "eventId": 40,
+      "bandId": 33,
+      "sequence": 0
+    },
+    {
+      "eventId": 40,
+      "bandId": 60,
+      "sequence": 1
+    },
+    {
+      "eventId": 41,
+      "bandId": 61,
+      "sequence": 0
+    },
+    {
+      "eventId": 42,
+      "bandId": 13,
+      "sequence": 1
+    },
+    {
+      "eventId": 42,
+      "bandId": 62,
+      "sequence": 0
+    },
+    {
+      "eventId": 42,
+      "bandId": 63,
+      "sequence": 2
+    },
+    {
+      "eventId": 42,
+      "bandId": 64,
+      "sequence": 3
+    },
+    {
+      "eventId": 43,
+      "bandId": 65,
+      "sequence": 0
+    },
+    {
+      "eventId": 44,
+      "bandId": 66,
+      "sequence": 0
+    },
+    {
+      "eventId": 45,
+      "bandId": 67,
+      "sequence": 0
+    },
+    {
+      "eventId": 46,
+      "bandId": 12,
+      "sequence": 1
+    },
+    {
+      "eventId": 46,
+      "bandId": 68,
+      "sequence": 0
+    },
+    {
+      "eventId": 46,
+      "bandId": 69,
+      "sequence": 2
+    },
+    {
+      "eventId": 47,
+      "bandId": 70,
+      "sequence": 0
+    },
+    {
+      "eventId": 47,
+      "bandId": 104,
+      "sequence": 1
+    },
+    {
+      "eventId": 48,
+      "bandId": 71,
+      "sequence": 0
+    },
+    {
+      "eventId": 49,
+      "bandId": 50,
+      "sequence": 0
+    },
+    {
+      "eventId": 49,
+      "bandId": 72,
+      "sequence": 1
+    },
+    {
+      "eventId": 50,
+      "bandId": 73,
+      "sequence": 0
+    },
+    {
+      "eventId": 51,
+      "bandId": 74,
+      "sequence": 0
+    },
+    {
+      "eventId": 52,
+      "bandId": 12,
+      "sequence": 0
+    },
+    {
+      "eventId": 53,
+      "bandId": 12,
+      "sequence": 0
+    },
+    {
+      "eventId": 54,
+      "bandId": 75,
+      "sequence": 5
+    },
+    {
+      "eventId": 54,
+      "bandId": 76,
+      "sequence": 0
+    },
+    {
+      "eventId": 54,
+      "bandId": 79,
+      "sequence": 1
+    },
+    {
+      "eventId": 54,
+      "bandId": 80,
+      "sequence": 2
+    },
+    {
+      "eventId": 54,
+      "bandId": 81,
+      "sequence": 3
+    },
+    {
+      "eventId": 54,
+      "bandId": 82,
+      "sequence": 4
+    },
+    {
+      "eventId": 54,
+      "bandId": 83,
+      "sequence": 6
+    },
+    {
+      "eventId": 54,
+      "bandId": 84,
+      "sequence": 7
+    },
+    {
+      "eventId": 54,
+      "bandId": 85,
+      "sequence": 8
+    },
+    {
+      "eventId": 54,
+      "bandId": 86,
+      "sequence": 9
+    },
+    {
+      "eventId": 54,
+      "bandId": 87,
+      "sequence": 10
+    },
+    {
+      "eventId": 55,
+      "bandId": 75,
+      "sequence": 0
+    },
+    {
+      "eventId": 55,
+      "bandId": 76,
+      "sequence": 1
+    },
+    {
+      "eventId": 56,
+      "bandId": 77,
+      "sequence": 1
+    },
+    {
+      "eventId": 56,
+      "bandId": 78,
+      "sequence": 0
+    },
+    {
+      "eventId": 59,
+      "bandId": 88,
+      "sequence": 0
+    },
+    {
+      "eventId": 60,
+      "bandId": 76,
+      "sequence": 1
+    },
+    {
+      "eventId": 60,
+      "bandId": 89,
+      "sequence": 0
+    },
+    {
+      "eventId": 61,
+      "bandId": 18,
+      "sequence": 0
+    },
+    {
+      "eventId": 61,
+      "bandId": 90,
+      "sequence": 1
+    },
+    {
+      "eventId": 62,
+      "bandId": 44,
+      "sequence": 0
+    },
+    {
+      "eventId": 62,
+      "bandId": 91,
+      "sequence": 1
+    },
+    {
+      "eventId": 63,
+      "bandId": 92,
+      "sequence": 0
+    },
+    {
+      "eventId": 63,
+      "bandId": 93,
+      "sequence": 1
+    },
+    {
+      "eventId": 65,
+      "bandId": 94,
+      "sequence": 0
+    },
+    {
+      "eventId": 66,
+      "bandId": 45,
+      "sequence": 0
+    },
+    {
+      "eventId": 67,
+      "bandId": 95,
+      "sequence": 0
+    },
+    {
+      "eventId": 68,
+      "bandId": 97,
+      "sequence": 0
+    },
+    {
+      "eventId": 69,
+      "bandId": 98,
+      "sequence": 0
+    },
+    {
+      "eventId": 70,
+      "bandId": 99,
+      "sequence": 0
+    },
+    {
+      "eventId": 71,
+      "bandId": 100,
+      "sequence": 0
+    },
+    {
+      "eventId": 72,
+      "bandId": 101,
+      "sequence": 0
+    },
+    {
+      "eventId": 73,
+      "bandId": 102,
+      "sequence": 0
+    },
+    {
+      "eventId": 74,
+      "bandId": 103,
+      "sequence": 0
+    },
+    {
+      "eventId": 76,
+      "bandId": 28,
+      "sequence": 2
+    },
+    {
+      "eventId": 76,
+      "bandId": 105,
+      "sequence": 0
+    },
+    {
+      "eventId": 76,
+      "bandId": 106,
+      "sequence": 1
+    },
+    {
+      "eventId": 77,
+      "bandId": 107,
+      "sequence": 0
+    },
+    {
+      "eventId": 77,
+      "bandId": 108,
+      "sequence": 1
+    },
+    {
+      "eventId": 78,
+      "bandId": 16,
+      "sequence": 1
+    },
+    {
+      "eventId": 78,
+      "bandId": 109,
+      "sequence": 0
+    },
+    {
+      "eventId": 78,
+      "bandId": 110,
+      "sequence": 2
+    },
+    {
+      "eventId": 78,
+      "bandId": 111,
+      "sequence": 3
+    },
+    {
+      "eventId": 79,
+      "bandId": 5,
+      "sequence": 0
+    },
+    {
+      "eventId": 80,
+      "bandId": 5,
+      "sequence": 0
+    },
+    {
+      "eventId": 81,
+      "bandId": 5,
+      "sequence": 0
+    },
+    {
+      "eventId": 81,
+      "bandId": 112,
+      "sequence": 1
+    }
+  ]
+}

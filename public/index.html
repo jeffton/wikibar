@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Wikibar.dk koncertkalenderen fra 2007, genoplivet som et sikkert, skrivebeskyttet arkiv.">
+    <title>Kalender på wikibar.dk</title>
+    <link rel="icon" type="image/png" href="layout/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="menu">
+      <nav class="menucontent" aria-label="Hovedmenu">
+        <a data-nav="calendar" href="./"><img src="layout/menu_calendar_selected.png" width="122" height="51" alt="kalender"></a>
+        <a data-nav="venues" href="?view=venues"><img src="layout/menu_venue.png" width="161" height="51" alt="spillesteder"></a>
+        <a data-nav="bands" href="?view=bands"><img src="layout/menu_band.png" width="85" height="51" alt="bands"></a>
+        <a data-nav="users" href="?view=users"><img src="layout/menu_user.png" width="111" height="51" alt="brugere"></a>
+      </nav>
+      <div class="login">
+        <span id="today"></span><span> &bull; </span>
+        <a class="button" href="?view=users">Log ind/Ny bruger</a>
+      </div>
+    </header>
+
+    <main id="main" class="main" tabindex="-1">
+      <noscript><div class="notice errortext"><div>Denne side fungerer ikke uden JavaScript.</div></div></noscript>
+      <p class="loading">Indlæser koncertkalenderen...</p>
+    </main>
+
+    <footer class="foot">
+      <div class="links">
+        <a href="?view=about">om wikibar</a> &bull;
+        <a href="?view=stats">statistik</a> &bull;
+        et skrivebeskyttet arkiv fra 2007
+      </div>
+    </footer>
+  </body>
+</html>
