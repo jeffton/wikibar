@@ -213,7 +213,7 @@ def build_archive(sql: str) -> dict[str, object]:
         "meta": {
             "snapshot": "2016-12-08",
             "dataThrough": max(str(event["date"]) for event in events),
-            "privacy": "Passwords, salts, tokens, email addresses, edit history and private-home addresses are excluded.",
+            "privacy": "Passwords, salts, tokens, email addresses and edit history are excluded.",
         },
         "bands": sorted(bands, key=lambda row: str(row["sortName"]).casefold()),
         "venues": sorted(venues, key=lambda row: str(row["sortName"]).casefold()),

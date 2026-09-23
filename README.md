@@ -21,7 +21,7 @@ Dataene stammer fra den komplette databasekopi fra 8. december 2016 og indeholde
 - offentlige brugerprofiler og de oprindelige deltagerlister
 - relationen mellem events og bands
 
-Adgangskoder, salts, tokens, mails, ændringshistorik og adresser på private hjem er udeladt. Det oprindelige SQL-dump ligger ikke i repositoryet.
+Adgangskoder, salts, tokens, mails og ændringshistorik er udeladt. Det oprindelige SQL-dump ligger ikke i repositoryet.
 
 `scripts/import_archive.py` kan genskabe `public/data/archive.json` fra det private dump:
 

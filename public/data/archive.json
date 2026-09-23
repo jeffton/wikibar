@@ -2,7 +2,7 @@
   "meta": {
     "snapshot": "2016-12-08",
     "dataThrough": "2012-06-30",
-    "privacy": "Passwords, salts, tokens, email addresses, edit history and private-home addresses are excluded."
+    "privacy": "Passwords, salts, tokens, email addresses and edit history are excluded."
   },
   "bands": [
     {

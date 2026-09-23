@@ -475,7 +475,7 @@ function showAbout() {
   wrapper.append(
     node("p", { text: "Wikibar var en fælles koncertkalender, hvor brugerne kunne oprette og redigere events, bands og spillesteder – og fortælle, hvilke koncerter de tog til." }),
     node("p", { text: "Denne udgave genskaber designet og indholdet fra den komplette bevarede databasekopi fra 8. december 2016. Den kører som statiske filer uden PHP, MySQL, login eller skriveadgang." }),
-    node("p", { text: "Alle events, bands, spillesteder, offentlige profiloplysninger og de oprindelige deltagerlister er med. Adgangskoder, mails, tokens, ændringshistorik og adresser på private hjem er udeladt." }),
+    node("p", { text: "Alle events, bands, spillesteder, offentlige profiloplysninger og de oprindelige deltagerlister er med. Adgangskoder, mails, tokens og ændringshistorik er udeladt." }),
   );
 }
 
