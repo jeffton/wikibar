@@ -409,7 +409,7 @@ function showDetail(data, type, itemId) {
 
   if (type === "venue") {
     const address = [item.street, [item.postalCode, item.city].filter(Boolean).join(" "), item.country].filter(Boolean).join("\n");
-    infoHeading(box, item.privateHome ? "Type" : "Adresse", item.privateHome ? "Privat hjem" : address);
+    infoHeading(box, "Adresse", address);
     infoHeading(box, "Musikken starter", item.musicStarts);
     const prices = [
       ["Typisk entré", item.typicalEntry], ["Fadøl", item.draught], ["Flaskeøl", item.bottle],
