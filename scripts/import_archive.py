@@ -8,7 +8,6 @@ import json
 import re
 from pathlib import Path
 
-PRIVATE_HOME_IDS = {13, 15}
 CURRENT_TYPES = {"band", "event", "venue"}
 
 
@@ -115,24 +114,6 @@ def records(sql: str, table: str) -> list[dict[str, object]]:
     return [dict(zip(columns, row, strict=True)) for row in rows]
 
 
-def clean_url(value: object) -> str | None:
-    if not value:
-        return None
-    url = str(value).strip()
-    if url.startswith(("http://", "https://")):
-        return url
-    return f"https://{url}"
-
-
-def social_url(value: object, service: str) -> str | None:
-    if not value:
-        return None
-    raw = str(value).strip()
-    if raw.startswith(("http://", "https://")):
-        return raw
-    return f"https://{service}.com/{raw}"
-
-
 def build_archive(sql: str) -> dict[str, object]:
     current = {
         (row["type"], row["id"]): row["version"]
@@ -147,31 +128,24 @@ def build_archive(sql: str) -> dict[str, object]:
         bands.append({
             "id": row["id"], "name": row["name"], "sortName": row["name_sort"],
             "country": row["country"], "text": row["text"],
-            "website": clean_url(row["url_website"]),
-            "myspace": social_url(row["url_myspace"], "myspace"),
-            "facebook": social_url(row["url_facebook"], "facebook"),
+            "website": row["url_website"], "myspace": row["url_myspace"],
+            "facebook": row["url_facebook"],
         })
 
     venues = []
     for row in records(sql, "venue_version"):
         if current.get(("venue", row["id"])) != row["version"]:
             continue
-        private_home = row["id"] in PRIVATE_HOME_IDS
         venues.append({
             "id": row["id"], "name": row["name"], "sortName": row["name_sort"],
-            "privateHome": private_home,
-            "street": None if private_home else row["address_street"],
-            "postalCode": None if private_home else row["address_postalcode"],
-            "city": None if private_home else row["address_city"],
-            "country": None if private_home else row["address_country"],
+            "street": row["address_street"], "postalCode": row["address_postalcode"],
+            "city": row["address_city"], "country": row["address_country"],
             "typicalEntry": row["price_entry"], "bottle": row["price_bottle"],
             "draught": row["price_draught"], "shot": row["price_shot"],
             "drink": row["price_drink"], "wardrobe": row["wardrobe"],
             "wardrobePrice": row["wardrobe_price"], "musicStarts": row["music_starts_at"],
-            "website": clean_url(row["url_website"]),
-            "myspace": social_url(row["url_myspace"], "myspace"),
-            "facebook": social_url(row["url_facebook"], "facebook"),
-            "text": row["text"],
+            "website": row["url_website"], "myspace": row["url_myspace"],
+            "facebook": row["url_facebook"], "text": row["text"],
         })
 
     events = []
@@ -185,10 +159,8 @@ def build_archive(sql: str) -> dict[str, object]:
             "id": row["id"], "type": row["eventtype"], "name": row["name"],
             "venueId": row["venueID"], "date": row["date"], "time": row["time"],
             "endDate": row["enddate"], "price": row["price"], "text": row["text"],
-            "website": clean_url(row["url_website"]),
-            "myspace": social_url(row["url_myspace"], "myspace"),
-            "facebook": social_url(row["url_facebook"], "facebook"),
-            "status": row["status"],
+            "website": row["url_website"], "myspace": row["url_myspace"],
+            "facebook": row["url_facebook"], "status": row["status"],
         })
 
     appearances = [
@@ -199,9 +171,8 @@ def build_archive(sql: str) -> dict[str, object]:
 
     users = [{
         "id": row["id"], "name": row["name"], "text": row["text"],
-        "website": clean_url(row["url_website"]),
-        "myspace": social_url(row["url_myspace"], "myspace"),
-        "facebook": social_url(row["url_facebook"], "facebook"),
+        "website": row["url_website"], "myspace": row["url_myspace"],
+        "facebook": row["url_facebook"],
     } for row in records(sql, "user")]
     attendance = [
         {"eventId": row["eventID"], "userId": row["userID"]}
@@ -212,7 +183,6 @@ def build_archive(sql: str) -> dict[str, object]:
     return {
         "meta": {
             "snapshot": "2016-12-08",
-            "dataThrough": max(str(event["date"]) for event in events),
             "privacy": "Passwords, salts, tokens, email addresses and edit history are excluded.",
         },
         "bands": sorted(bands, key=lambda row: str(row["sortName"]).casefold()),

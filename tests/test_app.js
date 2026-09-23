@@ -8,6 +8,9 @@ const source = fs.readFileSync("public/app.js", "utf8");
 const start = source.indexOf("function browseRanges");
 const end = source.indexOf("\n\nfunction showBrowse", start);
 const browseRanges = eval(`${source.slice(start, end)}\nbrowseRanges`);
+const hrefStart = source.indexOf("function hrefFor");
+const hrefEnd = source.indexOf("\n\nfunction iconLink", hrefStart);
+const hrefFor = eval(`${source.slice(hrefStart, hrefEnd)}\nhrefFor`);
 const archive = JSON.parse(fs.readFileSync("public/data/archive.json", "utf8"));
 
 function labels(items, perPage) {
@@ -25,4 +28,10 @@ test("band page ranges use the shortest unique boundaries", () => {
 test("outer and Unicode boundaries are shortened to one character", () => {
   const items = ["Æble", "Ørn", "Ål", "Åse"].map((sortName, id) => ({ id, name: sortName, sortName }));
   assert.deepEqual(labels(items, 2), ["Æ – Ø", "Å"]);
+});
+
+test("raw archive URL values become functional links only at render time", () => {
+  assert.equal(hrefFor("decoratedecorate.com"), "https://decoratedecorate.com");
+  assert.equal(hrefFor("decoratedecorate", "myspace"), "https://myspace.com/decoratedecorate");
+  assert.equal(hrefFor("pages/Beta-Satan/6280687935", "facebook"), "https://facebook.com/pages/Beta-Satan/6280687935");
 });

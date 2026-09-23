@@ -47,6 +47,10 @@ function route(label, targetView, targetId) {
   return node("a", { text: label, href: `?${query}` });
 }
 
+function hrefFor(value, service = null) {
+  return service ? `https://${service}.com/${value}` : `https://${value}`;
+}
+
 function iconLink(url, image, label, width, height) {
   const icon = node("img");
   icon.src = `layout/${image}`;
@@ -62,12 +66,12 @@ function iconLink(url, image, label, width, height) {
 
 function entityLink(item, type) {
   const wrapper = node("span", { className: "item" }, [route(item.name, type, item.id)]);
-  for (const [url, image, label, width, height] of [
-    [item.website, "linkicon-website.png", "Website", 18, 18],
-    [item.myspace, "linkicon-myspace.png", "MySpace", 17, 19],
-    [item.facebook, "linkicon-facebook.png", "Facebook", 18, 18],
+  for (const [value, service, image, label, width, height] of [
+    [item.website, null, "linkicon-website.png", "Website", 18, 18],
+    [item.myspace, "myspace", "linkicon-myspace.png", "MySpace", 17, 19],
+    [item.facebook, "facebook", "linkicon-facebook.png", "Facebook", 18, 18],
   ]) {
-    if (url) wrapper.append(" ", iconLink(url, image, label, width, height));
+    if (value) wrapper.append(" ", iconLink(hrefFor(value, service), image, label, width, height));
   }
   return wrapper;
 }
@@ -186,14 +190,14 @@ function eventRows(data, events) {
       const notes = node("div", { className: "eventnotes" });
       if (event.text) notes.append(node("span", { className: "content-copy", text: event.text }));
       const eventLinks = [
-        [event.website, "linkicon-website.png", "Website", 18, 18],
-        [event.myspace, "linkicon-myspace.png", "MySpace", 17, 19],
-        [event.facebook, "linkicon-facebook.png", "Facebook", 18, 18],
+        [event.website, null, "linkicon-website.png", "Website", 18, 18],
+        [event.myspace, "myspace", "linkicon-myspace.png", "MySpace", 17, 19],
+        [event.facebook, "facebook", "linkicon-facebook.png", "Facebook", 18, 18],
       ];
-      if (eventLinks.some(([url]) => url)) {
+      if (eventLinks.some(([value]) => value)) {
         const links = node("div", { className: "eventlinks" });
-        for (const [url, image, label, width, height] of eventLinks) {
-          if (url) links.append(iconLink(url, image, label, width, height), " ");
+        for (const [value, service, image, label, width, height] of eventLinks) {
+          if (value) links.append(iconLink(hrefFor(value, service), image, label, width, height), " ");
         }
         notes.append(links);
       }
@@ -424,9 +428,9 @@ function showDetail(data, type, itemId) {
   } else {
     infoHeading(box, "Land", item.country);
   }
-  if (item.website) infoHeading(box, "Website", externalLink(item.website.replace(/^https?:\/\//, ""), item.website));
-  if (item.myspace) infoHeading(box, "MySpace", externalLink(item.myspace.replace(/^https?:\/\//, ""), item.myspace));
-  if (item.facebook) infoHeading(box, "Facebook", externalLink(item.facebook.replace(/^https?:\/\//, ""), item.facebook));
+  if (item.website) infoHeading(box, "Website", externalLink(item.website, hrefFor(item.website)));
+  if (item.myspace) infoHeading(box, "MySpace", externalLink(`myspace.com/${item.myspace}`, hrefFor(item.myspace, "myspace")));
+  if (item.facebook) infoHeading(box, "Facebook", externalLink(`facebook.com/${item.facebook}`, hrefFor(item.facebook, "facebook")));
   if (box.children.length) wrapper.append(box);
   if (item.text) wrapper.append(node("p", { className: "content-copy", text: item.text }));
 
@@ -451,9 +455,9 @@ function showUser(data, userId) {
   heading(`${user.name} (bruger)`);
   const wrapper = content();
   const box = node("aside", { className: "info" });
-  if (user.website) infoHeading(box, "Website", externalLink(user.website.replace(/^https?:\/\//, ""), user.website));
-  if (user.myspace) infoHeading(box, "MySpace", externalLink(user.myspace.replace(/^https?:\/\//, ""), user.myspace));
-  if (user.facebook) infoHeading(box, "Facebook", externalLink(user.facebook.replace(/^https?:\/\//, ""), user.facebook));
+  if (user.website) infoHeading(box, "Website", externalLink(user.website, hrefFor(user.website)));
+  if (user.myspace) infoHeading(box, "MySpace", externalLink(`myspace.com/${user.myspace}`, hrefFor(user.myspace, "myspace")));
+  if (user.facebook) infoHeading(box, "Facebook", externalLink(`facebook.com/${user.facebook}`, hrefFor(user.facebook, "facebook")));
   if (box.children.length) wrapper.append(box);
   if (user.text) wrapper.append(node("p", { className: "content-copy", text: user.text }));
   else wrapper.append(node("em", { text: "Denne bruger skrev ikke en profiltekst." }));
@@ -576,7 +580,7 @@ function showNotFound() {
   content().append(node("p", {}, [document.createTextNode("Siden findes ikke. Gå tilbage til "), route("kalenderen", "calendar"), document.createTextNode(".")]));
 }
 
-fetch("data/archive.json")
+fetch("data/archive.json?v=13")
   .then((response) => {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return response.json();

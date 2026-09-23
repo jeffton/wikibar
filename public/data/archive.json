@@ -1,7 +1,6 @@
 {
   "meta": {
     "snapshot": "2016-12-08",
-    "dataThrough": "2012-06-30",
     "privacy": "Passwords, salts, tokens, email addresses and edit history are excluded."
   },
   "bands": [
@@ -21,8 +20,8 @@
       "sortName": "18th Dye",
       "country": "DK/D",
       "text": "Dansk/tysk støjrock. Gendannet band fra 90'erne.",
-      "website": "https://18thdye.org",
-      "myspace": "https://myspace.com/18thdye",
+      "website": "18thdye.org",
+      "myspace": "18thdye",
       "facebook": null
     },
     {
@@ -61,8 +60,8 @@
       "sortName": "Air",
       "country": "F",
       "text": null,
-      "website": "https://intairnet.org",
-      "myspace": "https://myspace.com/intairnet",
+      "website": "intairnet.org",
+      "myspace": "intairnet",
       "facebook": null
     },
     {
@@ -81,8 +80,8 @@
       "sortName": "Andi Almqvist",
       "country": "S",
       "text": null,
-      "website": "https://www.andialmqvist.com",
-      "myspace": "https://myspace.com/andialmqvist",
+      "website": "www.andialmqvist.com",
+      "myspace": "andialmqvist",
       "facebook": null
     },
     {
@@ -101,8 +100,8 @@
       "sortName": "Animosity",
       "country": null,
       "text": null,
-      "website": "https://www.animositysf.com",
-      "myspace": "https://myspace.com/animosity",
+      "website": "www.animositysf.com",
+      "myspace": "animosity",
       "facebook": null
     },
     {
@@ -152,7 +151,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/asinrebekkamaria",
+      "myspace": "asinrebekkamaria",
       "facebook": null
     },
     {
@@ -191,8 +190,8 @@
       "sortName": "Baby Woodrose",
       "country": null,
       "text": null,
-      "website": "https://babywoodrose.com",
-      "myspace": "https://myspace.com/babywoodrose",
+      "website": "babywoodrose.com",
+      "myspace": "babywoodrose",
       "facebook": null
     },
     {
@@ -211,9 +210,9 @@
       "sortName": "Beta Satan",
       "country": null,
       "text": null,
-      "website": "https://betasatan.dk",
-      "myspace": "https://myspace.com/betasatan",
-      "facebook": "https://facebook.com/pages/Beta-Satan/6280687935"
+      "website": "betasatan.dk",
+      "myspace": "betasatan",
+      "facebook": "pages/Beta-Satan/6280687935"
     },
     {
       "id": 19,
@@ -221,8 +220,8 @@
       "sortName": "Black Rebel Motorcycle Club",
       "country": null,
       "text": null,
-      "website": "https://blackrebelmotorcycleclub.com",
-      "myspace": "https://myspace.com/blackrebelmotorcycleclub",
+      "website": "blackrebelmotorcycleclub.com",
+      "myspace": "blackrebelmotorcycleclub",
       "facebook": null
     },
     {
@@ -241,7 +240,7 @@
       "sortName": "Bloodhound Gang, The",
       "country": null,
       "text": null,
-      "website": "https://bloodhoundgang.com",
+      "website": "bloodhoundgang.com",
       "myspace": null,
       "facebook": null
     },
@@ -281,8 +280,8 @@
       "sortName": "Blue Van, The",
       "country": null,
       "text": null,
-      "website": "https://thebluevan.com",
-      "myspace": "https://myspace.com/thebluevan",
+      "website": "thebluevan.com",
+      "myspace": "thebluevan",
       "facebook": null
     },
     {
@@ -462,7 +461,7 @@
       "country": "D/DK",
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/choirofyoungbelievers",
+      "myspace": "choirofyoungbelievers",
       "facebook": null
     },
     {
@@ -472,7 +471,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/thecitykill",
+      "myspace": "thecitykill",
       "facebook": null
     },
     {
@@ -561,8 +560,8 @@
       "sortName": "Converge",
       "country": null,
       "text": null,
-      "website": "https://convergecult.com",
-      "myspace": "https://myspace.com/converge",
+      "website": "convergecult.com",
+      "myspace": "converge",
       "facebook": null
     },
     {
@@ -612,7 +611,7 @@
       "country": "US",
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/crystalantlers",
+      "myspace": "crystalantlers",
       "facebook": null
     },
     {
@@ -622,7 +621,7 @@
       "country": "US",
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/crystalstilts",
+      "myspace": "crystalstilts",
       "facebook": null
     },
     {
@@ -631,7 +630,7 @@
       "sortName": "Cure, The",
       "country": null,
       "text": null,
-      "website": "https://thecure.com",
+      "website": "thecure.com",
       "myspace": null,
       "facebook": null
     },
@@ -672,7 +671,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/darlingdontdance",
+      "myspace": "darlingdontdance",
       "facebook": null
     },
     {
@@ -702,8 +701,8 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/dpthewildesect",
-      "facebook": "https://facebook.com/pages/David-Peter-and-The-Wilde-Sect/26669416660"
+      "myspace": "dpthewildesect",
+      "facebook": "pages/David-Peter-and-The-Wilde-Sect/26669416660"
     },
     {
       "id": 203,
@@ -732,7 +731,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/dehjehle",
+      "myspace": "dehjehle",
       "facebook": null
     },
     {
@@ -741,9 +740,9 @@
       "sortName": "Death by Kite",
       "country": null,
       "text": null,
-      "website": "https://deathbykite.com",
-      "myspace": "https://myspace.com/deathbykite",
-      "facebook": "https://facebook.com/pages/Death-By-Kite/18102709626"
+      "website": "deathbykite.com",
+      "myspace": "deathbykite",
+      "facebook": "pages/Death-By-Kite/18102709626"
     },
     {
       "id": 8,
@@ -752,7 +751,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/deathtofrankziyanak",
+      "myspace": "deathtofrankziyanak",
       "facebook": null
     },
     {
@@ -771,8 +770,8 @@
       "sortName": "Decorate.Decorate",
       "country": null,
       "text": null,
-      "website": "https://decoratedecorate.com",
-      "myspace": "https://myspace.com/decoratedecorate",
+      "website": "decoratedecorate.com",
+      "myspace": "decoratedecorate",
       "facebook": null
     },
     {
@@ -812,7 +811,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/digitalleather",
+      "myspace": "digitalleather",
       "facebook": null
     },
     {
@@ -821,8 +820,8 @@
       "sortName": "Dinosaur Machine",
       "country": null,
       "text": null,
-      "website": "https://www.dinosaurmachine.com",
-      "myspace": "https://myspace.com/dinosaurmachine",
+      "website": "www.dinosaurmachine.com",
+      "myspace": "dinosaurmachine",
       "facebook": null
     },
     {
@@ -861,7 +860,7 @@
       "sortName": "Dizzy Jam",
       "country": null,
       "text": null,
-      "website": "https://dizzyjam.dk",
+      "website": "dizzyjam.dk",
       "myspace": null,
       "facebook": null
     },
@@ -902,7 +901,7 @@
       "country": "DK",
       "text": "Lorenzo woodrose' psykedeliske band",
       "website": null,
-      "myspace": "https://myspace.com/dragontears2000",
+      "myspace": "dragontears2000",
       "facebook": null
     },
     {
@@ -911,8 +910,8 @@
       "sortName": "DragonForce",
       "country": "UK",
       "text": null,
-      "website": "https://dragonforce.com",
-      "myspace": "https://myspace.com/dragonforce",
+      "website": "dragonforce.com",
+      "myspace": "dragonforce",
       "facebook": null
     },
     {
@@ -922,7 +921,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/thedronesthedrones",
+      "myspace": "thedronesthedrones",
       "facebook": null
     },
     {
@@ -951,8 +950,8 @@
       "sortName": "Dúné",
       "country": null,
       "text": null,
-      "website": "https://dunesite.com",
-      "myspace": "https://myspace.com/dunesite",
+      "website": "dunesite.com",
+      "myspace": "dunesite",
       "facebook": null
     },
     {
@@ -1051,8 +1050,8 @@
       "sortName": "Entakt",
       "country": null,
       "text": null,
-      "website": "https://entakt.dk",
-      "myspace": "https://myspace.com/entakt",
+      "website": "entakt.dk",
+      "myspace": "entakt",
       "facebook": null
     },
     {
@@ -1061,8 +1060,8 @@
       "sortName": "Entombed",
       "country": null,
       "text": null,
-      "website": "https://entombed.org",
-      "myspace": "https://myspace.com/serpentsaints",
+      "website": "entombed.org",
+      "myspace": "serpentsaints",
       "facebook": null
     },
     {
@@ -1071,8 +1070,8 @@
       "sortName": "epo-555",
       "country": null,
       "text": null,
-      "website": "https://epo-555.dk",
-      "myspace": "https://myspace.com/epo555",
+      "website": "epo-555.dk",
+      "myspace": "epo555",
       "facebook": null
     },
     {
@@ -1082,7 +1081,7 @@
       "country": "DK",
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/esterlouder",
+      "myspace": "esterlouder",
       "facebook": null
     },
     {
@@ -1092,7 +1091,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/evildeathmachine",
+      "myspace": "evildeathmachine",
       "facebook": null
     },
     {
@@ -1122,7 +1121,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/factory45",
+      "myspace": "factory45",
       "facebook": null
     },
     {
@@ -1131,8 +1130,8 @@
       "sortName": "Fashion, The",
       "country": null,
       "text": null,
-      "website": "https://thefashion.dk",
-      "myspace": "https://myspace.com/thefashiondk",
+      "website": "thefashion.dk",
+      "myspace": "thefashiondk",
       "facebook": null
     },
     {
@@ -1142,7 +1141,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/fiftyfootspiders",
+      "myspace": "fiftyfootspiders",
       "facebook": null
     },
     {
@@ -1161,8 +1160,8 @@
       "sortName": "First Aid Kit",
       "country": "S",
       "text": null,
-      "website": "https://thisisfirstaidkit.com",
-      "myspace": "https://myspace.com/thisisfirstaidkit",
+      "website": "thisisfirstaidkit.com",
+      "myspace": "thisisfirstaidkit",
       "facebook": null
     },
     {
@@ -1201,8 +1200,8 @@
       "sortName": "Floor is Made of Lava, The",
       "country": null,
       "text": null,
-      "website": "https://thelava.dk",
-      "myspace": "https://myspace.com/thelava",
+      "website": "thelava.dk",
+      "myspace": "thelava",
       "facebook": null
     },
     {
@@ -1261,8 +1260,8 @@
       "sortName": "Gallhammer",
       "country": "JAP",
       "text": null,
-      "website": "https://galhammer.com",
-      "myspace": "https://myspace.com/ghammercrust",
+      "website": "galhammer.com",
+      "myspace": "ghammercrust",
       "facebook": null
     },
     {
@@ -1272,7 +1271,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/ghostandtape",
+      "myspace": "ghostandtape",
       "facebook": null
     },
     {
@@ -1281,8 +1280,8 @@
       "sortName": "Go! Team, The",
       "country": "UK",
       "text": null,
-      "website": "https://www.thegoteam.co.uk",
-      "myspace": "https://myspace.com/thegoteam",
+      "website": "www.thegoteam.co.uk",
+      "myspace": "thegoteam",
       "facebook": null
     },
     {
@@ -1291,7 +1290,7 @@
       "sortName": "Gogol Bordello",
       "country": null,
       "text": "Gogol Bordello is a Gypsy punk band from the Lower East Side of New York City that formed in 1999. They are renowned for their frenetic, theatrical stage shows. Much of their sound is inspired by Gypsy music, as most of their members are immigrants from Eastern Europe. The band incorporates minor-key accordion and fiddle (and on some of their albums, saxophone) mixed with cabaret, punk, and dub.\r\n\r\nThey were described by Phill Jupitus on Jools Holland Live as \"a bit like The Clash having a fight with The Pogues in Eastern Europe",
-      "website": "https://gogolbordello.com",
+      "website": "gogolbordello.com",
       "myspace": null,
       "facebook": null
     },
@@ -1322,7 +1321,7 @@
       "country": null,
       "text": "Surf",
       "website": null,
-      "myspace": "https://myspace.com/tgtb",
+      "myspace": "tgtb",
       "facebook": null
     },
     {
@@ -1341,8 +1340,8 @@
       "sortName": "Green Concorde",
       "country": null,
       "text": null,
-      "website": "https://greenconcorde.com",
-      "myspace": "https://myspace.com/greenconcorde",
+      "website": "greenconcorde.com",
+      "myspace": "greenconcorde",
       "facebook": null
     },
     {
@@ -1392,7 +1391,7 @@
       "country": "DK",
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/connective",
+      "myspace": "connective",
       "facebook": null
     },
     {
@@ -1421,8 +1420,8 @@
       "sortName": "Highway Child",
       "country": null,
       "text": null,
-      "website": "https://www.highwaychild.dk",
-      "myspace": "https://myspace.com/highwaychilddk",
+      "website": "www.highwaychild.dk",
+      "myspace": "highwaychilddk",
       "facebook": null
     },
     {
@@ -1471,8 +1470,8 @@
       "sortName": "I Am Bones",
       "country": null,
       "text": null,
-      "website": "https://iambones.dk",
-      "myspace": "https://myspace.com/iambonesband",
+      "website": "iambones.dk",
+      "myspace": "iambonesband",
       "facebook": null
     },
     {
@@ -1481,8 +1480,8 @@
       "sortName": "I Got You on Tape",
       "country": null,
       "text": null,
-      "website": "https://igotyouontape.com",
-      "myspace": "https://myspace.com/igotyouontape",
+      "website": "igotyouontape.com",
+      "myspace": "igotyouontape",
       "facebook": null
     },
     {
@@ -1541,8 +1540,8 @@
       "sortName": "ISIS",
       "country": "US",
       "text": null,
-      "website": "https://isistheband.com",
-      "myspace": "https://myspace.com/sgnl05",
+      "website": "isistheband.com",
+      "myspace": "sgnl05",
       "facebook": null
     },
     {
@@ -1602,7 +1601,7 @@
       "country": "CAN",
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/japandroids",
+      "myspace": "japandroids",
       "facebook": null
     },
     {
@@ -1661,8 +1660,8 @@
       "sortName": "Joyce Hotel",
       "country": null,
       "text": null,
-      "website": "https://joycehotel.com",
-      "myspace": "https://myspace.com/joycehotel",
+      "website": "joycehotel.com",
+      "myspace": "joycehotel",
       "facebook": null
     },
     {
@@ -1701,8 +1700,8 @@
       "sortName": "Kid Hereafter, A",
       "country": null,
       "text": null,
-      "website": "https://akidhereafter.com",
-      "myspace": "https://myspace.com/akidhereafter",
+      "website": "akidhereafter.com",
+      "myspace": "akidhereafter",
       "facebook": null
     },
     {
@@ -1762,7 +1761,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/knivknep",
+      "myspace": "knivknep",
       "facebook": null
     },
     {
@@ -1792,7 +1791,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/kvaern",
+      "myspace": "kvaern",
       "facebook": null
     },
     {
@@ -1821,9 +1820,9 @@
       "sortName": "La La Naïve",
       "country": null,
       "text": null,
-      "website": "https://lalanaive.dk",
-      "myspace": "https://myspace.com/lalanaive",
-      "facebook": "https://facebook.com/pages/La-La-Naive/30442487349"
+      "website": "lalanaive.dk",
+      "myspace": "lalanaive",
+      "facebook": "pages/La-La-Naive/30442487349"
     },
     {
       "id": 79,
@@ -1841,8 +1840,8 @@
       "sortName": "Lampshade",
       "country": null,
       "text": null,
-      "website": "https://www.lampshade.dk/",
-      "myspace": "https://myspace.com/lmpshd",
+      "website": "www.lampshade.dk/",
+      "myspace": "lmpshd",
       "facebook": null
     },
     {
@@ -1882,7 +1881,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/thelateparade",
+      "myspace": "thelateparade",
       "facebook": null
     },
     {
@@ -1911,7 +1910,7 @@
       "sortName": "Lis er Stille",
       "country": null,
       "text": null,
-      "website": "https://liserstille.dk",
+      "website": "liserstille.dk",
       "myspace": null,
       "facebook": null
     },
@@ -1942,8 +1941,8 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/littleyellsalot",
-      "facebook": "https://facebook.com/group.php?gid=8413503333"
+      "myspace": "littleyellsalot",
+      "facebook": "group.php?gid=8413503333"
     },
     {
       "id": 243,
@@ -1961,7 +1960,7 @@
       "sortName": "Logh",
       "country": null,
       "text": null,
-      "website": "https://logh.se",
+      "website": "logh.se",
       "myspace": null,
       "facebook": null
     },
@@ -1982,7 +1981,7 @@
       "country": "S",
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/loveisall8",
+      "myspace": "loveisall8",
       "facebook": null
     },
     {
@@ -2062,7 +2061,7 @@
       "country": "UK",
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/mapsmusic",
+      "myspace": "mapsmusic",
       "facebook": null
     },
     {
@@ -2081,9 +2080,9 @@
       "sortName": "Marulk",
       "country": "S",
       "text": "Med en rygende frisk vinyl i bagagen og boogienerverne udenpå skjorten tager den svenske trio Marulk [i](havtaske på dansk)[/i] ud på en firedages miniturné i Nordeuropa. Pladen er udgivet i februar på den klassiske svenske label Transubstans Records, og har med sin new school boogie allerede fået en varm modtagelse af både publikum og presse.\r\nEfter Tyskland och Belgien afslutter de lørdag den 27. marts på Dragens Hule i den danske hovedstad. De deler scenen med københavnske Fuzz Manta og aftenen bliver svedig, intensiv – Og det bliver højt, meget højt.\r\nVelkommen!",
-      "website": "https://marulk.net",
-      "myspace": "https://myspace.com/marulk",
-      "facebook": "https://facebook.com/pages/Marulk/162485587524"
+      "website": "marulk.net",
+      "myspace": "marulk",
+      "facebook": "pages/Marulk/162485587524"
     },
     {
       "id": 43,
@@ -2091,8 +2090,8 @@
       "sortName": "Mary Onettes, The",
       "country": null,
       "text": null,
-      "website": "https://www.themaryonettes.net",
-      "myspace": "https://myspace.com/themaryonettes",
+      "website": "www.themaryonettes.net",
+      "myspace": "themaryonettes",
       "facebook": null
     },
     {
@@ -2211,8 +2210,8 @@
       "sortName": "Mob",
       "country": null,
       "text": null,
-      "website": "https://mobsite.dk",
-      "myspace": "https://myspace.com/mobnoise",
+      "website": "mobsite.dk",
+      "myspace": "mobnoise",
       "facebook": null
     },
     {
@@ -2241,9 +2240,9 @@
       "sortName": "Mono",
       "country": "JAP",
       "text": "Filmisk og drømmende støj-/postrock",
-      "website": "https://mono-jpn.com",
-      "myspace": "https://myspace.com/monojp",
-      "facebook": "https://facebook.com/pages/Mono-Japan/12609779342"
+      "website": "mono-jpn.com",
+      "myspace": "monojp",
+      "facebook": "pages/Mono-Japan/12609779342"
     },
     {
       "id": 162,
@@ -2281,8 +2280,8 @@
       "sortName": "Morrissey",
       "country": null,
       "text": null,
-      "website": "https://www.itsmorrisseysworld.com",
-      "myspace": "https://myspace.com/morrissey",
+      "website": "www.itsmorrisseysworld.com",
+      "myspace": "morrissey",
       "facebook": null
     },
     {
@@ -2321,8 +2320,8 @@
       "sortName": "Munck/Johnson",
       "country": null,
       "text": null,
-      "website": "https://www.munckjohnson.dk",
-      "myspace": "https://myspace.com/munckjohnson",
+      "website": "www.munckjohnson.dk",
+      "myspace": "munckjohnson",
       "facebook": null
     },
     {
@@ -2421,8 +2420,8 @@
       "sortName": "Nancy and the Kapow! Circus Quintet",
       "country": null,
       "text": null,
-      "website": "https://kapowcircus.com",
-      "myspace": "https://myspace.com/kapowcircus",
+      "website": "kapowcircus.com",
+      "myspace": "kapowcircus",
       "facebook": null
     },
     {
@@ -2552,7 +2551,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/od666",
+      "myspace": "od666",
       "facebook": null
     },
     {
@@ -2561,8 +2560,8 @@
       "sortName": "Oh No Ono",
       "country": null,
       "text": null,
-      "website": "https://www.ohnoono.com",
-      "myspace": "https://myspace.com/ohnoono",
+      "website": "www.ohnoono.com",
+      "myspace": "ohnoono",
       "facebook": null
     },
     {
@@ -2581,8 +2580,8 @@
       "sortName": "Olesen-Olesen",
       "country": null,
       "text": null,
-      "website": "https://olesen-olesen.dk",
-      "myspace": "https://myspace.com/olesenolesen",
+      "website": "olesen-olesen.dk",
+      "myspace": "olesenolesen",
       "facebook": null
     },
     {
@@ -2731,8 +2730,8 @@
       "sortName": "Port Largo",
       "country": null,
       "text": null,
-      "website": "https://portlargo.dk",
-      "myspace": "https://myspace.com/portlargo",
+      "website": "portlargo.dk",
+      "myspace": "portlargo",
       "facebook": null
     },
     {
@@ -2781,8 +2780,8 @@
       "sortName": "Psyke Project, The",
       "country": null,
       "text": null,
-      "website": "https://www.thepsykeproject.dk",
-      "myspace": "https://myspace.com/thepsykeproject",
+      "website": "www.thepsykeproject.dk",
+      "myspace": "thepsykeproject",
       "facebook": null
     },
     {
@@ -2802,7 +2801,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/radiosaigon",
+      "myspace": "radiosaigon",
       "facebook": null
     },
     {
@@ -2982,8 +2981,8 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/sallilunn",
-      "facebook": "https://facebook.com/group.php?gid=42997990058"
+      "myspace": "sallilunn",
+      "facebook": "group.php?gid=42997990058"
     },
     {
       "id": 183,
@@ -3062,7 +3061,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/shalalas",
+      "myspace": "shalalas",
       "facebook": null
     },
     {
@@ -3072,7 +3071,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/shoutwellingtonairforce",
+      "myspace": "shoutwellingtonairforce",
       "facebook": null
     },
     {
@@ -3092,7 +3091,7 @@
       "country": "US",
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/silkflowersnyc",
+      "myspace": "silkflowersnyc",
       "facebook": null
     },
     {
@@ -3151,8 +3150,8 @@
       "sortName": "Skambankt",
       "country": "N",
       "text": null,
-      "website": "https://www.skambankt.com",
-      "myspace": "https://myspace.com/skambankt",
+      "website": "www.skambankt.com",
+      "myspace": "skambankt",
       "facebook": null
     },
     {
@@ -3162,7 +3161,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/skatoldk",
+      "myspace": "skatoldk",
       "facebook": null
     },
     {
@@ -3211,8 +3210,8 @@
       "sortName": "Snake and Jet's Amazing Bullit Band",
       "country": null,
       "text": null,
-      "website": "https://snakeandjet.dk",
-      "myspace": "https://myspace.com/snakeandjet",
+      "website": "snakeandjet.dk",
+      "myspace": "snakeandjet",
       "facebook": null
     },
     {
@@ -3221,8 +3220,8 @@
       "sortName": "Song to the Siren",
       "country": null,
       "text": null,
-      "website": "https://songtothesiren.com",
-      "myspace": "https://myspace.com/karmacraft",
+      "website": "songtothesiren.com",
+      "myspace": "karmacraft",
       "facebook": null
     },
     {
@@ -3251,8 +3250,8 @@
       "sortName": "Speaker Bite Me",
       "country": null,
       "text": null,
-      "website": "https://speakerbiteme.com",
-      "myspace": "https://myspace.com/speakerbiteme",
+      "website": "speakerbiteme.com",
+      "myspace": "speakerbiteme",
       "facebook": null
     },
     {
@@ -3271,7 +3270,7 @@
       "sortName": "Spleen United",
       "country": "DK",
       "text": null,
-      "website": "https://www.spleenunited.dk",
+      "website": "www.spleenunited.dk",
       "myspace": null,
       "facebook": null
     },
@@ -3291,8 +3290,8 @@
       "sortName": "Sterling",
       "country": null,
       "text": null,
-      "website": "https://sterlingnet.dk",
-      "myspace": "https://myspace.com/sterlingdk",
+      "website": "sterlingnet.dk",
+      "myspace": "sterlingdk",
       "facebook": null
     },
     {
@@ -3312,7 +3311,7 @@
       "country": null,
       "text": null,
       "website": null,
-      "myspace": "https://myspace.com/strangersonatrainband",
+      "myspace": "strangersonatrainband",
       "facebook": null
     },
     {
@@ -3451,9 +3450,9 @@
       "sortName": "Teppop",
       "country": null,
       "text": null,
-      "website": "https://teppop.dk",
-      "myspace": "https://myspace.com/teppop",
-      "facebook": "https://facebook.com/pages/Teppop/7646401391"
+      "website": "teppop.dk",
+      "myspace": "teppop",
+      "facebook": "pages/Teppop/7646401391"
     },
     {
       "id": 133,
@@ -3621,8 +3620,8 @@
       "sortName": "Two Gallants",
       "country": "US",
       "text": null,
-      "website": "https://www.twogallants.com/",
-      "myspace": "https://myspace.com/twogallants",
+      "website": "www.twogallants.com/",
+      "myspace": "twogallants",
       "facebook": null
     },
     {
@@ -3661,8 +3660,8 @@
       "sortName": "Utah",
       "country": null,
       "text": null,
-      "website": "https://utah.dk",
-      "myspace": "https://myspace.com/utahdk",
+      "website": "utah.dk",
+      "myspace": "utahdk",
       "facebook": null
     },
     {
@@ -3681,8 +3680,8 @@
       "sortName": "Velour",
       "country": null,
       "text": null,
-      "website": "https://velournet.dk",
-      "myspace": "https://myspace.com/velourboys",
+      "website": "velournet.dk",
+      "myspace": "velourboys",
       "facebook": null
     },
     {
@@ -3781,8 +3780,8 @@
       "sortName": "Wildbirds & Peacedrums",
       "country": null,
       "text": null,
-      "website": "https://wildbirdsandpeacedrums.com",
-      "myspace": "https://myspace.com/wildbirdsandpeacedrums",
+      "website": "wildbirdsandpeacedrums.com",
+      "myspace": "wildbirdsandpeacedrums",
       "facebook": null
     },
     {
@@ -3871,8 +3870,8 @@
       "sortName": "Zenith",
       "country": null,
       "text": null,
-      "website": "https://zenithmetal.dk",
-      "myspace": "https://myspace.com/zenithmetal",
+      "website": "zenithmetal.dk",
+      "myspace": "zenithmetal",
       "facebook": null
     },
     {
@@ -3891,7 +3890,6 @@
       "id": 31,
       "name": "Amager Bio",
       "sortName": "Amager Bio",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -3904,7 +3902,7 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://www.amagerbio.dk",
+      "website": "www.amagerbio.dk",
       "myspace": null,
       "facebook": null,
       "text": null
@@ -3913,7 +3911,6 @@
       "id": 15,
       "name": "Anna's lejlighed",
       "sortName": "Anna's lejlighed",
-      "privateHome": true,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -3935,7 +3932,6 @@
       "id": 4,
       "name": "Apparatet",
       "sortName": "Apparatet",
-      "privateHome": false,
       "street": "Nørrebrogade 184",
       "postalCode": "2200",
       "city": "København N",
@@ -3949,15 +3945,14 @@
       "wardrobePrice": null,
       "musicStarts": "21 sharp",
       "website": null,
-      "myspace": "https://myspace.com/apparatet",
-      "facebook": "https://facebook.com/group.php?gid=6730280893",
+      "myspace": "apparatet",
+      "facebook": "group.php?gid=6730280893",
       "text": "Hyggeligt spillested på Nørrebro. Altid gratis entré, og musikken starter allerede kl 21."
     },
     {
       "id": 24,
       "name": "Basement",
       "sortName": "Basement",
-      "privateHome": false,
       "street": "Enghavevej 42",
       "postalCode": null,
       "city": null,
@@ -3979,7 +3974,6 @@
       "id": 42,
       "name": "Bumzen",
       "sortName": "Bumzen",
-      "privateHome": false,
       "street": "Baldersgade 20-22",
       "postalCode": "2200",
       "city": "København N",
@@ -4001,7 +3995,6 @@
       "id": 28,
       "name": "Café Kino",
       "sortName": "Café Kino",
-      "privateHome": false,
       "street": "Øresundsvej 6",
       "postalCode": "2300",
       "city": "København S",
@@ -4014,7 +4007,7 @@
       "wardrobe": 0,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://cafekino.dk",
+      "website": "cafekino.dk",
       "myspace": null,
       "facebook": null,
       "text": "Sympatisk spillested på Amager, som dog er ret institutionsagtigt. Baren tager ikke dankort - til gengæld er der både rødvin og kaffe."
@@ -4023,7 +4016,6 @@
       "id": 21,
       "name": "Café Retro",
       "sortName": "Café Retro",
-      "privateHome": false,
       "street": "Knabrostræde 26",
       "postalCode": "1210",
       "city": "København K",
@@ -4036,7 +4028,7 @@
       "wardrobe": 0,
       "wardrobePrice": null,
       "musicStarts": "21",
-      "website": "https://cafe-retro.dk",
+      "website": "cafe-retro.dk",
       "myspace": null,
       "facebook": null,
       "text": "Meget hyggelig og gammeldags (men trendy) lille café i indre by. Mønstret tapet på væggene, lænestole, sofaer, balkon og trådløst net."
@@ -4045,7 +4037,6 @@
       "id": 5,
       "name": "Den Grå Hal",
       "sortName": "Den Grå Hal",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4067,7 +4058,6 @@
       "id": 35,
       "name": "Din Nye Ven",
       "sortName": "Din Nye Ven",
-      "privateHome": false,
       "street": "Skt. Peders Stræde 34",
       "postalCode": "1453",
       "city": "København K",
@@ -4080,8 +4070,8 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://dinnyeven.dk",
-      "myspace": "https://myspace.com/dinnyeven",
+      "website": "dinnyeven.dk",
+      "myspace": "dinnyeven",
       "facebook": null,
       "text": null
     },
@@ -4089,7 +4079,6 @@
       "id": 36,
       "name": "Dragens Hule",
       "sortName": "Dragens Hule",
-      "privateHome": false,
       "street": "Refshalevej 209 A",
       "postalCode": "1432",
       "city": "København K",
@@ -4111,7 +4100,6 @@
       "id": 41,
       "name": "Drone",
       "sortName": "Drone",
-      "privateHome": false,
       "street": "Nørrebrogade 184",
       "postalCode": "2200",
       "city": "København N",
@@ -4125,15 +4113,14 @@
       "wardrobePrice": null,
       "musicStarts": "21",
       "website": null,
-      "myspace": "https://myspace.com/dronebar",
-      "facebook": "https://facebook.com/group.php?gid=46067589412",
+      "myspace": "dronebar",
+      "facebook": "group.php?gid=46067589412",
       "text": null
     },
     {
       "id": 1,
       "name": "Dunkel Bar",
       "sortName": "Dunkel Bar",
-      "privateHome": false,
       "street": "Vester Voldgade 10",
       "postalCode": null,
       "city": null,
@@ -4147,7 +4134,7 @@
       "wardrobePrice": null,
       "musicStarts": null,
       "website": null,
-      "myspace": "https://myspace.com/dunkelbar",
+      "myspace": "dunkelbar",
       "facebook": null,
       "text": null
     },
@@ -4155,7 +4142,6 @@
       "id": 43,
       "name": "Dödsmaskinen",
       "sortName": "Dödsmaskinen",
-      "privateHome": false,
       "street": "Dortheavej 61",
       "postalCode": "2400",
       "city": "København NV",
@@ -4168,7 +4154,7 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://dødsmaskinen.dk",
+      "website": "dødsmaskinen.dk",
       "myspace": null,
       "facebook": null,
       "text": null
@@ -4177,7 +4163,6 @@
       "id": 34,
       "name": "Egmont",
       "sortName": "Egmont",
-      "privateHome": false,
       "street": "Nørre alle 75",
       "postalCode": "2100",
       "city": "København Ø",
@@ -4199,7 +4184,6 @@
       "id": 14,
       "name": "Elværket",
       "sortName": "Elværket",
-      "privateHome": false,
       "street": "Rosenkildestien",
       "postalCode": null,
       "city": "Helsingør",
@@ -4212,16 +4196,15 @@
       "wardrobe": 0,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://muhus.nu",
-      "myspace": "https://myspace.com/elvaerket",
-      "facebook": "https://facebook.com/group.php?gid=47355440949",
+      "website": "muhus.nu",
+      "myspace": "elvaerket",
+      "facebook": "group.php?gid=47355440949",
       "text": "Happy hour fra 22-23"
     },
     {
       "id": 50,
       "name": "Falconer Salen",
       "sortName": "Falconer Salen",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4243,7 +4226,6 @@
       "id": 46,
       "name": "Faust",
       "sortName": "Faust",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4265,7 +4247,6 @@
       "id": 11,
       "name": "Forbrændingen",
       "sortName": "Forbrændingen",
-      "privateHome": false,
       "street": "Vognporten 11",
       "postalCode": "2620",
       "city": "Albertslund",
@@ -4278,7 +4259,7 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://www.fbf.dk",
+      "website": "www.fbf.dk",
       "myspace": null,
       "facebook": null,
       "text": null
@@ -4287,7 +4268,6 @@
       "id": 25,
       "name": "Forum",
       "sortName": "Forum",
-      "privateHome": false,
       "street": "Julius Thomsens Plads",
       "postalCode": "1925",
       "city": "Frederiksberg C",
@@ -4300,7 +4280,7 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://www.forumcopenhagen.dk/",
+      "website": "www.forumcopenhagen.dk/",
       "myspace": null,
       "facebook": null,
       "text": null
@@ -4309,7 +4289,6 @@
       "id": 20,
       "name": "Fælledparken",
       "sortName": "Fælledparken",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4331,7 +4310,6 @@
       "id": 19,
       "name": "Global",
       "sortName": "Global",
-      "privateHome": false,
       "street": "Nørre Allé 7",
       "postalCode": "2200",
       "city": "København N",
@@ -4353,7 +4331,6 @@
       "id": 47,
       "name": "The Gun Club",
       "sortName": "Gun Club, The",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4368,14 +4345,13 @@
       "musicStarts": null,
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/pages/Kobenhavn-Denmark/The-Gun-Club/106578719373706",
+      "facebook": "pages/Kobenhavn-Denmark/The-Gun-Club/106578719373706",
       "text": null
     },
     {
       "id": 22,
       "name": "Huset i Magstræde",
       "sortName": "Huset i Magstræde",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4388,7 +4364,7 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://husetmagstraede.dk",
+      "website": "husetmagstraede.dk",
       "myspace": null,
       "facebook": null,
       "text": "Super-hyggeligt, lille koncertsted midt i byen. Der kan godt være langt mellem de interessante koncerter, men det er et rart sted, når man endelig er der."
@@ -4397,7 +4373,6 @@
       "id": 40,
       "name": "Jolene",
       "sortName": "Jolene",
-      "privateHome": false,
       "street": "Flæsketorvet 81-85",
       "postalCode": "1711",
       "city": "København V",
@@ -4411,7 +4386,7 @@
       "wardrobePrice": null,
       "musicStarts": null,
       "website": null,
-      "myspace": "https://myspace.com/jolenebar",
+      "myspace": "jolenebar",
       "facebook": null,
       "text": null
     },
@@ -4419,7 +4394,6 @@
       "id": 44,
       "name": "Jolene Bar",
       "sortName": "Jolene Bar",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4441,7 +4415,6 @@
       "id": 18,
       "name": "Kaleidoskop K1",
       "sortName": "Kaleidoskop K1",
-      "privateHome": false,
       "street": "Nørrebrogade 37",
       "postalCode": "2200",
       "city": "København N",
@@ -4454,7 +4427,7 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://kaleidoskop.dk",
+      "website": "kaleidoskop.dk",
       "myspace": null,
       "facebook": null,
       "text": null
@@ -4463,7 +4436,6 @@
       "id": 39,
       "name": "KB Hallen",
       "sortName": "KB Hallen",
-      "privateHome": false,
       "street": "Peter Bangs Vej 147",
       "postalCode": "2000",
       "city": "Frederiksberg",
@@ -4476,7 +4448,7 @@
       "wardrobe": 1,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://www.kbhallen.dk",
+      "website": "www.kbhallen.dk",
       "myspace": null,
       "facebook": null,
       "text": null
@@ -4485,7 +4457,6 @@
       "id": 52,
       "name": "KB18",
       "sortName": "KB18",
-      "privateHome": false,
       "street": "Kødboderne 18",
       "postalCode": "1714",
       "city": "København V",
@@ -4498,16 +4469,15 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://kb18.net",
+      "website": "kb18.net",
       "myspace": null,
-      "facebook": "https://facebook.com/kb18cph",
+      "facebook": "kb18cph",
       "text": null
     },
     {
       "id": 13,
       "name": "KO & MO's lejlighed",
       "sortName": "KO & MO's lejlighed",
-      "privateHome": true,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4529,7 +4499,6 @@
       "id": 27,
       "name": "Kraftwerket",
       "sortName": "Kraftwerket",
-      "privateHome": false,
       "street": "Valgårdsvej 2",
       "postalCode": "2500",
       "city": "Valby",
@@ -4542,7 +4511,7 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://kraftwerket.dk",
+      "website": "kraftwerket.dk",
       "myspace": null,
       "facebook": null,
       "text": null
@@ -4551,7 +4520,6 @@
       "id": 9,
       "name": "Lades Kælder",
       "sortName": "Lades Kælder",
-      "privateHome": false,
       "street": "Kattesundet 6",
       "postalCode": "1458",
       "city": "Kbh K.",
@@ -4564,8 +4532,8 @@
       "wardrobe": 1,
       "wardrobePrice": 10,
       "musicStarts": "ca. 22:30",
-      "website": "https://lades.dk",
-      "myspace": "https://myspace.com/ladescph",
+      "website": "lades.dk",
+      "myspace": "ladescph",
       "facebook": null,
       "text": null
     },
@@ -4573,7 +4541,6 @@
       "id": 2,
       "name": "Loppen",
       "sortName": "Loppen",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4586,8 +4553,8 @@
       "wardrobe": 1,
       "wardrobePrice": 15,
       "musicStarts": "22-22:30",
-      "website": "https://loppen.dk",
-      "myspace": "https://myspace.com/loppenvenue",
+      "website": "loppen.dk",
+      "myspace": "loppenvenue",
       "facebook": null,
       "text": null
     },
@@ -4595,7 +4562,6 @@
       "id": 30,
       "name": "Lygten",
       "sortName": "Lygten",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4617,7 +4583,6 @@
       "id": 33,
       "name": "Operaen - Christiania",
       "sortName": "Operaen - Christiania",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4639,7 +4604,6 @@
       "id": 49,
       "name": "Overdrevet",
       "sortName": "Overdrevet",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4661,7 +4625,6 @@
       "id": 12,
       "name": "Pumpehuset",
       "sortName": "Pumpehuset",
-      "privateHome": false,
       "street": "Studiestræde 52",
       "postalCode": "1554",
       "city": "København V",
@@ -4674,7 +4637,7 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://www.pumpehuset.dk",
+      "website": "www.pumpehuset.dk",
       "myspace": null,
       "facebook": null,
       "text": null
@@ -4683,7 +4646,6 @@
       "id": 8,
       "name": "The Rock",
       "sortName": "Rock, The",
-      "privateHome": false,
       "street": "Skindergade 45 -47",
       "postalCode": "1159",
       "city": "København K",
@@ -4696,7 +4658,7 @@
       "wardrobe": 1,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://the-rock.dk",
+      "website": "the-rock.dk",
       "myspace": null,
       "facebook": null,
       "text": null
@@ -4705,7 +4667,6 @@
       "id": 16,
       "name": "RUC",
       "sortName": "RUC",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": "Trekroner",
@@ -4727,7 +4688,6 @@
       "id": 3,
       "name": "Rust",
       "sortName": "Rust",
-      "privateHome": false,
       "street": "Guldbergsgade 8",
       "postalCode": "2200",
       "city": "København N",
@@ -4740,16 +4700,15 @@
       "wardrobe": 1,
       "wardrobePrice": 10,
       "musicStarts": null,
-      "website": "https://rust.dk",
-      "myspace": "https://myspace.com/clubrust",
-      "facebook": "https://facebook.com/group.php?gid=6814594141",
+      "website": "rust.dk",
+      "myspace": "clubrust",
+      "facebook": "group.php?gid=6814594141",
       "text": null
     },
     {
       "id": 38,
       "name": "Råhuset",
       "sortName": "Råhuset",
-      "privateHome": false,
       "street": "Onkel Dannys Plads 7",
       "postalCode": null,
       "city": "København V",
@@ -4771,7 +4730,6 @@
       "id": 48,
       "name": "Statens Museum for Kunst",
       "sortName": "Statens Museum for Kunst",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4793,7 +4751,6 @@
       "id": 7,
       "name": "Stengade",
       "sortName": "Stengade",
-      "privateHome": false,
       "street": "Stengade 18",
       "postalCode": "2200",
       "city": "København N",
@@ -4806,7 +4763,7 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": "22-23",
-      "website": "https://www.stengade.dk",
+      "website": "www.stengade.dk",
       "myspace": null,
       "facebook": null,
       "text": null
@@ -4815,7 +4772,6 @@
       "id": 17,
       "name": "Studenterhuset",
       "sortName": "Studenterhuset",
-      "privateHome": false,
       "street": "Købmagergade 52",
       "postalCode": "1150",
       "city": "København K",
@@ -4828,7 +4784,7 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://studenterhuset.com",
+      "website": "studenterhuset.com",
       "myspace": null,
       "facebook": null,
       "text": null
@@ -4837,7 +4793,6 @@
       "id": 37,
       "name": "Tivoli",
       "sortName": "Tivoli",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4859,7 +4814,6 @@
       "id": 45,
       "name": "Under Vand",
       "sortName": "Under Vand",
-      "privateHome": false,
       "street": "Kay Fiskers Plads",
       "postalCode": null,
       "city": null,
@@ -4872,7 +4826,7 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://undervand.org",
+      "website": "undervand.org",
       "myspace": null,
       "facebook": null,
       "text": "Ved Ørestad metro st."
@@ -4881,7 +4835,6 @@
       "id": 51,
       "name": "Ungdomshuset Dortheavej 61",
       "sortName": "Ungdomshuset Dortheavej 61",
-      "privateHome": false,
       "street": "Dortheavej 61",
       "postalCode": "2400",
       "city": "København NV",
@@ -4894,16 +4847,15 @@
       "wardrobe": 0,
       "wardrobePrice": null,
       "musicStarts": "ca. 22",
-      "website": "https://ungeren.dk",
+      "website": "ungeren.dk",
       "myspace": null,
-      "facebook": "https://facebook.com/groups/147281785300059/",
+      "facebook": "groups/147281785300059/",
       "text": null
     },
     {
       "id": 26,
       "name": "Van Gogh",
       "sortName": "Van Gogh",
-      "privateHome": false,
       "street": "Falkonér Allé 79",
       "postalCode": "2000",
       "city": "Frederiksberg C",
@@ -4925,7 +4877,6 @@
       "id": 29,
       "name": "Vanløse Kulturhus",
       "sortName": "Vanløse Kulturhus",
-      "privateHome": false,
       "street": null,
       "postalCode": null,
       "city": null,
@@ -4947,7 +4898,6 @@
       "id": 6,
       "name": "Vega",
       "sortName": "Vega",
-      "privateHome": false,
       "street": "Enghavevej 40",
       "postalCode": "1674",
       "city": "København V",
@@ -4960,7 +4910,7 @@
       "wardrobe": 1,
       "wardrobePrice": 15,
       "musicStarts": "ca. 21",
-      "website": "https://vega.dk",
+      "website": "vega.dk",
       "myspace": null,
       "facebook": null,
       "text": null
@@ -4969,7 +4919,6 @@
       "id": 10,
       "name": "Viften",
       "sortName": "Viften",
-      "privateHome": false,
       "street": "Rødovre Parkvej 130",
       "postalCode": "2610",
       "city": "Rødovre",
@@ -4982,7 +4931,7 @@
       "wardrobe": null,
       "wardrobePrice": null,
       "musicStarts": null,
-      "website": "https://www.viften.dk",
+      "website": "www.viften.dk",
       "myspace": null,
       "facebook": null,
       "text": null
@@ -5010,7 +4959,7 @@
       "name": "anne",
       "text": "Hej, jeg er Anne!",
       "website": null,
-      "myspace": "https://myspace.com/frahmling",
+      "myspace": "frahmling",
       "facebook": null
     },
     {
@@ -5026,7 +4975,7 @@
       "name": "B-gitten",
       "text": "Birgitte, den usynlige fra 13.2 (eller også bare den lyserøde?!)",
       "website": null,
-      "myspace": "https://myspace.com/b_gitten",
+      "myspace": "b_gitten",
       "facebook": null
     },
     {
@@ -5041,8 +4990,8 @@
       "id": 19,
       "name": "Esben",
       "text": null,
-      "website": "https://happyhelmet.se",
-      "myspace": "https://myspace.com/happyhelmetsweden",
+      "website": "happyhelmet.se",
+      "myspace": "happyhelmetsweden",
       "facebook": null
     },
     {
@@ -5057,9 +5006,9 @@
       "id": 1,
       "name": "Jeff",
       "text": "Hej-hej, jeg er nørden der har programmeret wikibaren!",
-      "website": "https://zno.dk",
-      "myspace": "https://myspace.com/psychedupjeff",
-      "facebook": "https://facebook.com/david.thomas"
+      "website": "zno.dk",
+      "myspace": "psychedupjeff",
+      "facebook": "david.thomas"
     },
     {
       "id": 13,
@@ -5075,7 +5024,7 @@
       "text": "Nogen kender mig måske bedre som Skude Mads",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/profile.php?id=530421486"
+      "facebook": "profile.php?id=530421486"
     },
     {
       "id": 15,
@@ -5145,7 +5094,7 @@
       "id": 18,
       "name": "Sveske",
       "text": "Det er godt at have lidt ekstra salt på sig, i tilfælde af æggekrig-- hahahaha",
-      "website": "https://www.google.com",
+      "website": "www.google.com",
       "myspace": null,
       "facebook": null
     },
@@ -5274,7 +5223,7 @@
       "endDate": null,
       "price": 0,
       "text": "Vega Natklub.\r\nFri entré kl. 22-01, og drikkevarer til alle kl. 22-23",
-      "website": "https://www.soundvenue.com/news.asp?id=5849",
+      "website": "www.soundvenue.com/news.asp?id=5849",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -5334,8 +5283,8 @@
       "endDate": "2007-06-03",
       "price": null,
       "text": "",
-      "website": "https://cphdistortion.dk",
-      "myspace": "https://myspace.com/cphdistortion",
+      "website": "cphdistortion.dk",
+      "myspace": "cphdistortion",
       "facebook": null,
       "status": null
     },
@@ -5349,7 +5298,7 @@
       "endDate": null,
       "price": 50,
       "text": "Releaseparty for EP'en \"A Machine Like Me\"\r\nVideo og gratis drikkevarer kl 21, koncert 22.",
-      "website": "https://www.songtothesiren.com/myspace/300507loppen.jpg",
+      "website": "www.songtothesiren.com/myspace/300507loppen.jpg",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -5514,8 +5463,8 @@
       "endDate": "2007-06-16",
       "price": 80,
       "text": "",
-      "website": "https://vesterbrofestival.dk",
-      "myspace": "https://myspace.com/vesterbrofestival",
+      "website": "vesterbrofestival.dk",
+      "myspace": "vesterbrofestival",
       "facebook": null,
       "status": null
     },
@@ -5649,8 +5598,8 @@
       "endDate": "2007-07-08",
       "price": null,
       "text": "",
-      "website": "https://roskilde-festival.dk",
-      "myspace": "https://myspace.com/roskildefestival",
+      "website": "roskilde-festival.dk",
+      "myspace": "roskildefestival",
       "facebook": null,
       "status": "soldout"
     },
@@ -5664,7 +5613,7 @@
       "endDate": "2007-07-15",
       "price": null,
       "text": null,
-      "website": "https://www.jazzfestival.dk",
+      "website": "www.jazzfestival.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -5709,7 +5658,7 @@
       "endDate": "2007-07-21",
       "price": 250,
       "text": "Billetter er til salg på billetnet - der bliver sikkert udsolgt, og de er 100 kr. dyrere i indgangen...",
-      "website": "https://nakkefestival.dk",
+      "website": "nakkefestival.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -5799,7 +5748,7 @@
       "endDate": "2007-08-11",
       "price": null,
       "text": "",
-      "website": "https://helsingorfestival.dk/2007",
+      "website": "helsingorfestival.dk/2007",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -5874,7 +5823,7 @@
       "endDate": "2007-08-26",
       "price": null,
       "text": "+ flere bands",
-      "website": "https://ms.dk/fair",
+      "website": "ms.dk/fair",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -5889,8 +5838,8 @@
       "endDate": null,
       "price": 80,
       "text": "",
-      "website": "https://blomstblomst.dk/03",
-      "myspace": "https://myspace.com/blomstblomst",
+      "website": "blomstblomst.dk/03",
+      "myspace": "blomstblomst",
       "facebook": null,
       "status": null
     },
@@ -5994,7 +5943,7 @@
       "endDate": null,
       "price": 60,
       "text": "16-21: Rock/Pop\r\n22-04: Metal",
-      "website": "https://rock.xstream.dk/site/calendar_element.php?id=652",
+      "website": "rock.xstream.dk/site/calendar_element.php?id=652",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -6069,8 +6018,8 @@
       "endDate": "2007-09-15",
       "price": 170,
       "text": "",
-      "website": "https://blog.myspace.com/index.cfm?fuseaction=blog.view&friendID=84602951&blogID=302150987",
-      "myspace": "https://myspace.com/gutterisland",
+      "website": "blog.myspace.com/index.cfm?fuseaction=blog.view&friendID=84602951&blogID=302150987",
+      "myspace": "gutterisland",
       "facebook": null,
       "status": null
     },
@@ -6084,7 +6033,7 @@
       "endDate": null,
       "price": 50,
       "text": "Vega Natklub\r\nFri entré kl. 23-01\r\nØl til alle kl. 23-00",
-      "website": "https://www.soundvenue.com/news.asp?id=6244",
+      "website": "www.soundvenue.com/news.asp?id=6244",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -6144,7 +6093,7 @@
       "endDate": null,
       "price": 135,
       "text": "",
-      "website": "https://rock.xstream.dk/site/calendar_element.php?id=653",
+      "website": "rock.xstream.dk/site/calendar_element.php?id=653",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -7840,7 +7789,7 @@
       "price": 250,
       "text": "+ et band til, som offentliggøres 28. april.\r\n150 kr. for én dag",
       "website": null,
-      "myspace": "https://myspace.com/klubb_land",
+      "myspace": "klubb_land",
       "facebook": null,
       "status": null
     },
@@ -8124,8 +8073,8 @@
       "endDate": "2008-06-08",
       "price": null,
       "text": "A celebration of Copenhagen streetlife & nightlife",
-      "website": "https://www.cphdistortion.dk",
-      "myspace": "https://myspace.com/cphdistortion",
+      "website": "www.cphdistortion.dk",
+      "myspace": "cphdistortion",
       "facebook": null,
       "status": null
     },
@@ -8139,7 +8088,7 @@
       "endDate": "2008-06-07",
       "price": 200,
       "text": "",
-      "website": "https://www.vesterbrofestival.dk/",
+      "website": "www.vesterbrofestival.dk/",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -8169,8 +8118,8 @@
       "endDate": "2008-07-06",
       "price": null,
       "text": "Billetsalget er i gang!",
-      "website": "https://roskilde-festival.dk",
-      "myspace": "https://myspace.com/roskildefestival",
+      "website": "roskilde-festival.dk",
+      "myspace": "roskildefestival",
       "facebook": null,
       "status": null
     },
@@ -8184,7 +8133,7 @@
       "endDate": "2008-07-26",
       "price": null,
       "text": "",
-      "website": "https://nakkefestival.dk",
+      "website": "nakkefestival.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -8214,7 +8163,7 @@
       "endDate": "2008-08-09",
       "price": null,
       "text": "",
-      "website": "https://helsingorfestival.dk/2008",
+      "website": "helsingorfestival.dk/2008",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -8244,7 +8193,7 @@
       "endDate": "2008-08-11",
       "price": null,
       "text": "18 bands i alt",
-      "website": "https://beatday.dk",
+      "website": "beatday.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -8274,7 +8223,7 @@
       "endDate": "2008-08-23",
       "price": null,
       "text": "",
-      "website": "https://gutter-island.dk",
+      "website": "gutter-island.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -8304,7 +8253,7 @@
       "endDate": "2008-09-14",
       "price": 100,
       "text": "2000 forskellige øl.\r\nHos Carlsberg - Vesterfælledvej 100 i København",
-      "website": "https://www.beerfestival.dk",
+      "website": "www.beerfestival.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -8441,7 +8390,7 @@
       "text": "",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=62126110700",
+      "facebook": "event.php?eid=62126110700",
       "status": null
     },
     {
@@ -8471,7 +8420,7 @@
       "text": "",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=68493092432",
+      "facebook": "event.php?eid=68493092432",
       "status": null
     },
     {
@@ -8756,7 +8705,7 @@
       "text": "",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=48223391987",
+      "facebook": "event.php?eid=48223391987",
       "status": null
     },
     {
@@ -8814,9 +8763,9 @@
       "endDate": null,
       "price": 80,
       "text": "",
-      "website": "https://gutter-island.dk",
-      "myspace": "https://myspace.com/gutterisland",
-      "facebook": "https://facebook.com/event.php?eid=62440701521",
+      "website": "gutter-island.dk",
+      "myspace": "gutterisland",
+      "facebook": "event.php?eid=62440701521",
       "status": null
     },
     {
@@ -8920,7 +8869,7 @@
       "price": 70,
       "text": "",
       "website": null,
-      "myspace": "https://myspace.com/copenhagenskaconvention",
+      "myspace": "copenhagenskaconvention",
       "facebook": null,
       "status": null
     },
@@ -8994,9 +8943,9 @@
       "endDate": "2009-04-26",
       "price": null,
       "text": "Filmfestival",
-      "website": "https://cphpix.dk",
+      "website": "cphpix.dk",
       "myspace": null,
-      "facebook": "https://facebook.com/group.php?gid=36913617877",
+      "facebook": "group.php?gid=36913617877",
       "status": null
     },
     {
@@ -9026,7 +8975,7 @@
       "text": "Releaseparty på Chainsaw Eaters/Melting Walkmen splitten med fire livebands!\r\nFørste band kl. 22 og City Kill kl. 23.",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=158910975003",
+      "facebook": "event.php?eid=158910975003",
       "status": null
     },
     {
@@ -9041,7 +8990,7 @@
       "text": "",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=52638653559",
+      "facebook": "event.php?eid=52638653559",
       "status": null
     },
     {
@@ -9146,7 +9095,7 @@
       "text": "Frank Silva kl. 20",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=62253809747",
+      "facebook": "event.php?eid=62253809747",
       "status": null
     },
     {
@@ -9159,8 +9108,8 @@
       "endDate": "2009-05-16",
       "price": null,
       "text": "Tre dages gutter arrangement i København",
-      "website": "https://gutter-island.dk",
-      "myspace": "https://myspace.com/gutterisland",
+      "website": "gutter-island.dk",
+      "myspace": "gutterisland",
       "facebook": null,
       "status": null
     },
@@ -9234,7 +9183,7 @@
       "endDate": "2009-06-07",
       "price": null,
       "text": "",
-      "website": "https://www.cphdistortion.dk",
+      "website": "www.cphdistortion.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -9249,9 +9198,9 @@
       "endDate": "2009-06-06",
       "price": null,
       "text": "Tidligere Vesterbro Festival",
-      "website": "https://startfestival.dk",
-      "myspace": "https://myspace.com/startfestival",
-      "facebook": "https://facebook.com/pages/Kbenhavn-Denmark/Start-Festival/40435037502",
+      "website": "startfestival.dk",
+      "myspace": "startfestival",
+      "facebook": "pages/Kbenhavn-Denmark/Start-Festival/40435037502",
       "status": null
     },
     {
@@ -9296,7 +9245,7 @@
       "text": "MESCALIN BABY; ASSILATO SOUND SERVICE, NIGHTPASS, MES REVES, PALERMO SURF EXPERIENCE, DE HELLIGE TREKONGER OG DEN ETNISKE PRINS, SPEED HAUF M.F\r\n\r\nGRATIS ENTRÉ FRA KL 16 til 20 - DEREFTER 50 kr",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=99813720663",
+      "facebook": "event.php?eid=99813720663",
       "status": null
     },
     {
@@ -9339,8 +9288,8 @@
       "endDate": "2009-07-05",
       "price": 1785,
       "text": "",
-      "website": "https://roskilde-festival.dk",
-      "myspace": "https://myspace.com/roskildefestival",
+      "website": "roskilde-festival.dk",
+      "myspace": "roskildefestival",
       "facebook": null,
       "status": null
     },
@@ -9354,7 +9303,7 @@
       "endDate": "2009-07-12",
       "price": null,
       "text": "",
-      "website": "https://jazzfestival.dk",
+      "website": "jazzfestival.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -9369,7 +9318,7 @@
       "endDate": "2009-07-25",
       "price": null,
       "text": "",
-      "website": "https://nakkefestival.dk",
+      "website": "nakkefestival.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -9399,7 +9348,7 @@
       "endDate": "2009-08-08",
       "price": null,
       "text": "",
-      "website": "https://helsingorfestival.dk",
+      "website": "helsingorfestival.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -9414,7 +9363,7 @@
       "endDate": "2009-08-16",
       "price": null,
       "text": "",
-      "website": "https://www.stromcph.dk",
+      "website": "www.stromcph.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -9444,7 +9393,7 @@
       "endDate": "2009-08-15",
       "price": null,
       "text": "",
-      "website": "https://beatday.dk",
+      "website": "beatday.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -9491,7 +9440,7 @@
       "text": "",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=239030105127",
+      "facebook": "event.php?eid=239030105127",
       "status": null
     },
     {
@@ -9519,9 +9468,9 @@
       "endDate": null,
       "price": 115,
       "text": "",
-      "website": "https://blog.crunchy.dk/post/15-YEARS-COME-AND-POP-OUR-CHERRY.aspx",
+      "website": "blog.crunchy.dk/post/15-YEARS-COME-AND-POP-OUR-CHERRY.aspx",
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=119711890329",
+      "facebook": "event.php?eid=119711890329",
       "status": null
     },
     {
@@ -9819,7 +9768,7 @@
       "endDate": "2009-11-14",
       "price": null,
       "text": "Torsdag d. 12. Nov.\r\n\r\nDe efterladte(DK)\r\nDreamjockey (DK)\r\nWhale Watching Tour/Bedroom Community(IS/NY)\r\n(WWT. feat Sam Amidon, Ben Frost,Nico Muhly,Valgeir Sigurdsson+ Guests )\r\nFrisk Frugt\r\n\r\nFredag d. 13. Nov.\r\n\r\nPinkunoizu (DK)\r\nThe rumour said fire (DK)\r\nTony Scherr (Trio)(US)\r\nChris Brown (CAN)\r\nGiant Sand (US/DK)\r\n\r\nLørdag d. 14. Nov.\r\n\r\nCody(DK)\r\nEr de sjældne(DK)\r\nRobot feat Claus Hempler(DK)\r\nYoung comets (DK)\r\nSlaraffenland (DK)",
-      "website": "https://husetmagstraede.dk/Default.asp?id=2&event=3347",
+      "website": "husetmagstraede.dk/Default.asp?id=2&event=3347",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -9879,7 +9828,7 @@
       "endDate": "2009-12-06",
       "price": null,
       "text": "",
-      "website": "https://atpfestival.com",
+      "website": "atpfestival.com",
       "myspace": null,
       "facebook": null,
       "status": "soldout"
@@ -10091,7 +10040,7 @@
       "text": "",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=204834140858",
+      "facebook": "event.php?eid=204834140858",
       "status": null
     },
     {
@@ -10106,7 +10055,7 @@
       "text": "",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=366796258346",
+      "facebook": "event.php?eid=366796258346",
       "status": null
     },
     {
@@ -10136,7 +10085,7 @@
       "text": "",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=201322818684",
+      "facebook": "event.php?eid=201322818684",
       "status": null
     },
     {
@@ -10225,8 +10174,8 @@
       "price": null,
       "text": "",
       "website": null,
-      "myspace": "https://myspace.com/teoripraksis",
-      "facebook": "https://facebook.com/event.php?eid=10150125328615254",
+      "myspace": "teoripraksis",
+      "facebook": "event.php?eid=10150125328615254",
       "status": null
     },
     {
@@ -10269,9 +10218,9 @@
       "endDate": "2010-05-29",
       "price": null,
       "text": "",
-      "website": "https://www.primaverasound.com/ps.php?idioma=en",
-      "myspace": "https://myspace.com/primaverasound",
-      "facebook": "https://facebook.com/pages/Primavera-Sound-Festival/156656398155",
+      "website": "www.primaverasound.com/ps.php?idioma=en",
+      "myspace": "primaverasound",
+      "facebook": "pages/Primavera-Sound-Festival/156656398155",
       "status": null
     },
     {
@@ -10299,7 +10248,7 @@
       "endDate": "2010-06-06",
       "price": null,
       "text": "",
-      "website": "https://cphdistortion.dk",
+      "website": "cphdistortion.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -10316,7 +10265,7 @@
       "text": "",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=124234807590736",
+      "facebook": "event.php?eid=124234807590736",
       "status": null
     },
     {
@@ -10331,7 +10280,7 @@
       "text": "",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=118980138131667",
+      "facebook": "event.php?eid=118980138131667",
       "status": null
     },
     {
@@ -10359,7 +10308,7 @@
       "endDate": "2010-06-12",
       "price": null,
       "text": "",
-      "website": "https://startfestival.dk",
+      "website": "startfestival.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -10374,7 +10323,7 @@
       "endDate": "2010-07-04",
       "price": null,
       "text": "",
-      "website": "https://roskilde-festival.dk",
+      "website": "roskilde-festival.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -10389,7 +10338,7 @@
       "endDate": "2010-07-24",
       "price": null,
       "text": "",
-      "website": "https://nakkefestival.dk",
+      "website": "nakkefestival.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -10449,9 +10398,9 @@
       "endDate": null,
       "price": 50,
       "text": "",
-      "website": "https://kubik.kk.dk/kulturvesterbro/raahuset",
-      "myspace": "https://myspace.com/theflyingeyes",
-      "facebook": "https://facebook.com/home.php?#!/event.php?eid=139736909378751&index=1",
+      "website": "kubik.kk.dk/kulturvesterbro/raahuset",
+      "myspace": "theflyingeyes",
+      "facebook": "home.php?#!/event.php?eid=139736909378751&index=1",
       "status": null
     },
     {
@@ -10511,7 +10460,7 @@
       "text": "",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=116182568429194&index=1",
+      "facebook": "event.php?eid=116182568429194&index=1",
       "status": null
     },
     {
@@ -10554,7 +10503,7 @@
       "endDate": "2011-07-02",
       "price": null,
       "text": "",
-      "website": "https://roskilde-festival.dk",
+      "website": "roskilde-festival.dk",
       "myspace": null,
       "facebook": null,
       "status": null
@@ -10571,7 +10520,7 @@
       "text": "",
       "website": null,
       "myspace": null,
-      "facebook": "https://facebook.com/event.php?eid=102983623141756",
+      "facebook": "event.php?eid=102983623141756",
       "status": null
     },
     {
@@ -10599,7 +10548,7 @@
       "endDate": "2012-07-08",
       "price": null,
       "text": "",
-      "website": "https://roskilde-festival.dk",
+      "website": "roskilde-festival.dk",
       "myspace": null,
       "facebook": null,
       "status": null

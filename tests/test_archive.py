@@ -202,14 +202,31 @@ class PublicArchiveTests(unittest.TestCase):
         self.assertTrue(all(entry["eventId"] in event_ids for entry in self.archive["attendance"]))
         self.assertTrue(all(entry["userId"] in user_ids for entry in self.archive["attendance"]))
 
-    def test_home_events_are_present_without_addresses(self):
-        homes = {venue["id"]: venue for venue in self.archive["venues"] if venue["privateHome"]}
-        self.assertEqual(set(homes), {13, 15})
+    def test_home_events_and_source_null_addresses_are_preserved(self):
+        homes = {venue["id"]: venue for venue in self.archive["venues"] if venue["id"] in {13, 15}}
+        self.assertEqual({venue["name"] for venue in homes.values()}, {"KO & MO's lejlighed", "Anna's lejlighed"})
         for home in homes.values():
+            self.assertNotIn("privateHome", home)
             self.assertIsNone(home["street"])
             self.assertIsNone(home["postalCode"])
             self.assertIsNone(home["city"])
+            self.assertIsNone(home["country"])
         self.assertEqual(sum(event["venueId"] in homes for event in self.archive["events"]), 3)
+
+    def test_raw_source_urls_are_preserved(self):
+        urls = [
+            row[field]
+            for collection in ("bands", "venues", "events", "users")
+            for row in self.archive[collection]
+            for field in ("website", "myspace", "facebook")
+            if row[field]
+        ]
+        self.assertEqual(len(urls), 287)
+        self.assertTrue(all("://" not in value for value in urls))
+        decorate = next(band for band in self.archive["bands"] if band["id"] == 1)
+        self.assertEqual(decorate["website"], "decoratedecorate.com")
+        self.assertEqual(decorate["myspace"], "decoratedecorate")
+        self.assertNotIn("dataThrough", self.archive["meta"])
 
     def test_no_legacy_hashes_or_database_credentials(self):
         self.assertNotIn("passwordsalt", self.archive_text.lower())
