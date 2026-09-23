@@ -6,7 +6,7 @@ Siden bevarer det oprindelige sorte/gule design, bitmapmenuen og det komplette b
 
 ## Repository
 
-- `public/` indeholder det nye statiske site.
+- `public/` indeholder det nye statiske site. De oprindelige læse-URL’er som `/venue/13`, `/band/1`, `/user/1`, `/event/201#e`, `/bands/2` og `/-1` virker via nginx-routing til samme statiske app.
 - `legacy/2007-05-18/` indeholder den nyeste komplette kopi af den oprindelige PHP/Smarty-kode.
 - `legacy/2016-12-08-partial/` indeholder den seneste, men ufuldstændige, bevarede kodekopi.
 

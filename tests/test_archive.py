@@ -53,8 +53,9 @@ class StaticAppTests(unittest.TestCase):
 
     def test_profile_list_is_compact_and_links_to_calendar_event(self):
         self.assertEqual(self.source.count("events.slice(-6).reverse()"), 2)
-        self.assertIn('href: `?view=calendar&page=${page}#event-${event.id}`', self.source)
+        self.assertIn('href: `/event/${event.id}#e`', self.source)
         self.assertIn('card.id = `event-${event.id}`', self.source)
+        self.assertIn('card.id = "e"', self.source)
         self.assertIn('location.hash === `#event-${event.id}`', self.source)
         self.assertIn('scrollIntoView({ block: "center" })', self.source)
 

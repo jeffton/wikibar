@@ -2,9 +2,14 @@
 
 const main = document.querySelector("#main");
 const params = new URLSearchParams(location.search);
-const view = params.get("view") || "calendar";
-const id = Number(params.get("id"));
-const requestedPage = Math.max(1, Number.parseInt(params.get("page") || "1", 10) || 1);
+const parts = location.pathname.split("/").filter(Boolean);
+const pathView = parts[0] === "page" ? parts[1] : parts[0];
+const view = ["bands", "venues", "users", "band", "venue", "user", "event", "about", "stats"].includes(pathView)
+  ? pathView
+  : parts.length === 1 && /^-?\d+$/.test(parts[0]) ? "calendar"
+  : !parts.length ? params.get("view") || "calendar" : "unknown";
+const id = Number(parts[1] || params.get("id"));
+const requestedPage = Number.parseInt((view === "calendar" ? parts[0] : parts[1]) || params.get("page") || "1", 10) || 1;
 const EVENTS_PER_PAGE = 12;
 
 const labels = {
@@ -15,11 +20,11 @@ const labels = {
   festival: "festival",
 };
 
-const selectedNav = view === "venue" ? "venues" : view === "band" ? "bands" : view === "user" ? "users" : view;
+const selectedNav = view === "venue" ? "venues" : view === "band" ? "bands" : view === "user" ? "users" : view === "event" ? "calendar" : view;
 for (const link of document.querySelectorAll("[data-nav]")) {
   const nav = link.dataset.nav;
   const image = link.querySelector("img");
-  image.src = `layout/menu_${nav === "venues" ? "venue" : nav === "bands" ? "band" : nav === "users" ? "user" : "calendar"}${nav === selectedNav ? "_selected" : ""}.png`;
+  image.src = `/layout/menu_${nav === "venues" ? "venue" : nav === "bands" ? "band" : nav === "users" ? "user" : "calendar"}${nav === selectedNav ? "_selected" : ""}.png`;
 }
 
 const dateFormatter = new Intl.DateTimeFormat("da-DK", {
@@ -41,10 +46,14 @@ function node(tag, options = {}, children = []) {
   return element;
 }
 
+function routePath(targetView, targetId) {
+  if (targetView === "calendar") return targetId && targetId !== 1 ? `/${targetId}` : "/";
+  if (targetView === "about" || targetView === "stats") return `/page/${targetView}`;
+  return `/${targetView}${targetId === undefined ? "" : `/${targetId}`}`;
+}
+
 function route(label, targetView, targetId) {
-  const query = new URLSearchParams({ view: targetView });
-  if (targetId !== undefined) query.set("id", targetId);
-  return node("a", { text: label, href: `?${query}` });
+  return node("a", { text: label, href: routePath(targetView, targetId) });
 }
 
 function hrefFor(value, service = null) {
@@ -53,7 +62,7 @@ function hrefFor(value, service = null) {
 
 function iconLink(url, image, label, width, height) {
   const icon = node("img");
-  icon.src = `layout/${image}`;
+  icon.src = `/layout/${image}`;
   icon.alt = label;
   icon.title = label;
   icon.width = width;
@@ -128,21 +137,22 @@ function eventRows(data, events) {
     }
     previousDate = event.date;
 
-    const highlighted = location.hash === `#event-${event.id}`;
+    const highlighted = (view === "event" && id === event.id) || location.hash === `#event-${event.id}`;
     const card = node("article", { className: `event${highlighted ? " eventhighlight" : ""}` });
     card.id = `event-${event.id}`;
-    card.style.backgroundImage = `url("layout/event-${event.type}.png")`;
+    card.style.backgroundImage = `url("/layout/event-${event.type}.png")`;
     card.setAttribute("aria-label", labels[event.type] || event.type);
+    if (highlighted && view === "event") card.id = "e";
 
     const eventContent = node("div", { className: "eventcontent" });
     eventContent.append(node("div", { className: "minibar" }, [
-      node("a", { className: "button", text: "Redigér event", href: "?view=about" }),
-      node("a", { className: "button", text: "Jeg er på!", href: "?view=users" }),
+      node("a", { className: "button", text: "Redigér event", href: "/page/about" }),
+      node("a", { className: "button", text: "Jeg er på!", href: "/users" }),
     ]));
 
     if (event.status) {
       const statusImage = node("img", { className: "eventstatus" });
-      statusImage.src = `layout/eventstatus_${event.status}.png`;
+      statusImage.src = `/layout/eventstatus_${event.status}.png`;
       statusImage.alt = event.status === "soldout" ? "UDSOLGT" : "AFLYST";
       statusImage.width = 86;
       statusImage.height = 40;
@@ -224,11 +234,9 @@ function compactEventRows(data, events, profileType, profileId) {
   const calendar = node("div", { className: "profile-calendar" });
   events.forEach((event, index) => {
     const row = node("article", { className: `smallevent${index === events.length - 1 ? " lastsmallevent" : ""}` });
-    row.style.backgroundImage = `url("layout/eventsmall-${event.type}.png")`;
-    const eventIndex = data.events.findIndex((entry) => entry.id === event.id);
-    const page = Math.floor(eventIndex / EVENTS_PER_PAGE) + 1;
+    row.style.backgroundImage = `url("/layout/eventsmall-${event.type}.png")`;
     row.append(node("div", { className: "minibar" }, [
-      node("a", { className: "button", text: "Vis", href: `?view=calendar&page=${page}#event-${event.id}` }),
+      node("a", { className: "button", text: "Vis", href: `/event/${event.id}#e` }),
     ]));
     row.append(node("h3", { text: archiveDate(event.date) }));
     if (event.name) row.append(node("h4", { text: event.name }));
@@ -253,20 +261,20 @@ function compactEventRows(data, events, profileType, profileId) {
 function pager(totalPages, currentPage) {
   const bar = node("nav", { className: "editbar pager" });
   bar.setAttribute("aria-label", "Kalendersider");
-  const first = Math.max(1, currentPage - 2);
-  const last = Math.min(totalPages, currentPage + 2);
-  const addPage = (page, label = `Side ${page}`) => {
-    const query = new URLSearchParams(location.search);
-    query.set("page", page);
-    const link = node("a", { className: `button${page === currentPage ? " activebutton" : ""}`, text: label, href: `?${query}` });
+  const position = Math.abs(currentPage);
+  const first = Math.max(1, position - 2);
+  const last = Math.min(totalPages, position + 2);
+  const addPage = (number) => {
+    const page = currentPage < 0 ? -number : number;
+    const link = node("a", { className: `button${page === currentPage ? " activebutton" : ""}`, text: currentPage < 0 ? `Arkiv ${number}` : `Side ${number}`, href: routePath("calendar", page) });
     if (page === currentPage) link.setAttribute("aria-current", "page");
     bar.append(link);
   };
   if (first > 1) addPage(1);
   if (first > 2) bar.append(" … ");
-  for (let page = first; page <= last; page += 1) {
+  for (let number = first; number <= last; number += 1) {
     if (bar.childNodes.length) bar.append(" ");
-    addPage(page);
+    addPage(number);
   }
   if (last < totalPages - 1) bar.append(" … ");
   if (last < totalPages) {
@@ -276,11 +284,15 @@ function pager(totalPages, currentPage) {
   return bar;
 }
 
-function showCalendar(data) {
+function showCalendar(data, targetEvent = null) {
   const totalPages = Math.ceil(data.events.length / EVENTS_PER_PAGE);
-  const page = Math.min(requestedPage, totalPages);
-  const events = data.events.slice((page - 1) * EVENTS_PER_PAGE, page * EVENTS_PER_PAGE);
-  heading(`Kalender${page > 1 ? ` (side ${page})` : ""}`);
+  const page = targetEvent
+    ? Math.floor(data.events.findIndex((event) => event.id === targetEvent) / EVENTS_PER_PAGE) + 1
+    : requestedPage < 0 ? Math.max(-totalPages, requestedPage) : Math.min(totalPages, requestedPage);
+  const ordered = page < 0 ? [...data.events].reverse() : data.events;
+  const offset = (Math.abs(page) - 1) * EVENTS_PER_PAGE;
+  const events = ordered.slice(offset, offset + EVENTS_PER_PAGE);
+  heading(`Kalender${page < 0 ? ` (arkiv, side ${-page})` : page > 1 ? ` (side ${page})` : ""}`);
   const wrapper = content();
   wrapper.append(eventRows(data, events), pager(totalPages, page));
 }
@@ -331,7 +343,7 @@ function showBrowse(data, type) {
   const perPage = 30;
   const search = (params.get("search") || "").trim();
   const totalPages = Math.ceil(items.length / perPage);
-  const page = Math.min(requestedPage, totalPages);
+  const page = Math.min(Math.max(1, requestedPage), totalPages);
   heading(title);
   const wrapper = content();
 
@@ -343,10 +355,8 @@ function showBrowse(data, type) {
     ranges.forEach((range, index) => {
       const pageNumber = index + 1;
       const label = range.last ? `${range.first} – ${range.last}` : range.first;
-      const query = new URLSearchParams({ view: type });
-      if (pageNumber > 1) query.set("page", pageNumber);
       const active = !search && pageNumber === page;
-      const pageLink = node("a", { className: `button${active ? " activebutton" : ""}`, text: label, href: `?${query}` });
+      const pageLink = node("a", { className: `button${active ? " activebutton" : ""}`, text: label, href: routePath(type, pageNumber > 1 ? pageNumber : undefined) });
       if (active) pageLink.setAttribute("aria-current", "page");
       pageBar.append(node("div", { className: "pagebutton" }, [pageLink]));
     });
@@ -354,17 +364,14 @@ function showBrowse(data, type) {
   }
 
   const form = node("form", { className: "searchform" });
+  form.action = routePath(type);
   form.method = "get";
-  const viewInput = node("input");
-  viewInput.type = "hidden";
-  viewInput.name = "view";
-  viewInput.value = type;
   const input = node("input");
   input.type = "search";
   input.name = "search";
   input.value = search;
   input.setAttribute("aria-label", `Søg i ${title.toLocaleLowerCase("da")}`);
-  form.append(viewInput, input, node("button", { className: "button", text: "Søg" }));
+  form.append(input, node("button", { className: "button", text: "Søg" }));
   wrapper.append(form, node("div", { className: "clear" }));
 
   let results;
@@ -580,13 +587,17 @@ function showNotFound() {
   content().append(node("p", {}, [document.createTextNode("Siden findes ikke. Gå tilbage til "), route("kalenderen", "calendar"), document.createTextNode(".")]));
 }
 
-fetch("data/archive.json?v=13")
+fetch("/data/archive.json?v=13")
   .then((response) => {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return response.json();
   })
   .then((data) => {
     if (view === "calendar") showCalendar(data);
+    else if (view === "event") {
+      if (data.events.some((event) => event.id === id)) showCalendar(data, id);
+      else showNotFound();
+    }
     else if (view === "bands" || view === "venues" || view === "users") showBrowse(data, view);
     else if (view === "band" || view === "venue") showDetail(data, view, id);
     else if (view === "user") showUser(data, id);
@@ -595,6 +606,7 @@ fetch("data/archive.json?v=13")
     else showNotFound();
     main.focus({ preventScroll: true });
     if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView({ block: "center" });
+    else if (view === "event") document.getElementById("e")?.scrollIntoView({ block: "center" });
   })
   .catch((error) => {
     heading("Fejl");
